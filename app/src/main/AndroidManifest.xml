@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.playground">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Playground"
+        tools:targetApi="31">
+        <activity
+            android:name=".activities.ClockActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ScrollVActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ScrollHActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.Bgcolor"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ScreenRotation"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SysInfo"
+            android:exported="false" />
+        <activity
+            android:name=".activities.explicit_intent"
+            android:exported="false" />
+        <activity
+            android:name=".activities.implicit_intent"
+            android:exported="false" />
+        <activity
+            android:name=".activities.tabs.tab3"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.tabs.tab2"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.Material3.Dark.NoActionBar">
+            <intent-filter>
+
+                <!--
+                to make this activity as the starting activity.
+                So whenever the app will execute the user can see the splash screen
+                at the beginning.
+                -->
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.tabs.tab1"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".activities.cardView"
+            android:exported="false" />
+        <activity
+            android:name=".activities.tabActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AlertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.spinnerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <!--
+            Disabling for splash screen
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+    </application>
+
+</manifest>
