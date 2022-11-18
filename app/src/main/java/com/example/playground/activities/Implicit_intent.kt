@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import com.example.playground.Constants
+import com.example.playground.utils.Constants
 import com.example.playground.R
 
-class implicit_intent : AppCompatActivity() {
+class Implicit_intent : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_implicit_intent)
@@ -19,7 +19,7 @@ class implicit_intent : AppCompatActivity() {
 
         shareActbtn.setOnClickListener {
             val message = findViewById<EditText>(R.id.usrmsg).text.toString()
-            var intent = Intent(this, explicit_intent::class.java)
+            var intent = Intent(this, Explicit_intent::class.java)
 
             intent.putExtra(Constants.USR_MSG_KEY, message)
             startActivity(intent)

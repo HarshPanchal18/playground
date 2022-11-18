@@ -20,6 +20,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.playground.activities.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,15 +33,17 @@ class MainActivity : AppCompatActivity() {
             setTheme(R.style.AnotherTheme);
         }*/
 
+        //supportActionBar?.title = "Playground"
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // R is a special class in java
         // that enables you to retrieve the references to resource in your app.
 
-        val alertbtn:       Button =findViewById(R.id.alertbtn)
-        val cardbtn:        Button =findViewById(R.id.cardbtn)
-        val tabbtn:         Button =findViewById(R.id.tabbtn)
-        val spinbtn:        Button =findViewById(R.id.spinner)
+        val alertbtn: Button = findViewById(R.id.alertbtn)
+        val cardbtn: Button = findViewById(R.id.cardbtn)
+        val tabbtn: Button = findViewById(R.id.tabbtn)
+        val spinbtn: Button = findViewById(R.id.spinner)
         val intentbtn:      Button =findViewById(R.id.intentbtn)
         val sysbtn:         Button =findViewById(R.id.sysinfobtn)
         val scrRotatebtn:   Button =findViewById(R.id.orientation)
@@ -49,27 +53,27 @@ class MainActivity : AppCompatActivity() {
         val netbtn:         Button =findViewById(R.id.networkbtn)
         val scrollbtn:      Button =findViewById(R.id.scrollbtn)
         val txtclockbtn:    Button =findViewById(R.id.clockbtn)
-        registerForContextMenu(scrollbtn) // Register For Hold Action
 
+        registerForContextMenu(scrollbtn) // Register For Hold Action
 
         alertbtn.setOnClickListener {
             startActivity(Intent(this, AlertActivity::class.java))
         }
 
         cardbtn.setOnClickListener {
-            startActivity(Intent(this, cardView::class.java))
+            startActivity(Intent(this, CardView::class.java))
         }
 
         tabbtn.setOnClickListener {
-            startActivity(Intent(this, tabActivity::class.java))
+            startActivity(Intent(this, TabActivity::class.java))
         }
 
         spinbtn.setOnClickListener {
-            startActivity(Intent(this, spinnerActivity::class.java))
+            startActivity(Intent(this, SpinnerActivity::class.java))
         }
 
         intentbtn.setOnClickListener {
-            startActivity(Intent(this,implicit_intent::class.java))
+            startActivity(Intent(this, Implicit_intent::class.java))
         }
 
         sysbtn.setOnClickListener {
@@ -132,8 +136,8 @@ class MainActivity : AppCompatActivity() {
         @Nullable textColor: Int?
     ) {
         val t = Toast.makeText(context, text, duration)
-        if (backgroundColor != null) t.view
-            ?.setBackgroundTintList(ColorStateList.valueOf(backgroundColor))
+        if (backgroundColor != null) t.view?.backgroundTintList =
+            ColorStateList.valueOf(backgroundColor)
         if (textColor != null) (t.view!!.findViewById<View>(android.R.id.message) as TextView)
             .setTextColor(textColor)
         t.show()
@@ -188,7 +192,8 @@ class MainActivity : AppCompatActivity() {
         if(backPressedTime+2000>System.currentTimeMillis()) {
             backToast.cancel()
             super.onBackPressed()
-            return
+            //return
+            exitProcess(0)
         }
         else
             backToast.show()

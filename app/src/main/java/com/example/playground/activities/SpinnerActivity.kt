@@ -8,9 +8,9 @@ import android.widget.Spinner
 import android.widget.TextView
 import com.example.playground.R
 
-class spinnerActivity : AppCompatActivity() {
+class SpinnerActivity : AppCompatActivity() {
 
-    private val expert= BeerExpert()
+    private val expert = BeerExpert()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,7 @@ class spinnerActivity : AppCompatActivity() {
     }
 
     fun onBeerClick(view: View) {
-        val brands=findViewById<TextView>(R.id.brands)
+        val brands = findViewById<TextView>(R.id.brands)
         val color=findViewById<Spinner>(R.id.spincolor)
 
         // get the selected item in the spinner

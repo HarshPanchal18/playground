@@ -11,7 +11,7 @@ import com.example.playground.activities.tabs.tab2
 import com.example.playground.activities.tabs.tab3
 import com.google.android.material.tabs.TabLayout
 
-class tabActivity : AppCompatActivity() {
+class TabActivity : AppCompatActivity() {
 
     private lateinit var pager: ViewPager // creating object of ViewPager
     private lateinit var tab: TabLayout // creating object of TabLayout

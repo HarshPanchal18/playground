@@ -27,7 +27,7 @@ class SplashScreen : AppCompatActivity() {
         //Normal Handler is depricated , so we have to change the code little bit
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LockScreen::class.java))
             finish()
         },1000)
     }
