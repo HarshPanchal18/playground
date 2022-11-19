@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/dev/playground/app/src/main/res/drawable-anydpi/ic_action_exit.xml" value="0.124" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout-land/activity_main.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_alert.xml" value="0.21" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_auto_scroll.xml" value="0.25" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_bgcolor.xml" value="0.25" />
@@ -19,6 +20,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_scroll.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_scroll_h.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_scroll_v.xml" value="0.1717948717948718" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_scrollbar.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_spinner.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_splash_screen.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_sys_info.xml" value="0.5" />

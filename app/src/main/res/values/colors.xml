@@ -13,7 +13,8 @@
     <color name="colorPrimaryDark">#056008</color>
     <color name="colorAccent">#E39D36</color>
     <color name="buttonlayer1">#a85b5b</color>
-    <color name="buttonlayer2">#b1e374</color>
+    <color name="buttonlayer2">#79c936</color>
+    <color name="floatbutton">#b457fa</color>
 
 
     <color name="lightbluebg">#32a0a8</color>

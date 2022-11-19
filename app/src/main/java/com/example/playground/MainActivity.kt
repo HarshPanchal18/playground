@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.ContextMenu
@@ -15,44 +16,48 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.Nullable
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.ScrollingView
 import com.example.playground.activities.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.activity_alert.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        /*if(someExpression) {
-            setTheme(R.style.Theme_Black);
-        } else {
-            setTheme(R.style.AnotherTheme);
-        }*/
-
-        //supportActionBar?.title = "Playground"
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // R is a special class in java
         // that enables you to retrieve the references to resource in your app.
 
+        // Appbar Configs
+        supportActionBar?.title = "Playground"
+        val actionBar: ActionBar? = getSupportActionBar()
+        val colorDrawable = ColorDrawable(Color.parseColor("#f7ac34"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
+
+        val scrollTxt: TextView = findViewById(R.id.scrollingtxt)
+        scrollTxt.isSelected = true
+
         val alertbtn: Button = findViewById(R.id.alertbtn)
         val cardbtn: Button = findViewById(R.id.cardbtn)
         val tabbtn: Button = findViewById(R.id.tabbtn)
         val spinbtn: Button = findViewById(R.id.spinner)
-        val intentbtn:      Button =findViewById(R.id.intentbtn)
-        val sysbtn:         Button =findViewById(R.id.sysinfobtn)
-        val scrRotatebtn:   Button =findViewById(R.id.orientation)
-        val bgcolorbtn:     Button =findViewById(R.id.bgbtn)
-        val fltbtn:         FloatingActionButton =findViewById(R.id.floating)
-        val layout:         ConstraintLayout =findViewById(R.id.homelayout)
-        val netbtn:         Button =findViewById(R.id.networkbtn)
-        val scrollbtn:      Button =findViewById(R.id.scrollbtn)
-        val txtclockbtn:    Button =findViewById(R.id.clockbtn)
+        val intentbtn: Button = findViewById(R.id.intentbtn)
+        val sysbtn: Button = findViewById(R.id.sysinfobtn)
+        val scrRotatebtn: Button = findViewById(R.id.orientation)
+        val bgcolorbtn: Button = findViewById(R.id.bgbtn)
+        val fltbtn: FloatingActionButton = findViewById(R.id.floating)
+        val layout: ConstraintLayout = findViewById(R.id.homelayout)
+        val netbtn: Button = findViewById(R.id.networkbtn)
+        val scrollbtn: Button = findViewById(R.id.scrollbtn)
+        val txtclockbtn: Button = findViewById(R.id.clockbtn)
+        val progressbtn: Button = findViewById(R.id.progressbtn)
 
         registerForContextMenu(scrollbtn) // Register For Hold Action
 
@@ -122,11 +127,15 @@ class MainActivity : AppCompatActivity() {
             val view=toast.view
             view?.background?.setColorFilter(Color.BLACK,PorterDuff.Mode.SRC_IN)
             toast.show()*/
-            CustomToast(this,"Hold Me",Toast.LENGTH_SHORT,Color.BLACK,Color.WHITE)
+            CustomToast(this, "Hold Me", Toast.LENGTH_SHORT, Color.BLACK, Color.WHITE)
         }
 
         txtclockbtn.setOnClickListener {
-            startActivity(Intent(this,ClockActivity::class.java))
+            startActivity(Intent(this, ClockActivity::class.java))
+        }
+
+        progressbtn.setOnClickListener {
+            startActivity(Intent(this, ProgressbarActivity::class.java))
         }
     }
 
@@ -188,7 +197,7 @@ class MainActivity : AppCompatActivity() {
         exitProcess(0)
         */
 
-        backToast=Toast.makeText(this,"Press again to leave",Toast.LENGTH_SHORT)
+        backToast = Toast.makeText(this, "Press again to Exit", Toast.LENGTH_SHORT)
         if(backPressedTime+2000>System.currentTimeMillis()) {
             backToast.cancel()
             super.onBackPressed()
