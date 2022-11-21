@@ -5,6 +5,7 @@ package com.example.playground
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
+import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.ConnectivityManager
@@ -20,7 +21,6 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.ScrollingView
 import com.example.playground.activities.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.activity_alert.view.*
@@ -29,6 +29,11 @@ import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        // TODO Auto-generated method stub
+        super.onConfigurationChanged(newConfig)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -58,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         val scrollbtn: Button = findViewById(R.id.scrollbtn)
         val txtclockbtn: Button = findViewById(R.id.clockbtn)
         val progressbtn: Button = findViewById(R.id.progressbtn)
+        val imgbtn: Button = findViewById(R.id.imgbtn)
 
         registerForContextMenu(scrollbtn) // Register For Hold Action
 
@@ -96,20 +102,25 @@ class MainActivity : AppCompatActivity() {
 
         //--------Flat button
         fltbtn.setOnClickListener {
-            val builder=AlertDialog.Builder(this)
-            builder.setTitle("Exit")
-            builder.setMessage(R.string.dialogMessage2)
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Lock")
+            builder.setMessage(R.string.dialogMessageLock)
             builder.setIcon(android.R.drawable.ic_dialog_alert)
 
             //positive action
-            builder.setPositiveButton("Yes"){ _, which-> finish() }
+            builder.setPositiveButton("Yes") { _, which ->
+                startActivity(Intent(this, LockScreen::class.java))
+                finish()
+            }
 
             //cancel action
             builder.setNegativeButton("No")
-            { _, which->Toast.makeText(applicationContext,"Welcome Back :)",Toast.LENGTH_SHORT).show() }
+            { _, which ->
+                Toast.makeText(applicationContext, "Welcome Back :)", Toast.LENGTH_SHORT).show()
+            }
 
             //create the alert dialog
-            val alertDialog:AlertDialog=builder.create()
+            val alertDialog: AlertDialog = builder.create()
 
             //other properties
             alertDialog.setCancelable(false)
@@ -136,6 +147,10 @@ class MainActivity : AppCompatActivity() {
 
         progressbtn.setOnClickListener {
             startActivity(Intent(this, ProgressbarActivity::class.java))
+        }
+
+        imgbtn.setOnClickListener {
+            startActivity(Intent(this, ImgActivity::class.java))
         }
     }
 

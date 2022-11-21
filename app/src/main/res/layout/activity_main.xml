@@ -42,6 +42,7 @@
         android:layout_marginTop="20dp"
         android:text="AlertDialog"
         android:backgroundTint="@color/buttonlayer1"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +55,7 @@
         android:layout_marginTop="20dp"
         android:text="CARD"
         android:backgroundTint="@color/buttonlayer1"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.61"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,6 +68,7 @@
         android:layout_marginTop="20dp"
         android:text="Tab"
         android:backgroundTint="@color/buttonlayer1"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,6 +81,7 @@
         android:layout_marginTop="20dp"
         android:text="Spinner"
         android:backgroundTint="@color/buttonlayer2"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +94,7 @@
         android:layout_marginTop="20dp"
         android:text="Intent"
         android:backgroundTint="@color/buttonlayer2"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.414"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,6 +107,7 @@
         android:layout_marginTop="20dp"
         android:text="System Info"
         android:backgroundTint="@color/buttonlayer2"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.884"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,6 +120,7 @@
         android:layout_marginTop="20dp"
         android:text="Orientation"
         android:backgroundTint="@color/buttonlayer1"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.942"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,6 +133,7 @@
         android:layout_marginTop="20dp"
         android:text="Background Color"
         android:backgroundTint="@color/buttonlayer1"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,12 +145,13 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
         android:layout_marginBottom="92dp"
+
         app:backgroundTint="@color/floatbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_action_exit" />
+        app:srcCompat="@drawable/ic_action_lock" />
 
     <Button
         android:id="@+id/networkbtn"
@@ -151,6 +160,7 @@
         android:layout_marginTop="20dp"
         android:text="Are you online?"
         android:backgroundTint="@color/buttonlayer2"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toStartOf="parent"
@@ -163,6 +173,7 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/buttonlayer2"
         android:text="Scroll View"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.883"
         app:layout_constraintStart_toStartOf="parent"
@@ -175,6 +186,7 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/buttonlayer1"
         android:text="Clock"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
@@ -187,8 +199,21 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/buttonlayer1"
         android:text="Progress"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollbtn" />
+
+    <Button
+        android:id="@+id/imgbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Image"
+        android:backgroundTint="@color/buttonlayer1"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollbtn" />
 

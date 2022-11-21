@@ -5,6 +5,8 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
+        <activity
+            android:name=".activities.ImgActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.ProgressbarActivity"
             android:exported="false" />
@@ -87,7 +92,9 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboardHidden|screenSize">
 
             <!--
             Disabling for splash screen

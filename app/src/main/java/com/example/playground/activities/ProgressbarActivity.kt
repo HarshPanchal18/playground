@@ -5,7 +5,12 @@ import android.app.ProgressDialog
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
+import android.webkit.WebChromeClient
+import android.webkit.WebSettings
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Button
+import android.widget.ProgressBar
 import com.example.playground.R
 
 class ProgressbarActivity : Activity() {
@@ -19,6 +24,22 @@ class ProgressbarActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_progressbar)
         addListenerOnButton()
+
+        /*val w:WebView=findViewById(R.id.wbview)
+        val wSetting:WebSettings=w.settings
+        wSetting.javaScriptEnabled=true
+        w.webViewClient = WebViewClient()
+        w.loadUrl("https://www.google.com/")
+        w.webChromeClient = object : WebChromeClient() {
+            override fun onProgressChanged(view: WebView, newProgress: Int) {
+                progressBar!!.progress = newProgress
+                if (newProgress == 100)
+                    progressBar!!.visibility=View.GONE
+                else
+                    progressBar!!.progress = View.VISIBLE
+            }
+        }*/
+
     }
 
     private fun addListenerOnButton() {

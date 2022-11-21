@@ -37,7 +37,7 @@ class AlertActivity : AppCompatActivity() {
         alertbtn.setOnClickListener {
             val builder=AlertDialog.Builder(this)
             builder.setTitle(R.string.dialogTitle)
-            builder.setMessage(R.string.dialogMessage)
+            builder.setMessage(R.string.dialogMsgHome)
             builder.setIcon(android.R.drawable.ic_dialog_alert)
 
             //positive action

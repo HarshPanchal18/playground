@@ -1,8 +1,11 @@
 package com.example.playground.activities
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.view.Gravity
 import android.widget.Toast
 import com.example.playground.MainActivity
@@ -18,6 +21,8 @@ class LockScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lock_screen)
 
+        val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
+
         val r: Int = rand(0, 10)
         gobtn.setOnClickListener {
             if (passwdbox.text.toString() == r.toString()) {
@@ -25,10 +30,19 @@ class LockScreen : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else {
-                val toast = Toast.makeText(this, "Try Again :)", Toast.LENGTH_SHORT)
-                toast.setGravity(Gravity.CENTER, 0, 0)
-                toast.show()
+                vibrator.vibrate(
+                    VibrationEffect.createOneShot(
+                        200,
+                        VibrationEffect.DEFAULT_AMPLITUDE
+                    )
+                );
             }
+        }
+
+        hintbtn.setOnClickListener {
+            val toast = Toast.makeText(this, "Try :--> $r", Toast.LENGTH_SHORT)
+            toast.setGravity(Gravity.CENTER, 0, 0)
+            toast.show()
         }
     }
 

@@ -14,8 +14,9 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <string name="dialogTitle">Exit</string>
-    <string name="dialogMessage">Are you sure you want to go home??</string>
-    <string name="dialogMessage2">Are you sure you want to exit??</string>
+    <string name="dialogMsgHome">Are you sure you want to go home??</string>
+    <string name="dialogMsgExit">Are you sure you want to exit??</string>
+    <string name="dialogMessageLock">Are you sure you want to Lock??</string>
     <string name="title_activity_tab">tabActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>

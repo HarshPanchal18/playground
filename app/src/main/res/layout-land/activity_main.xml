@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/homelayout"
+    android:orientation="horizontal"
     android:background="#a2a899"
     tools:context=".MainActivity">
 
@@ -12,23 +13,23 @@
         android:id="@+id/scrollingtxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="4dp"
         android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
 
+        android:background="#bbbbbb"
         android:ellipsize="marquee"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:marqueeRepeatLimit="marquee_forever"
-        android:scrollHorizontally="true"
         android:scrollbarFadeDuration="@integer/material_motion_duration_short_1"
-        android:singleLine="true"
+        android:scrollHorizontally="true"
 
+        android:singleLine="true"
         android:text="Hello World!                  Hello World!                    Hello World!"
         android:textAlignment="center"
         android:textColor="#2e7056"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:background="#bbbbbb"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,7 +144,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollingtxt"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_action_exit" />
+        app:srcCompat="@drawable/ic_action_lock" />
 
     <Button
         android:id="@+id/networkbtn"
@@ -161,13 +162,14 @@
         android:id="@+id/scrollbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="@color/buttonlayer2"
         android:text="Scroll View"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollingtxt" />
+        app:layout_constraintTop_toBottomOf="@+id/clockbtn" />
 
     <Button
         android:id="@+id/clockbtn"
@@ -190,6 +192,20 @@
         android:text="Progress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollingtxt" />
+
+    <Button
+        android:id="@+id/imgbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/buttonlayer1"
+
+        android:text="Image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollingtxt" />
 
