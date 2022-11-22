@@ -1,7 +1,5 @@
 package com.example.playground
 
-//implementation com.google.android.material:material:1.4.0
-
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -26,14 +24,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.playground.activities.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_alert.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.system.exitProcess
 
-
 class MainActivity : AppCompatActivity() {
 
-    override fun onConfigurationChanged(newConfig: Configuration) {
+     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
     }
 
@@ -101,7 +99,6 @@ class MainActivity : AppCompatActivity() {
 
         bgcolorbtn.setOnClickListener {
             startActivity(Intent(this,Bgcolor::class.java))
-            //Settings.System.putInt(this.contentResolver,"show_touches",0)
         }
 
         //--------Flat button
@@ -112,16 +109,14 @@ class MainActivity : AppCompatActivity() {
             builder.setIcon(android.R.drawable.ic_dialog_alert)
 
             //positive action
-            builder.setPositiveButton("Yes") { _, which ->
+            builder.setPositiveButton("Yes") { _, _ ->
                 startActivity(Intent(this, LockScreen::class.java))
                 finish()
             }
 
             //cancel action
             builder.setNegativeButton("No")
-            { _, which ->
-                Toast.makeText(applicationContext, "Welcome Back :)", Toast.LENGTH_SHORT).show()
-            }
+            { _, _ -> Toast.makeText(applicationContext, "Welcome Back :)", Toast.LENGTH_SHORT).show() }
 
             //create the alert dialog
             val alertDialog: AlertDialog = builder.create()
@@ -203,7 +198,7 @@ class MainActivity : AppCompatActivity() {
         return netInfo != null && netInfo.isConnectedOrConnecting
     }
 
-    fun checkConnection() {
+    private fun checkConnection() {
         if (isOnline())
             Toast.makeText(this, "Yes", Toast.LENGTH_SHORT).show()
          else
@@ -212,24 +207,29 @@ class MainActivity : AppCompatActivity() {
 
     // Ask again when exit
     private var backPressedTime:Long=0
-    lateinit var backToast: Toast
+    lateinit var layout:ConstraintLayout
 
     override fun onBackPressed() {
-        /*
-        this@MainActivity.finish()
-        exitProcess(0)
-        */
 
-        backToast = Toast.makeText(this, "Press again to Exit", Toast.LENGTH_SHORT)
+        /*this@MainActivity.finish()
+        exitProcess(0)*/
+
         if(backPressedTime+2000>System.currentTimeMillis()) {
-            backToast.cancel()
             super.onBackPressed()
-            //return
             exitProcess(0)
         }
-        else
-            backToast.show()
-
+        else{
+            layout=findViewById(R.id.homelayout)
+            val snackBar=
+                Snackbar.make(homelayout,"Press back again to exit",Snackbar.LENGTH_SHORT)
+                .setAction("BACK"){
+                    Snackbar.make(homelayout,"Welcome",Snackbar.LENGTH_SHORT).show()
+                }
+            snackBar.setActionTextColor(Color.YELLOW)
+            val snackBarView=snackBar.view
+            snackBarView.setBackgroundColor(Color.BLACK)
+            snackBar.show()
+        }
         backPressedTime= System.currentTimeMillis()
     }
 
@@ -245,17 +245,13 @@ class MainActivity : AppCompatActivity() {
             R.id.action_setting->{
                 Toast.makeText(applicationContext, "clicked on setting", Toast.LENGTH_LONG).show()
                 val intent=Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
-                //val intent=Intent(Settings.ACTION_SETTINGS)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 val uri: Uri =Uri.fromParts("package",packageName,null)
                 intent.data = uri
                 startActivity(intent)
                 true
-                /*
-                startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
-                data = Uri.fromParts("package", packageName, null)
-                })
-                */
+                /*startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                    data = Uri.fromParts("package", packageName, null)})*/
             }
             R.id.action_share->{
                 Toast.makeText(applicationContext, "clicked on share", Toast.LENGTH_LONG).show()
@@ -269,16 +265,13 @@ class MainActivity : AppCompatActivity() {
                 builder.setIcon(android.R.drawable.ic_dialog_alert)
 
                 //positive action
-                builder.setPositiveButton("Yes") { _, which ->
+                builder.setPositiveButton("Yes") { _, _ ->
                     //startActivity(Intent(this, LockScreen::class.java))
-                    finish()
-                }
+                    finish() }
 
                 //cancel action
                 builder.setNegativeButton("No")
-                { _, _ ->
-                    Toast.makeText(applicationContext, "Welcome Back :)", Toast.LENGTH_SHORT).show()
-                }
+                { _, _ -> Toast.makeText(applicationContext, "Welcome Back :)", Toast.LENGTH_SHORT).show() }
 
                 //create the alert dialog
                 val alertDialog: AlertDialog = builder.create()
