@@ -9,8 +9,11 @@ import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.ConnectivityManager
+import android.net.Uri
 import android.os.Bundle
+import android.provider.Settings
 import android.view.ContextMenu
+import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
@@ -29,8 +32,8 @@ import kotlin.system.exitProcess
 
 
 class MainActivity : AppCompatActivity() {
+
     override fun onConfigurationChanged(newConfig: Configuration) {
-        // TODO Auto-generated method stub
         super.onConfigurationChanged(newConfig)
     }
 
@@ -42,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         // Appbar Configs
         supportActionBar?.title = "Playground"
-        val actionBar: ActionBar? = getSupportActionBar()
+        val actionBar: ActionBar? = supportActionBar
         val colorDrawable = ColorDrawable(Color.parseColor("#f7ac34"))
         actionBar?.setBackgroundDrawable(colorDrawable)
 
@@ -64,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         val txtclockbtn: Button = findViewById(R.id.clockbtn)
         val progressbtn: Button = findViewById(R.id.progressbtn)
         val imgbtn: Button = findViewById(R.id.imgbtn)
+        val stopwbtn: Button = findViewById(R.id.stopwatchbtn)
 
         registerForContextMenu(scrollbtn) // Register For Hold Action
 
@@ -152,6 +156,10 @@ class MainActivity : AppCompatActivity() {
         imgbtn.setOnClickListener {
             startActivity(Intent(this, ImgActivity::class.java))
         }
+
+        stopwbtn.setOnClickListener {
+            startActivity(Intent(this, Stopwatch::class.java))
+        }
     }
 
     fun CustomToast(
@@ -223,5 +231,64 @@ class MainActivity : AppCompatActivity() {
             backToast.show()
 
         backPressedTime= System.currentTimeMillis()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.options_menu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        Toast.makeText(this,"Selected",Toast.LENGTH_SHORT).show()
+        return when(item.itemId)
+        {
+            R.id.action_setting->{
+                Toast.makeText(applicationContext, "clicked on setting", Toast.LENGTH_LONG).show()
+                val intent=Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                //val intent=Intent(Settings.ACTION_SETTINGS)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                val uri: Uri =Uri.fromParts("package",packageName,null)
+                intent.data = uri
+                startActivity(intent)
+                true
+                /*
+                startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                data = Uri.fromParts("package", packageName, null)
+                })
+                */
+            }
+            R.id.action_share->{
+                Toast.makeText(applicationContext, "clicked on share", Toast.LENGTH_LONG).show()
+                true
+            }
+            R.id.action_exit->{
+                Toast.makeText(applicationContext, "clicked on exit", Toast.LENGTH_LONG).show()
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Lock")
+                builder.setMessage(R.string.dialogMsgExit)
+                builder.setIcon(android.R.drawable.ic_dialog_alert)
+
+                //positive action
+                builder.setPositiveButton("Yes") { _, which ->
+                    //startActivity(Intent(this, LockScreen::class.java))
+                    finish()
+                }
+
+                //cancel action
+                builder.setNegativeButton("No")
+                { _, _ ->
+                    Toast.makeText(applicationContext, "Welcome Back :)", Toast.LENGTH_SHORT).show()
+                }
+
+                //create the alert dialog
+                val alertDialog: AlertDialog = builder.create()
+
+                //other properties
+                alertDialog.setCancelable(false)
+                alertDialog.show()
+                true
+            }
+            else->super.onOptionsItemSelected(item)
+        }
     }
 }

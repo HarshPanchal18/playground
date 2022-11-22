@@ -23,7 +23,7 @@
         android:scrollbarFadeDuration="@integer/material_motion_duration_short_1"
         android:singleLine="true"
 
-        android:text="Hello World!                  Hello World!                    Hello World!"
+        android:text="Hello World!                  Hello World!                    Hello World!                    Hello World!"
         android:textAlignment="center"
         android:textColor="#2e7056"
         android:textSize="25dp"
@@ -216,5 +216,18 @@
         app:layout_constraintHorizontal_bias="0.946"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollbtn" />
+
+    <Button
+        android:id="@+id/stopwatchbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/buttonlayer2"
+
+        android:text="Stopwatch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollingtxt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
