@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:onClick="onStart"
+        android:onClick="onClickStart"
         android:text="Start"/>
 
     <Button
@@ -40,9 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:onClick="onStop"
+        android:onClick="onClickStop"
         android:text="Stop"/>
 
+    <!--
     <Chronometer
         android:id="@+id/chronotime"
         android:layout_width="match_parent"
@@ -63,5 +64,5 @@
         android:onClick="StartStopChronometer"
         android:text="Start"
         android:textStyle="bold"/>
-
+-->
 </LinearLayout>

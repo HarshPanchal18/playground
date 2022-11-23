@@ -3,6 +3,7 @@ package com.example.playground.activities
 import android.os.Bundle
 import android.os.SystemClock
 import android.os.Handler
+import android.os.PersistableBundle
 import android.view.View
 import android.widget.Button
 import android.widget.Chronometer
@@ -12,42 +13,42 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.playground.R
 import java.util.*
 
-
 class Stopwatch : AppCompatActivity() {
 
     private var seconds: Int = 0
     private var running: Boolean = false
-
-    private var start:Boolean = false
-    private var chrono:Chronometer?=null
+    private var wasRunning:Boolean = false // a new variable, records whether the stopwatch was running before the onStop() was called.
+    // to record whether the stopwatch was called
+    // so that we know whether to set it running again when the activity becomes visible
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stopwatch)
         supportActionBar!!.hide()
 
-        chrono=findViewById(R.id.chronotime)
-        /*chrono?.onChronometerTickListener = object:Chronometer.OnChronometerTickListener{
-            override fun onChronometerTick(chronoChanged: Chronometer?) {
-                chrono= chronoChanged!!
-            }
-        }*/
-
-        // lambda format of above
-        chrono?.onChronometerTickListener =
-          OnChronometerTickListener { chronoChanged -> chrono = chronoChanged }
+        if(savedInstanceState!=null) {
+            seconds=savedInstanceState.getInt("seconds")
+            running=savedInstanceState.getBoolean("running")
+            wasRunning=savedInstanceState.getBoolean("wasRunning") // save the state
+        }
 
         runTimer()
     }
 
-        fun onStart(view: View) { running = true }
+     fun onClickStart(v:View) {
+        if(wasRunning)
+            running=true
+    }
 
-        fun onStop(view: View) { running = false }
+    fun onClickStop(v:View) {
+        wasRunning=running // record whether the stopwatch was running when the onStop() is called
+        running=false
+    }
 
-        fun onReset(view: View) {
-            running=false
-            seconds=0
-        }
+    fun onReset(view:View) {
+        running=false
+        seconds=0
+    }
 
     private fun runTimer(){
         val timeView: TextView =findViewById(R.id.timeview)
@@ -80,16 +81,13 @@ class Stopwatch : AppCompatActivity() {
         })
     }
 
-    fun StartStopChronometer(view: View) {
-        if(start){
-            chrono?.stop()
-            start=false
-            (view as Button).text = "Start"
-        } else {
-            chrono?.base=SystemClock.elapsedRealtime()
-            chrono?.stop()
-            start=true
-            (view as Button).text ="Stop"
+    // added for save the instance rotating the device
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.run {
+            putInt("seconds",seconds)
+            putBoolean("running",running)
+            putBoolean("wasRunning",wasRunning)
         }
     }
 }
