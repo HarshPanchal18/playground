@@ -15,8 +15,8 @@ import java.util.*
 
 class Stopwatch : AppCompatActivity() {
 
-    private var seconds: Int = 0
-    private var running: Boolean = false
+    private var seconds: Int = 0 // number of seconds displayed on the screen
+    private var running: Boolean = false // is the stopwatch is running
     private var wasRunning:Boolean = false // a new variable, records whether the stopwatch was running before the onStop() was called.
     // to record whether the stopwatch was called
     // so that we know whether to set it running again when the activity becomes visible
@@ -35,19 +35,44 @@ class Stopwatch : AppCompatActivity() {
         runTimer()
     }
 
-     fun onClickStart(v:View) {
-        if(wasRunning)
+    // added for save the instance while rotating the device
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.run {
+            putInt("seconds",seconds)
+            putBoolean("running",running)
+            putBoolean("wasRunning",wasRunning)
+        }
+    }
+
+    fun onClickStart(v:View) {
+        //if(wasRunning)
             running=true
     }
 
     fun onClickStop(v:View) {
-        wasRunning=running // record whether the stopwatch was running when the onStop() is called
+        //wasRunning=running // record whether the stopwatch was running when the onStop() is called
         running=false
     }
 
     fun onReset(view:View) {
         running=false
         seconds=0
+    }
+
+    override fun onResume() {
+        super.onResume() // called when the activity is started or resumed
+        if(wasRunning)
+            running =true
+    }
+
+    override fun onPause() {
+        /* If the activity is stopped, onPause() is called prior to calling onStop()
+            onPause() is called irrespective of whether the activity is paused or stopped,
+            which means we can move our onStop() code to onPause(). */
+        super.onPause()
+        wasRunning=running
+        running=false
     }
 
     private fun runTimer(){
@@ -79,15 +104,5 @@ class Stopwatch : AppCompatActivity() {
                 * */
             }
         })
-    }
-
-    // added for save the instance rotating the device
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.run {
-            putInt("seconds",seconds)
-            putBoolean("running",running)
-            putBoolean("wasRunning",wasRunning)
-        }
     }
 }
