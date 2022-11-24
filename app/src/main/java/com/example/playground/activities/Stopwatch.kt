@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.os.Handler
 import android.os.PersistableBundle
+import android.system.SystemCleaner
 import android.view.View
 import android.widget.Button
 import android.widget.Chronometer
@@ -21,6 +22,7 @@ class Stopwatch : AppCompatActivity() {
     // to record whether the stopwatch was called
     // so that we know whether to set it running again when the activity becomes visible
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stopwatch)
@@ -31,8 +33,14 @@ class Stopwatch : AppCompatActivity() {
             running=savedInstanceState.getBoolean("running")
             wasRunning=savedInstanceState.getBoolean("wasRunning") // save the state
         }
-
         runTimer()
+
+        val chronobtn:Button=findViewById(R.id.startchrono)
+        chronobtn.setOnClickListener {
+            val chronometer:Chronometer=findViewById(R.id.chronometer)
+            chronometer.base=SystemClock.elapsedRealtime()
+            chronometer.start()
+        }
     }
 
     // added for save the instance while rotating the device

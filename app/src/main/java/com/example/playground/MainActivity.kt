@@ -15,6 +15,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.Nullable
@@ -50,58 +51,50 @@ class MainActivity : AppCompatActivity() {
         val scrollTxt: TextView = findViewById(R.id.scrollingtxt)
         scrollTxt.isSelected = true
 
-        val alertbtn: Button = findViewById(R.id.alertbtn)
-        val cardbtn: Button = findViewById(R.id.cardbtn)
-        val tabbtn: Button = findViewById(R.id.tabbtn)
-        val spinbtn: Button = findViewById(R.id.spinner)
-        val intentbtn: Button = findViewById(R.id.intentbtn)
-        val sysbtn: Button = findViewById(R.id.sysinfobtn)
-        val scrRotatebtn: Button = findViewById(R.id.orientation)
-        val bgcolorbtn: Button = findViewById(R.id.bgbtn)
-        val fltbtn: FloatingActionButton = findViewById(R.id.floating)
         val layout: ConstraintLayout = findViewById(R.id.homelayout)
-        val netbtn: Button = findViewById(R.id.networkbtn)
-        val scrollbtn: Button = findViewById(R.id.scrollbtn)
-        val txtclockbtn: Button = findViewById(R.id.clockbtn)
-        val progressbtn: Button = findViewById(R.id.progressbtn)
-        val imgbtn: Button = findViewById(R.id.imgbtn)
-        val stopwbtn: Button = findViewById(R.id.stopwatchbtn)
 
-        registerForContextMenu(scrollbtn) // Register For Hold Action
-
+        val alertbtn: Button = findViewById(R.id.alertbtn)
         alertbtn.setOnClickListener {
             startActivity(Intent(this, AlertActivity::class.java))
         }
 
+        val cardbtn: Button = findViewById(R.id.cardbtn)
         cardbtn.setOnClickListener {
             startActivity(Intent(this, CardView::class.java))
         }
 
+        val tabbtn: Button = findViewById(R.id.tabbtn)
         tabbtn.setOnClickListener {
             startActivity(Intent(this, TabActivity::class.java))
         }
 
+        val spinbtn: Button = findViewById(R.id.spinner)
         spinbtn.setOnClickListener {
             startActivity(Intent(this, SpinnerActivity::class.java))
         }
 
+        val intentbtn: Button = findViewById(R.id.intentbtn)
         intentbtn.setOnClickListener {
             startActivity(Intent(this, Implicit_intent::class.java))
         }
 
+        val sysbtn: Button = findViewById(R.id.sysinfobtn)
         sysbtn.setOnClickListener {
             startActivity(Intent(this, SysInfo::class.java))
         }
 
+        val scrRotatebtn: Button = findViewById(R.id.orientation)
         scrRotatebtn.setOnClickListener {
             startActivity(Intent(this, ScreenRotation::class.java))
         }
 
+        val bgcolorbtn: Button = findViewById(R.id.bgbtn)
         bgcolorbtn.setOnClickListener {
             startActivity(Intent(this,Bgcolor::class.java))
         }
 
         //--------Flat button
+        val fltbtn: FloatingActionButton = findViewById(R.id.floating)
         fltbtn.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Lock")
@@ -126,10 +119,13 @@ class MainActivity : AppCompatActivity() {
             alertDialog.show()
         }
 
+        val netbtn: Button = findViewById(R.id.networkbtn)
         netbtn.setOnClickListener {
             checkConnection()
         }
 
+        val scrollbtn: Button = findViewById(R.id.scrollbtn)
+        registerForContextMenu(scrollbtn) // Register For Hold Action
         scrollbtn.setOnClickListener {
             /*val toast:Toast=Toast.makeText(this,"Hold Me",Toast.LENGTH_SHORT)
             toast.setGravity(Gravity.CENTER,0,0)
@@ -140,21 +136,43 @@ class MainActivity : AppCompatActivity() {
             CustomToast(this, "Hold Me", Toast.LENGTH_SHORT, Color.BLACK, Color.WHITE)
         }
 
+        val txtclockbtn: Button = findViewById(R.id.clockbtn)
         txtclockbtn.setOnClickListener {
             startActivity(Intent(this, ClockActivity::class.java))
         }
 
+        val progressbtn: Button = findViewById(R.id.progressbtn)
         progressbtn.setOnClickListener {
             startActivity(Intent(this, ProgressbarActivity::class.java))
         }
 
+        val imgbtn: Button = findViewById(R.id.imgbtn)
         imgbtn.setOnClickListener {
             startActivity(Intent(this, ImgActivity::class.java))
         }
 
+        val stopwbtn: Button = findViewById(R.id.stopwatchbtn)
         stopwbtn.setOnClickListener {
             startActivity(Intent(this, Stopwatch::class.java))
         }
+
+        val seekbar:SeekBar = findViewById(R.id.seekbar)
+        val seektext:TextView = findViewById(R.id.barnumber)
+        seektext.text= seekbar.progress.toString()+"/"+seekbar.max
+        seekbar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
+            var prog_val:Int=0
+            override fun onProgressChanged(seekbarr: SeekBar?, progress: Int, fromuser: Boolean) {
+                prog_val=progress
+            }
+
+            override fun onStartTrackingTouch(seekbarr: SeekBar?) { // called as you starting to slide
+                seektext.text=prog_val.toString()+"/"+seekbar.max
+            }
+
+            override fun onStopTrackingTouch(seekbarr: SeekBar?) {
+                seektext.text=prog_val.toString()+"/"+seekbar.max
+            }
+        })
     }
 
     fun CustomToast(

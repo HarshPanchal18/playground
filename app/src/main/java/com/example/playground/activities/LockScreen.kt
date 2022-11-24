@@ -1,6 +1,10 @@
 package com.example.playground.activities
 
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -28,14 +32,14 @@ class LockScreen : AppCompatActivity() {
             if (passwdbox.text.toString() == r.toString()) {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                passwdbox.backgroundTintList=ColorStateList.valueOf(Color.GREEN)
                 finish()
             } else {
                 vibrator.vibrate(
-                    VibrationEffect.createOneShot(
-                        200,
-                        VibrationEffect.DEFAULT_AMPLITUDE
-                    )
-                );
+                    VibrationEffect
+                        .createOneShot(200,VibrationEffect.DEFAULT_AMPLITUDE)
+                )
+                passwdbox.backgroundTintList=ColorStateList.valueOf(Color.RED)
             }
         }
 
