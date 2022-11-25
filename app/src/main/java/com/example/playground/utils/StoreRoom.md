@@ -98,3 +98,27 @@ fun CustomToast(
 ```kotlin
 import kotlinx.android.synthetic.main.activity_main.*
 ```
+
+## _QnA_
+
+#### I added a String to my `strings.xml` file, but I can't see it in R.java. Why isn't it there?  
+> Android Studio generates R.java when you save any changes you've made. If you've added a resource but can't see it in R.java, check that your changes have been saved
+> R.java also gets updated when the app gets built. The app builds when you run the app, so running the app will also update `R.java`
+
+#### What type of object is returned by getSelectedItem()?
+> It's declared as type `object`. Because we need a string-array for the values, the actual value returned in this case is a `String`
+
+#### Why did we've to replace the activity code that Android Studio created for us?
+> IDEs such as Android Studio include functions and utilities that can save you a lot of time.
+> They generate a lot of code for you, and sometimes this can be useful. But when you're learning a new language or development area such as Android, we think it's best ot learn about the fundamentals of the language rather than what th IDE genrates for you.
+> This way you'll develop a greater understanding of the language.
+
+#### Why does Android run each app inside a separate process?
+> For security and stability.
+> This approach prevents one app from accessing the data of another.
+> It also means if one app crashes, it won't take others down with it.
+
+#### Why have an `onCreate()` method in our activity? Why not just put that code inside a `constructor` ?
+> Android needs to set up the environment for the activity after it's constructed.
+> Once the environment is ready, Android calls onCreate().
+> That's why code to setup the screen goes inside onCreate() instead pf constructor.

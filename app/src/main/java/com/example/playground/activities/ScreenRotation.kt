@@ -1,9 +1,9 @@
 package com.example.playground.activities
 
 import android.content.pm.ActivityInfo
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.widget.Switch
+import androidx.appcompat.app.AppCompatActivity
 import com.example.playground.R
 
 class ScreenRotation : AppCompatActivity() {
@@ -11,16 +11,12 @@ class ScreenRotation : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rotation)
 
-        val Land: Button =findViewById(R.id.landscapebtn)
-        val Port: Button =findViewById(R.id.portbtn)
+        val oswitch:Switch =findViewById(R.id.orientationswitch)
 
-        Land!!.setOnClickListener {
-            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+        oswitch.setOnCheckedChangeListener { _, on ->
+            requestedOrientation =
+                if (on) ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+                else ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         }
-
-        Port!!.setOnClickListener {
-            requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-        }
-
     }
 }

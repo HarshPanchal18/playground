@@ -17,7 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ProfileFragment"
+            android:exported="false" />
+        <activity
+            android:name=".HomeFragment"
+            android:exported="false" />
+        <activity
+            android:name=".AddFragrment"
+            android:exported="false" />
         <activity
             android:name=".activities.LaunchActivity"
             android:exported="false" />

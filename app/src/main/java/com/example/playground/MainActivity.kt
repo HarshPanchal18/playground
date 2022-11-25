@@ -48,8 +48,6 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
         val scrollTxt: TextView = findViewById(R.id.scrollingtxt)
         scrollTxt.isSelected = true
 
-        val layout: ConstraintLayout = findViewById(R.id.homelayout)
-
         val alertbtn: Button = findViewById(R.id.alertbtn)
         alertbtn.setOnClickListener {
             startActivity(Intent(this, AlertActivity::class.java))
@@ -164,7 +162,7 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
         stopwbtn.setOnClickListener {
             startActivity(Intent(this, Stopwatch::class.java))
         }
-
+        var BackLightValue:Float= 1f
         val seekbar:SeekBar = findViewById(R.id.seekbar)
         val seektext:TextView = findViewById(R.id.barnumber)
         seektext.text= seekbar.progress.toString()+"/"+seekbar.max
@@ -172,6 +170,10 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
             var prog_val:Int=0
             override fun onProgressChanged(seekbarr: SeekBar?, progress: Int, fromuser: Boolean) {
                 prog_val=progress
+                BackLightValue = ((progress/100).toFloat())//.toFloat()// / 100
+                val layoutParams = window.attributes
+                layoutParams.screenBrightness = BackLightValue
+                window.attributes = layoutParams
             }
 
             override fun onStartTrackingTouch(seekbarr: SeekBar?) { // called as you starting to slide
@@ -192,7 +194,7 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
     fun CustomToast(
         context: Context?, text: String?, duration: Int,
         @Nullable backgroundColor: Int?,
-        @Nullable textColor: Int?
+        @Nullable textColor: Int?,
     ) {
         val t = Toast.makeText(context, text, duration)
         if (backgroundColor != null) t.view?.backgroundTintList =
@@ -206,7 +208,8 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
     override fun onCreateContextMenu(
         menu: ContextMenu?,
         v: View?,
-        menuInfo: ContextMenu.ContextMenuInfo?) {
+        menuInfo: ContextMenu.ContextMenuInfo?,
+    ) {
         super.onCreateContextMenu(menu, v, menuInfo)
         menu?.setHeaderTitle("Select Orientation:")
 
@@ -237,10 +240,9 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
     }*/
 
     // Online button
-    protected fun isOnline(): Boolean {
+    private fun isOnline(): Boolean {
         val cm = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         val netInfo = cm.activeNetworkInfo
-
         return netInfo != null && netInfo.isConnectedOrConnecting
     }
 
