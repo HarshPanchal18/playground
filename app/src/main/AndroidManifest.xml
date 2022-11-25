@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
+
+        <activity
+            android:name=".activities.LaunchActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.Stopwatch"
             android:exported="false" />

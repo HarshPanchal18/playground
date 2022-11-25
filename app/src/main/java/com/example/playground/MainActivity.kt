@@ -14,10 +14,7 @@ import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.SeekBar
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.annotation.Nullable
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
@@ -26,11 +23,11 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.playground.activities.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_alert.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.system.exitProcess
 
-class MainActivity : AppCompatActivity() {
+
+class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener { // implements Popmenu for popup window
 
      override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
@@ -129,12 +126,24 @@ class MainActivity : AppCompatActivity() {
         scrollbtn.setOnClickListener {
             /*val toast:Toast=Toast.makeText(this,"Hold Me",Toast.LENGTH_SHORT)
             toast.setGravity(Gravity.CENTER,0,0)
-            //toast.setGravity(Gravity.CENTER,-50,0)
             val view=toast.view
             view?.background?.setColorFilter(Color.BLACK,PorterDuff.Mode.SRC_IN)
             toast.show()*/
             CustomToast(this, "Hold Me", Toast.LENGTH_SHORT, Color.BLACK, Color.WHITE)
         }
+
+        /*scrollbtn.setOnClickListener(object: View.OnClickListener{
+            /*override fun onClick(v: View?) {
+                val popup:PopupMenu= PopupMenu(this,v)
+                //popup.setOnMenuItemClickListener(MainActivity)
+            }*/
+            override fun onClick(v: View?) {
+                val popup = PopupMenu(this@MainActivity, v)
+                popup.setOnMenuItemClickListener(this@MainActivity)
+                popup.inflate(R.menu.popup_menu)
+                popup.show()
+            }
+        })*/
 
         val txtclockbtn: Button = findViewById(R.id.clockbtn)
         txtclockbtn.setOnClickListener {
@@ -173,6 +182,11 @@ class MainActivity : AppCompatActivity() {
                 seektext.text=prog_val.toString()+"/"+seekbar.max
             }
         })
+
+        val launchbtn:Button=findViewById(R.id.launchbtn)
+        launchbtn.setOnClickListener {
+            startActivity(Intent(this,LaunchActivity::class.java))
+        }
     }
 
     fun CustomToast(
@@ -208,6 +222,20 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    // For popup menu
+    /*override fun onMenuItemClick(item: MenuItem): Boolean {
+        Toast.makeText(this, "Selected Item: " + item.title, Toast.LENGTH_SHORT).show()
+        return when (item.itemId) {
+            R.menu.popup_menu ->                 // do your code
+                true
+            /*R.id.copy_item ->                 // do your code
+                true
+            R.id.print_item ->                 // do your code
+                true*/
+            else -> false
+        }
+    }*/
+
     // Online button
     protected fun isOnline(): Boolean {
         val cm = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -228,7 +256,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var layout:ConstraintLayout
 
     override fun onBackPressed() {
-
         /*this@MainActivity.finish()
         exitProcess(0)*/
 

@@ -39,6 +39,7 @@ class LockScreen : AppCompatActivity() {
                     VibrationEffect
                         .createOneShot(200,VibrationEffect.DEFAULT_AMPLITUDE)
                 )
+                passwdbox.setText("")
                 passwdbox.backgroundTintList=ColorStateList.valueOf(Color.RED)
             }
         }
