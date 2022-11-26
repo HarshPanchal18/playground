@@ -18,14 +18,20 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
-            android:name=".ProfileFragment"
+            android:name=".activities.BottomTab"
             android:exported="false" />
         <activity
-            android:name=".HomeFragment"
-            android:exported="false" />
+            android:name=".fragments.ProfileFragment"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
-            android:name=".AddFragrment"
-            android:exported="false" />
+            android:name=".fragments.HomeFragment"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".fragments.AddFragrment"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".activities.LaunchActivity"
             android:exported="false" />
@@ -84,6 +90,7 @@
                 So whenever the app will execute the user can see the splash screen
                 at the beginning.
                 -->
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />

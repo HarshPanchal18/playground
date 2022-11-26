@@ -20,7 +20,9 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.viewpager.widget.ViewPager
 import com.example.playground.activities.*
+import com.example.playground.adapters.PagerViewAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
      override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +50,7 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
 
         val scrollTxt: TextView = findViewById(R.id.scrollingtxt)
         scrollTxt.isSelected = true
+
 
         val alertbtn: Button = findViewById(R.id.alertbtn)
         alertbtn.setOnClickListener {
@@ -162,6 +166,7 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
         stopwbtn.setOnClickListener {
             startActivity(Intent(this, Stopwatch::class.java))
         }
+
         var BackLightValue:Float= 1f
         val seekbar:SeekBar = findViewById(R.id.seekbar)
         val seektext:TextView = findViewById(R.id.barnumber)
@@ -188,6 +193,11 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
         val launchbtn:Button=findViewById(R.id.launchbtn)
         launchbtn.setOnClickListener {
             startActivity(Intent(this,LaunchActivity::class.java))
+        }
+
+        val bottomtab:Button=findViewById(R.id.bottomtab)
+        bottomtab.setOnClickListener {
+            startActivity(Intent(this,BottomTab::class.java))
         }
     }
 
