@@ -3,12 +3,9 @@ package com.example.playground.activities
 import android.os.Bundle
 import android.os.SystemClock
 import android.os.Handler
-import android.os.PersistableBundle
-import android.system.SystemCleaner
 import android.view.View
 import android.widget.Button
 import android.widget.Chronometer
-import android.widget.Chronometer.OnChronometerTickListener
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.playground.R

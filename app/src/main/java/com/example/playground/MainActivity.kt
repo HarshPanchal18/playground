@@ -199,6 +199,11 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
         sendsms.setOnClickListener {
             startActivity(Intent(this,SendSMS::class.java))
         }
+
+        val pickerbtn:Button=findViewById(R.id.pickerbtn)
+        pickerbtn.setOnClickListener {
+            startActivity(Intent(this,PickerActivity::class.java))
+        }
     }
 
     fun CustomToast(
