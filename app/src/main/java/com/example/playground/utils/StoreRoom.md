@@ -99,6 +99,43 @@ fun CustomToast(
 import kotlinx.android.synthetic.main.activity_main.*
 ```
 
+### Pass the value from 1st Activity to 3rd
+```kotlin
+/*
+ 1st Activity - Customized ListView
+ 2nd Activity - SingleMenuItemActivity
+ 3rd Activity - InsertionExample
+*/
+
+val intent=Intent(CustomizedListview.this,InsertionExample.class)
+intent.putExtra("orderid",getOrderid);
+startActivity(intent);
+```
+* In your 3rd Activity
+```kotlin
+ val bundle:Bundle = data.getExtras();
+ val getOrderId:String = bundle.getString("orderid");
+```
+Another way
+```java
+//your 1st activity (CustomizedListview)
+String str:String=txtView.getText().toString();
+Intent i=new Intent(getApplicationContext(),SingleMenuItemActivity.class);
+i.putExtra("message",str);
+startActivity(i);
+
+//your 2nd Activity (SingleMenuItemActivity)
+String str= getIntent().getStringExtra("message");
+Intent i = new Intent(getApplicationContext(), InsertionExample.class);
+i.putExtra("message", str);
+startActivity(i);
+
+//you 3rd Activity (InsertionExample)
+Intent int=getIntent();
+String str= int.getStringExtra("message");
+txtView.setText(str);
+```
+
 ## _QnA_
 
 #### I added a String to my `strings.xml` file, but I can't see it in R.java. Why isn't it there?  
