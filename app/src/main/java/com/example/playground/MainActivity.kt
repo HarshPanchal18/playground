@@ -10,10 +10,7 @@ import android.net.ConnectivityManager
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
-import android.view.ContextMenu
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
 import android.widget.*
 import androidx.annotation.Nullable
 import androidx.appcompat.app.ActionBar
@@ -28,14 +25,13 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.system.exitProcess
 
-
 class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener { // implements Popmenu for popup window
 
      override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
     }
 
-
+    var BackLightValue: Float = 0.5f
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -167,16 +163,15 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
             startActivity(Intent(this, Stopwatch::class.java))
         }
 
-        var BackLightValue:Float= 1f
         val seekbar:SeekBar = findViewById(R.id.seekbar)
         val seektext:TextView = findViewById(R.id.barnumber)
         seektext.text= seekbar.progress.toString()+"/"+seekbar.max
         seekbar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
-            var prog_val:Int=0
+            var prog_val:Float=0.0f
             override fun onProgressChanged(seekbarr: SeekBar?, progress: Int, fromuser: Boolean) {
-                prog_val=progress
-                BackLightValue = ((progress/100).toFloat())//.toFloat()// / 100
-                val layoutParams = window.attributes
+                prog_val= progress.toFloat()
+                BackLightValue = (progress/100).toFloat()
+                var layoutParams: WindowManager.LayoutParams = window.attributes
                 layoutParams.screenBrightness = BackLightValue
                 window.attributes = layoutParams
             }
@@ -198,6 +193,11 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
         val bottomtab:Button=findViewById(R.id.bottomtab)
         bottomtab.setOnClickListener {
             startActivity(Intent(this,BottomTab::class.java))
+        }
+
+        val sendsms:Button=findViewById(R.id.sendsms)
+        sendsms.setOnClickListener {
+            startActivity(Intent(this,SendSMS::class.java))
         }
     }
 

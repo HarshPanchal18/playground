@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/dev/playground/app/src/main/res/drawable-anydpi/ic_action_exit.xml" value="0.124" />
+        <entry key="..\:/dev/playground/app/src/main/res/drawable-anydpi/ic_action_hint.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/bottom_bar_shape.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/button_background.xml" value="0.2155" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_add_black.xml" value="0.148" />
@@ -29,7 +30,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_implicit_intent.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_launch.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.1" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_profile_fragment.xml" value="0.17094017094017094" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_progressbar.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_rotation.xml" value="0.1" />
@@ -38,6 +39,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_scroll_h.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_scroll_v.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_scrollbar.xml" value="0.33" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_send_sms.xml" value="0.25" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_spinner.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_splash_screen.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_stopwatch.xml" value="0.1" />
