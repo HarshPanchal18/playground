@@ -35,8 +35,8 @@ class PickerActivity : AppCompatActivity() {
         }
 
         timepicker.setOnTimeChangedListener(object: TimePicker.OnTimeChangedListener{
-            override fun onTimeChanged(tp: TimePicker?, p1: Int, p2: Int) {
-                Toast.makeText(applicationContext, "Time is $p1:$p2",Toast.LENGTH_SHORT).show()
+            override fun onTimeChanged(tp: TimePicker?, hr: Int, mn: Int) {
+                Toast.makeText(applicationContext, "Time is $hr:$mn",Toast.LENGTH_SHORT).show()
             }
         })
 

@@ -204,6 +204,11 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
         pickerbtn.setOnClickListener {
             startActivity(Intent(this,PickerActivity::class.java))
         }
+
+        val framebtn:Button=findViewById(R.id.framebtn)
+        framebtn.setOnClickListener {
+            startActivity(Intent(this,FrameLayoutActivity::class.java))
+        }
     }
 
     fun CustomToast(

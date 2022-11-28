@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">playground</string>
+    <string name="app_name">Playground</string>
     <string name="title_activity_alert">alertActivity</string>
 
     <string name="cardview">I\'m card</string>
