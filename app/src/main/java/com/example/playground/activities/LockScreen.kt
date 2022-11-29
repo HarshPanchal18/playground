@@ -12,11 +12,14 @@ import android.os.VibrationEffect
 import android.os.Vibrator
 import android.view.Gravity
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.playground.MainActivity
 import com.example.playground.R
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_lock_screen.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+import kotlin.system.exitProcess
 
 class LockScreen : AppCompatActivity() {
     private val random = Random()
@@ -50,6 +53,33 @@ class LockScreen : AppCompatActivity() {
             toast.show()
         }
     }
+
+    // Ask again when exit
+    private var backPressedTime:Long=0
+    lateinit var layout: ConstraintLayout
+    override fun onBackPressed() {
+        /*this@MainActivity.finish()
+        exitProcess(0)*/
+
+        if(backPressedTime+2000>System.currentTimeMillis()) {
+            super.onBackPressed()
+            exitProcess(0)
+        }
+        else{
+            layout=findViewById(R.id.locklayout)
+            val snackBar=
+                Snackbar.make(layout,"Press back again to exit", Snackbar.LENGTH_SHORT)
+                    /*.setAction("BACK"){
+                        Snackbar.make(layout,"Welcome", Snackbar.LENGTH_SHORT).show()
+                    }
+            snackBar.setActionTextColor(Color.YELLOW)*/
+            val snackBarView=snackBar.view
+            snackBarView.setBackgroundColor(Color.BLACK)
+            snackBar.show()
+        }
+        backPressedTime= System.currentTimeMillis()
+    }
+
 
     private fun rand(from: Int, to: Int): Int {
         return random.nextInt(to - from) + from

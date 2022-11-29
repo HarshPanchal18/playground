@@ -1,5 +1,7 @@
 package com.example.playground
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
@@ -8,6 +10,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.ConnectivityManager
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.view.*
@@ -17,9 +20,10 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.viewpager.widget.ViewPager
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.getSystemService
 import com.example.playground.activities.*
-import com.example.playground.adapters.PagerViewAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
@@ -208,6 +212,36 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
         val framebtn:Button=findViewById(R.id.framebtn)
         framebtn.setOnClickListener {
             startActivity(Intent(this,FrameLayoutActivity::class.java))
+        }
+
+        createNotificationChannel()
+        val notification=NotificationCompat.Builder(this,CHANNEL_ID)
+            .setContentTitle("Awesome Notification")
+            .setContentText("This is the content text") // description of notification
+            .setSmallIcon(R.drawable.ic_home_current)
+            .setPriority(NotificationCompat.PRIORITY_HIGH) // customize the previously set priority if required
+            .build() // to really build the notification (above are only designed the notification, not going to build without build())
+        val notificationManager= NotificationManagerCompat.from(this) // manager for notification
+
+        val notificationbtn:Button=findViewById(R.id.notificationbtn)
+        notificationbtn.setOnClickListener {
+            notificationManager.notify(NOTIFICATION_ID,notification)
+        }
+    }
+
+    private val CHANNEL_ID="channelID"
+    private val CHANNEL_NAME="channelName"
+    private val NOTIFICATION_ID=0
+    fun createNotificationChannel(){
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){ // O is for Orea
+            val channel= NotificationChannel(CHANNEL_ID,CHANNEL_NAME,
+                NotificationManager.IMPORTANCE_DEFAULT) // Priority for notification
+                .apply { //bcoz we want to do aomething with channel
+                    lightColor=Color.GREEN
+                    enableLights(true)
+                }
+            val manager=getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager // to get system service
+            manager.createNotificationChannel(channel)
         }
     }
 
