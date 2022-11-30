@@ -13,7 +13,7 @@ import android.widget.Button
 import android.widget.ProgressBar
 import com.example.playground.R
 
-class ProgressbarActivity : Activity() {
+class Progressbar : Activity() {
     private var btnStartProgress: Button? = null
     private var progressBar: ProgressDialog? = null
     private var progressBarStatus = 0

@@ -1,4 +1,4 @@
-package com.example.playground.activities
+package com.example.playground.adapters
 
 import java.util.ArrayList
 

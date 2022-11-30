@@ -19,6 +19,9 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
+            android:name=".activities.AnimationActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.FrameLayoutActivity"
             android:exported="false" />
         <activity
@@ -52,7 +55,7 @@
             android:name=".activities.ImgActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.ProgressbarActivity"
+            android:name=".activities.Progressbar"
             android:exported="false" />
         <activity
             android:name=".activities.LockScreen"

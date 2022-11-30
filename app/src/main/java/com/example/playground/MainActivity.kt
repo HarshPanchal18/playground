@@ -2,19 +2,28 @@ package com.example.playground
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
+import android.app.TaskStackBuilder
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.media.AudioManager
 import android.net.ConnectivityManager
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
-import android.view.*
-import android.widget.*
+import android.view.ContextMenu
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.Button
+import android.widget.SeekBar
+import android.widget.SeekBar.OnSeekBarChangeListener
+import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
@@ -22,7 +31,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import androidx.core.content.getSystemService
 import com.example.playground.activities.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -36,6 +44,8 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
     }
 
     var BackLightValue: Float = 0.5f
+    //lateinit var mAudio:AudioManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -154,7 +164,7 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
 
         val progressbtn: Button = findViewById(R.id.progressbtn)
         progressbtn.setOnClickListener {
-            startActivity(Intent(this, ProgressbarActivity::class.java))
+            startActivity(Intent(this, Progressbar::class.java))
         }
 
         val imgbtn: Button = findViewById(R.id.imgbtn)
@@ -167,27 +177,11 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
             startActivity(Intent(this, Stopwatch::class.java))
         }
 
-        val seekbar:SeekBar = findViewById(R.id.seekbar)
-        val seektext:TextView = findViewById(R.id.barnumber)
-        seektext.text= seekbar.progress.toString()+"/"+seekbar.max
-        seekbar.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
-            var prog_val:Float=0.0f
-            override fun onProgressChanged(seekbarr: SeekBar?, progress: Int, fromuser: Boolean) {
-                prog_val= progress.toFloat()
-                BackLightValue = (progress/100).toFloat()
-                var layoutParams: WindowManager.LayoutParams = window.attributes
-                layoutParams.screenBrightness = BackLightValue
-                window.attributes = layoutParams
-            }
+        val seekbarRing:SeekBar = findViewById(R.id.seekbarring)
+        initVolumeControls(seekbarRing,AudioManager.STREAM_RING)
 
-            override fun onStartTrackingTouch(seekbarr: SeekBar?) { // called as you starting to slide
-                seektext.text=prog_val.toString()+"/"+seekbar.max
-            }
-
-            override fun onStopTrackingTouch(seekbarr: SeekBar?) {
-                seektext.text=prog_val.toString()+"/"+seekbar.max
-            }
-        })
+        val seekbarMedia:SeekBar = findViewById(R.id.seekbarmedia)
+        initVolumeControls(seekbarMedia,AudioManager.STREAM_MUSIC)
 
         val launchbtn:Button=findViewById(R.id.launchbtn)
         launchbtn.setOnClickListener {
@@ -211,15 +205,23 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
 
         val framebtn:Button=findViewById(R.id.framebtn)
         framebtn.setOnClickListener {
-            startActivity(Intent(this,FrameLayoutActivity::class.java))
+            startActivity(Intent(this, FrameLayoutActivity::class.java))
         }
 
         createNotificationChannel()
+
+        val intent=Intent(this,MainActivity::class.java)
+        val pendingIntent=TaskStackBuilder.create(this).run {
+            addNextIntentWithParentStack(intent) // add this intent activity if we click on notification
+            getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT) // when the spinning already exists
+        }
+
         val notification=NotificationCompat.Builder(this,CHANNEL_ID)
             .setContentTitle("Awesome Notification")
             .setContentText("This is the content text") // description of notification
             .setSmallIcon(R.drawable.ic_home_current)
             .setPriority(NotificationCompat.PRIORITY_HIGH) // customize the previously set priority if required
+            .setContentIntent(pendingIntent) // add a pending intent to stay until clearing the notification manually
             .build() // to really build the notification (above are only designed the notification, not going to build without build())
         val notificationManager= NotificationManagerCompat.from(this) // manager for notification
 
@@ -227,25 +229,43 @@ class MainActivity : AppCompatActivity() {//, PopupMenu.OnMenuItemClickListener 
         notificationbtn.setOnClickListener {
             notificationManager.notify(NOTIFICATION_ID,notification)
         }
+
+        val animbtn:Button=findViewById(R.id.animbtn)
+        animbtn.setOnClickListener {
+            startActivity(Intent(this,AnimationActivity::class.java))
+        }
+    }
+
+    // Central Function For Volume
+    private fun initVolumeControls(seek: SeekBar?, stream: Int) {
+        val mAudio= getSystemService(Context.AUDIO_SERVICE) as AudioManager
+        seek?.max = mAudio.getStreamMaxVolume(stream)
+        seek?.progress = mAudio.getStreamVolume(stream)
+        seek?.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
+            override fun onProgressChanged(bar: SeekBar, progress: Int, fromUser: Boolean) {
+                mAudio.setStreamVolume(stream, progress, AudioManager.FLAG_PLAY_SOUND)
+            }
+
+            override fun onStartTrackingTouch(bar: SeekBar) {}
+            override fun onStopTrackingTouch(bar: SeekBar) {}
+        })
     }
 
     private val CHANNEL_ID="channelID"
     private val CHANNEL_NAME="channelName"
     private val NOTIFICATION_ID=0
-    fun createNotificationChannel(){
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){ // O is for Orea
-            val channel= NotificationChannel(CHANNEL_ID,CHANNEL_NAME,
-                NotificationManager.IMPORTANCE_DEFAULT) // Priority for notification
-                .apply { //bcoz we want to do aomething with channel
-                    lightColor=Color.GREEN
-                    enableLights(true)
-                }
-            val manager=getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager // to get system service
-            manager.createNotificationChannel(channel)
-        }
+    private fun createNotificationChannel(){
+        val channel= NotificationChannel(CHANNEL_ID,CHANNEL_NAME,
+            NotificationManager.IMPORTANCE_DEFAULT) // Priority for notification
+            .apply { //bcz we want to do something with channel
+                lightColor=Color.GREEN
+                enableLights(true)
+            }
+        val manager=getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager // to get system service
+        manager.createNotificationChannel(channel)
     }
 
-    fun CustomToast(
+    private fun CustomToast(
         context: Context?, text: String?, duration: Int,
         @Nullable backgroundColor: Int?,
         @Nullable textColor: Int?,

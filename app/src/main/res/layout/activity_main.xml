@@ -246,7 +246,7 @@
 
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollbtn"
         app:layout_constraintVertical_bias="0.0" />
@@ -280,26 +280,28 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollingtxt" />
 
     <SeekBar
-        android:id="@+id/seekbar"
+        android:id="@+id/seekbarring"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:max="100"
+        android:layout_marginTop="20dp"
         android:indeterminate="false"
+        android:max="100"
         android:progress="50"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintHorizontal_bias="0.924"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollingtxt" />
 
-    <TextView
-        android:id="@+id/barnumber"
-        android:layout_width="wrap_content"
+    <SeekBar
+        android:id="@+id/seekbarmedia"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:textStyle="bold"
+        android:layout_marginTop="48dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="50"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintHorizontal_bias="0.924"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollingtxt" />
 
@@ -375,5 +377,37 @@
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sendsms" />
+
+    <Button
+        android:id="@+id/animbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/buttonlayer1"
+        android:text="Animation"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/networkbtn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="25dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/seekbarring"
+        app:layout_constraintTop_toBottomOf="@+id/scrollingtxt"
+        app:srcCompat="@drawable/ring_volume" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="23dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/seekbarmedia"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/media_volume" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
