@@ -19,6 +19,9 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
+            android:name=".activities.Notification"
+            android:exported="false" />
+        <activity
             android:name=".activities.AnimationActivity"
             android:exported="false" />
         <activity

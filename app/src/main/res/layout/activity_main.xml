@@ -372,9 +372,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/buttonlayer1"
-        android:text="Show Notification"
+        android:text="Notification"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sendsms" />
 
@@ -393,7 +393,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageMedia"
         android:layout_width="25dp"
         android:layout_height="17dp"
         android:layout_marginTop="20dp"
@@ -402,12 +402,12 @@
         app:srcCompat="@drawable/ring_volume" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageRing"
         android:layout_width="23dp"
         android:layout_height="17dp"
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toStartOf="@+id/seekbarmedia"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageMedia"
         app:srcCompat="@drawable/media_volume" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
