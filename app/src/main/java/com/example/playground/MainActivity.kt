@@ -22,16 +22,20 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.playground.activities.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener { // implements Popmenu for popup window
+
+    lateinit var toggle:ActionBarDrawerToggle
 
      override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
@@ -45,13 +49,29 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
 
         // Appbar Configs
         supportActionBar?.title = "Playground"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val actionBar: ActionBar? = supportActionBar
         val colorDrawable = ColorDrawable(Color.parseColor("#f7ac34"))
         actionBar?.setBackgroundDrawable(colorDrawable)
 
+        //val navView:NavigationBarView = findViewById(R.id.navView)
+        navView.setNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.item1 -> Toast.makeText(applicationContext,"Item 1",Toast.LENGTH_SHORT).show()
+                R.id.item2 -> Toast.makeText(applicationContext,"Item 2",Toast.LENGTH_SHORT).show()
+                R.id.item3 -> Toast.makeText(applicationContext,"Item 3",Toast.LENGTH_SHORT).show()
+                //R.id.item4 -> Toast.makeText(applicationContext,"Item 4",Toast.LENGTH_SHORT).show()
+                //R.id.item5 -> Toast.makeText(applicationContext,"Item 5",Toast.LENGTH_SHORT).show()
+            }
+            true
+        }
+
         val scrollTxt: TextView = findViewById(R.id.scrollingtxt)
         scrollTxt.isSelected = true
 
+        toggle= ActionBarDrawerToggle(this,drawer,R.string.open,R.string.close)
+        drawer.addDrawerListener(toggle) // attach toggle with drawer
+        toggle.syncState()
 
         val alertbtn: Button = findViewById(R.id.alertbtn)
         alertbtn.setOnClickListener {
@@ -293,7 +313,12 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        Toast.makeText(this,"Selected",Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this,"Selected",Toast.LENGTH_SHORT).show()
+
+        if(toggle.onOptionsItemSelected(item)) {
+            return true
+        }
+
         return when(item.itemId)
         {
             R.id.action_setting->{
