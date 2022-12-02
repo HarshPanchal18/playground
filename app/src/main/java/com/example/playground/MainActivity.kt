@@ -26,11 +26,14 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.GravityCompat
 import com.example.playground.activities.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationBarView
+import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main2.*
 import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener { // implements Popmenu for popup window
@@ -54,14 +57,32 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         val colorDrawable = ColorDrawable(Color.parseColor("#f7ac34"))
         actionBar?.setBackgroundDrawable(colorDrawable)
 
-        //val navView:NavigationBarView = findViewById(R.id.navView)
+        val navView: NavigationView = findViewById(R.id.navView)
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.item1 -> Toast.makeText(applicationContext,"Item 1",Toast.LENGTH_SHORT).show()
-                R.id.item2 -> Toast.makeText(applicationContext,"Item 2",Toast.LENGTH_SHORT).show()
-                R.id.item3 -> Toast.makeText(applicationContext,"Item 3",Toast.LENGTH_SHORT).show()
-                //R.id.item4 -> Toast.makeText(applicationContext,"Item 4",Toast.LENGTH_SHORT).show()
-                //R.id.item5 -> Toast.makeText(applicationContext,"Item 5",Toast.LENGTH_SHORT).show()
+                R.id.page1 -> {
+                    Toast.makeText(applicationContext,"Page 1",Toast.LENGTH_SHORT).show()
+                    drawer.closeDrawer(GravityCompat.START)
+                    startActivity(Intent(this,MainActivity::class.java))
+                }
+
+                R.id.page2 -> {
+                    Toast.makeText(applicationContext,"Page 2",Toast.LENGTH_SHORT).show()
+                    drawer.closeDrawer(GravityCompat.START)
+                    startActivity(Intent(this,MainActivity2::class.java))
+                }
+
+                R.id.contact -> {
+                    //Toast.makeText(applicationContext,"")
+                    drawer.closeDrawer(GravityCompat.START)
+                    startActivity(Intent(this, AdminContact::class.java))
+                }
+
+                R.id.logout -> {
+                    Toast.makeText(applicationContext,"Log Out",Toast.LENGTH_SHORT).show()
+                    drawer.closeDrawer(GravityCompat.START)
+                    startActivity(Intent(this,LockScreen::class.java))
+                }
             }
             true
         }
