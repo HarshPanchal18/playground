@@ -62,28 +62,27 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             when(it.itemId){
                 R.id.page1 -> {
                     Toast.makeText(applicationContext,"Page 1",Toast.LENGTH_SHORT).show()
-                    drawer.closeDrawer(GravityCompat.START)
+                    //drawer.closeDrawer(GravityCompat.START)
                     startActivity(Intent(this,MainActivity::class.java))
                 }
 
                 R.id.page2 -> {
                     Toast.makeText(applicationContext,"Page 2",Toast.LENGTH_SHORT).show()
-                    drawer.closeDrawer(GravityCompat.START)
+                    //drawer.closeDrawer(GravityCompat.START)
                     startActivity(Intent(this,MainActivity2::class.java))
                 }
 
                 R.id.contact -> {
-                    //Toast.makeText(applicationContext,"")
-                    drawer.closeDrawer(GravityCompat.START)
                     startActivity(Intent(this, AdminContact::class.java))
                 }
 
                 R.id.logout -> {
                     Toast.makeText(applicationContext,"Log Out",Toast.LENGTH_SHORT).show()
-                    drawer.closeDrawer(GravityCompat.START)
+                    //drawer.closeDrawer(GravityCompat.START)
                     startActivity(Intent(this,LockScreen::class.java))
                 }
             }
+            drawer.closeDrawer(GravityCompat.START)
             true
         }
 
@@ -235,6 +234,11 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         val animbtn:Button=findViewById(R.id.animbtn)
         animbtn.setOnClickListener {
             startActivity(Intent(this,AnimationActivity::class.java))
+        }
+
+        val pull:Button=findViewById(R.id.pullrefresh)
+        pull.setOnClickListener {
+            startActivity(Intent(this,PullRefresh::class.java))
         }
     }
 

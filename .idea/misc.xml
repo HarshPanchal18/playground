@@ -7,6 +7,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/drawable-anydpi/ic_action_hint.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/bottom_bar_shape.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/button_background.xml" value="0.2155" />
+        <entry key="..\:/dev/playground/app/src/main/res/drawable/customs.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_add_black.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_add_current.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_add_pink.xml" value="0.148" />
@@ -32,13 +33,14 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_img.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_implicit_intent.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_launch.xml" value="0.1717948717948718" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.25" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.75" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.2630890052356021" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_notification.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_picker.xml" value="0.25" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_profile_fragment.xml" value="0.17094017094017094" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_progressbar.xml" value="0.1717948717948718" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_pull_refresh.xml" value="0.17543859649122806" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_rotation.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_screen_rotation.xml" value="0.1718683197947841" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_scroll.xml" value="0.1717948717948718" />
@@ -49,7 +51,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_spinner.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_splash_screen.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_stopwatch.xml" value="0.33" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_sys_info.xml" value="0.5" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_sys_info.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_sysinfo.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_tab.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_tab1.xml" value="0.209375" />
