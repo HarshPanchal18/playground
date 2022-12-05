@@ -6,7 +6,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.hardware.Sensor
-import android.hardware.SensorEvent
 import android.hardware.SensorManager
 import android.os.BatteryManager
 import android.os.Build
@@ -36,17 +35,17 @@ class SysInfo : AppCompatActivity() {
         osarch.text = System.getProperty("os.arch")
 
         val manufacturer = findViewById<View>(R.id.manufacturer) as TextView
-        manufacturer.text = Build.MANUFACTURER
+        manufacturer.text = Build.MANUFACTURER + "\n"
 
         registerReceiver(this.batteryInfoReceiver, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
 
-        /*val sensors= getSystemService(SENSOR_SERVICE) as SensorManager
+        val sensors= getSystemService(SENSOR_SERVICE) as SensorManager
         val sensortext:TextView=findViewById(R.id.sensortxt)
 
         val sList: List<Sensor> = sensors.getSensorList(Sensor.TYPE_ALL)
 
         for (i in 1 until sList.size)
-            sensortext.append(""" ${sList[i].name} """.trimIndent())*/
+            sensortext.append( "\n" + sList[i].name .trimIndent())
     }
 
     var batteryInfoReceiver: BroadcastReceiver? = object : BroadcastReceiver() {
@@ -61,15 +60,15 @@ class SysInfo : AppCompatActivity() {
             val temperature = intent.getIntExtra(BatteryManager.EXTRA_TEMPERATURE, 0)
             val voltage = intent.getIntExtra(BatteryManager.EXTRA_VOLTAGE, 0)
             battery.text = """
-                        Health: $health
-                        Level: $level
-                        Plugged: $plugged
-                        Present: $present
-                        Status: $status
-                        Technology: $technology
-                        Temperature: $temperature
-                        Voltage: $voltage
-            """.trimIndent()
+Health: $health
+Level: $level
+Plugged: $plugged
+Present: $present
+Status: $status
+Technology: $technology
+Temperature: $temperature
+Voltage: $voltage
+"""+"\n".trimIndent()
         }
     }
 }
