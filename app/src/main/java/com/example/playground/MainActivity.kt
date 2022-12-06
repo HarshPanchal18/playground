@@ -62,13 +62,11 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             when(it.itemId){
                 R.id.page1 -> {
                     Toast.makeText(applicationContext,"Page 1",Toast.LENGTH_SHORT).show()
-                    //drawer.closeDrawer(GravityCompat.START)
                     startActivity(Intent(this,MainActivity::class.java))
                 }
 
                 R.id.page2 -> {
                     Toast.makeText(applicationContext,"Page 2",Toast.LENGTH_SHORT).show()
-                    //drawer.closeDrawer(GravityCompat.START)
                     startActivity(Intent(this,MainActivity2::class.java))
                 }
 
@@ -78,7 +76,6 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
 
                 R.id.logout -> {
                     Toast.makeText(applicationContext,"Log Out",Toast.LENGTH_SHORT).show()
-                    //drawer.closeDrawer(GravityCompat.START)
                     startActivity(Intent(this,LockScreen::class.java))
                 }
             }
@@ -240,6 +237,11 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         pull.setOnClickListener {
             startActivity(Intent(this,PullRefresh::class.java))
         }
+
+        val list:Button=findViewById(R.id.listbtn)
+        list.setOnClickListener {
+            startActivity(Intent(this,ListViewActivity::class.java))
+        }
     }
 
     // Central Function For Volume
@@ -251,7 +253,6 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             override fun onProgressChanged(bar: SeekBar, progress: Int, fromUser: Boolean) {
                 mAudio.setStreamVolume(stream, progress, AudioManager.FLAG_PLAY_SOUND)
             }
-
             override fun onStartTrackingTouch(bar: SeekBar) {}
             override fun onStopTrackingTouch(bar: SeekBar) {}
         })
@@ -305,7 +306,7 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             Toast.makeText(this,"No",Toast.LENGTH_SHORT).show()
     }
 
-    // Ask again when exit
+    // Ask again for exit
     private var backPressedTime:Long=0
     lateinit var layout:ConstraintLayout
 
@@ -317,7 +318,7 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             super.onBackPressed()
             exitProcess(0)
         }
-        else{
+        else {
             layout=findViewById(R.id.homelayout)
             val snackBar=
                 Snackbar.make(homelayout,"Press back again to exit",Snackbar.LENGTH_SHORT)
@@ -338,11 +339,8 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        //Toast.makeText(this,"Selected",Toast.LENGTH_SHORT).show()
 
-        if(toggle.onOptionsItemSelected(item)) {
-            return true
-        }
+        if(toggle.onOptionsItemSelected(item)) { return true }
 
         return when(item.itemId)
         {
@@ -354,24 +352,22 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
                 intent.data = uri
                 startActivity(intent)
                 true
-                /*startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
-                    data = Uri.fromParts("package", packageName, null)})*/
             }
+
             R.id.action_share->{
                 Toast.makeText(applicationContext, "clicked on share", Toast.LENGTH_LONG).show()
                 true
             }
+
             R.id.action_exit->{
                 Toast.makeText(applicationContext, "clicked on exit", Toast.LENGTH_LONG).show()
                 val builder = AlertDialog.Builder(this)
-                builder.setTitle("Lock")
+                builder.setTitle("EXIT")
                 builder.setMessage(R.string.dialogMsgExit)
                 builder.setIcon(android.R.drawable.ic_dialog_alert)
 
                 //positive action
-                builder.setPositiveButton("Yes") { _, _ ->
-                    //startActivity(Intent(this, LockScreen::class.java))
-                    finish() }
+                builder.setPositiveButton("Yes") { _, _ -> finish() }
 
                 //cancel action
                 builder.setNegativeButton("No")

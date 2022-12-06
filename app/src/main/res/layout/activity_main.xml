@@ -7,9 +7,15 @@
     tools:context=".MainActivity"
     android:id="@+id/drawer">
 
-<androidx.constraintlayout.widget.ConstraintLayout
+<!--<androidx.core.widget.NestedScrollView-->
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="#a2a899">
 
     <androidx.constraintlayout.widget.Guideline
@@ -57,8 +63,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="4dp"
+        android:layout_marginTop="360dp"
         android:layout_marginRight="4dp"
-
         android:background="#bbbbbb"
         android:ellipsize="marquee"
         android:focusable="true"
@@ -66,16 +72,15 @@
         android:marqueeRepeatLimit="marquee_forever"
         android:scrollbarFadeDuration="@integer/material_motion_duration_short_1"
         android:scrollHorizontally="true"
-
         android:singleLine="true"
         android:text="Hello World!                  Hello World!                    Hello World!                    Hello World!"
         android:textAlignment="center"
         android:textColor="#2e7056"
         android:textSize="25dp"
-        android:textStyle="bold"
 
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -426,7 +431,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pickerbtn" />
 
+    <Button
+        android:id="@+id/listbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/buttonlayer2"
+        android:text="List"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+<!--</androidx.core.widget.NestedScrollView>-->
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"
