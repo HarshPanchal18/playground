@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.DrinkCategory">
+
+    <ListView
+        android:id="@+id/list_drinks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+
+<!--
+In activity_star_buzz.xml, we used the android:entries attribute to bind data to the list view.
+This worked because the data was held as a static String array resource.
+The array was described in strings.xml, so we could easily refer to it using:
+android:entries="@array/options"
+
+where options is the name of the String array.
+Using android:entries works fine if the data is a static array in strings.xml.
+But what if it isn’t? What if the data is held in an array you’ve programmatically created in Java code, or held in a
+database? In that case, the android:entries attribute won’t work.
+
+If you need to bind your list view to data held in something other
+than a String array resource, you need to take a different approach;
+you need to write activity code to bind the data.
+In our case, we need to bind our list view to the drinks array in the com.example.playground.adapters.Drink class.
+-->

@@ -19,6 +19,12 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
+            android:name=".activities.DrinkCategory"
+            android:exported="false" />
+        <activity
+            android:name=".activities.StarBuzz"
+            android:exported="false" />
+        <activity
             android:name=".activities.ListViewActivity"
             android:exported="false" />
         <activity

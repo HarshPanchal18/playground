@@ -191,3 +191,8 @@ fun createNotificationChannel(){
 > Android needs to set up the environment for the activity after it's constructed.
 > Once the environment is ready, Android calls onCreate().
 > That's why code to setup the screen goes inside onCreate() instead pf constructor.
+
+#### Why did we have to create an event listener to get items in the list view to respond to clicks? Couldn't we have just used it `android:onClick` attribute in the layout code?
+> You can only use the `android:onClick` attribute in activity layouts for buttons, or any views that are subclasses of `Button` such as `CheckBox` and `RadioButton`.
+> The `ListView` class  isn't a subclass of `Button`, so using the `android:onClick` attribute won't work.
+> That's why you have to implement your own listener.

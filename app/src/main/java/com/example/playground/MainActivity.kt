@@ -29,11 +29,9 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.GravityCompat
 import com.example.playground.activities.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main2.*
 import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener { // implements Popmenu for popup window
@@ -61,12 +59,12 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.page1 -> {
-                    Toast.makeText(applicationContext,"Page 1",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext,"Home Page",Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this,MainActivity::class.java))
                 }
 
                 R.id.page2 -> {
-                    Toast.makeText(applicationContext,"Page 2",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext,"Secondary Page",Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this,MainActivity2::class.java))
                 }
 
@@ -169,7 +167,7 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             val view=toast.view
             view?.background?.setColorFilter(Color.BLACK,PorterDuff.Mode.SRC_IN)
             toast.show()*/
-            CustomToast(this, "Hold Me", Toast.LENGTH_SHORT, Color.BLACK, Color.WHITE)
+            customToast(this, "Hold Me", Toast.LENGTH_SHORT, Color.BLACK, Color.WHITE)
         }
 
         val txtclockbtn: Button = findViewById(R.id.clockbtn)
@@ -242,6 +240,11 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         list.setOnClickListener {
             startActivity(Intent(this,ListViewActivity::class.java))
         }
+
+        val coffeebtn:Button=findViewById(R.id.coffeebtn)
+        coffeebtn.setOnClickListener {
+            startActivity(Intent(this,StarBuzz::class.java))
+        }
     }
 
     // Central Function For Volume
@@ -258,7 +261,7 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         })
     }
 
-    private fun CustomToast(
+    private fun customToast(
         context: Context?, text: String?, duration: Int,
         @Nullable backgroundColor: Int?,
         @Nullable textColor: Int?,

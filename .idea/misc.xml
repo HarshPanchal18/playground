@@ -27,6 +27,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_bottom_tab.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_card_view.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_clock.xml" value="0.21" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drink_category.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_explicit_intent.xml" value="0.5" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_frame_layout.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_home_fragment.xml" value="0.1" />
@@ -35,7 +36,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_launch.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_list_view.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.75" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_notification.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_picker.xml" value="0.25" />
@@ -51,6 +52,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_send_sms.xml" value="0.2" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_spinner.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_splash_screen.xml" value="0.1717948717948718" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_star_buzz.xml" value="0.2" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_stopwatch.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_sys_info.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_sysinfo.xml" value="0.22" />
