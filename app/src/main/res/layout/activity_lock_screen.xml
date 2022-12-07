@@ -15,7 +15,7 @@
         android:layout_marginTop="160dp"
         android:text="Enter Passcode"
         android:textSize="20sp"
-        android:textColor="@color/warm"
+        android:textColor="#F4821F"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -24,9 +24,10 @@
 
     <EditText
         android:id="@+id/passwdbox"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:textSize="20dp"
         android:ems="4"
         android:focusedByDefault="true"
         android:inputType="number|numberPassword"
@@ -48,12 +49,12 @@
         android:id="@+id/gobtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/cool"
         android:drawableEnd="@drawable/ic_action_exit"
         android:text="Go !!"
-        android:backgroundTint="@color/cool"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwdbox" />
 
@@ -61,11 +62,11 @@
         android:id="@+id/hintbtn"
         android:layout_width="54dp"
         android:layout_height="49dp"
-        android:layout_marginTop="132dp"
-        android:src="@drawable/ic_action_hint"
+        android:layout_marginTop="72dp"
         android:background="@drawable/button_background"
+        android:src="@drawable/ic_action_hint"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toEndOf="@+id/gobtn"
         app:layout_constraintTop_toBottomOf="@+id/passwdbox" />
 

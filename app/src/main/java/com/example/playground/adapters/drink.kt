@@ -1,8 +1,8 @@
 package com.example.playground.adapters
 import com.example.playground.R
 
-class Drink  //Each com.example.playground.adapters.Drink has a name, description, and an image resource
-constructor(val name: String, val desc: String, val imgID: Int) {
+class Drink(val name: String, val desc: String, val imgID: Int) {
+//Each com.example.playground.adapters.Drink has a name, description, and an image resource
 
     override fun toString(): String {
         return name

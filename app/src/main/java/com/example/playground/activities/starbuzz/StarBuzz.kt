@@ -1,13 +1,10 @@
-package com.example.playground.activities
+package com.example.playground.activities.starbuzz
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
-import com.example.playground.MainActivity
-import com.example.playground.MainActivity2
 import com.example.playground.R
 
 class StarBuzz : AppCompatActivity() {

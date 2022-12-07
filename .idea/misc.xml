@@ -14,9 +14,11 @@
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_home_black.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_home_current.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_home_pink.xml" value="0.148" />
+        <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_key.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_profile_black.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_profile_current.xml" value="0.148" />
+        <entry key="..\:/dev/playground/app/src/main/res/drawable/skins.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout-land/activity_main.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_add_fragrment.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_admin_contact.xml" value="0.1" />
@@ -28,6 +30,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_card_view.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_clock.xml" value="0.21" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drink_category.xml" value="0.1763157894736842" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drink_main.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_explicit_intent.xml" value="0.5" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_frame_layout.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_home_fragment.xml" value="0.1" />
@@ -35,7 +38,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_implicit_intent.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_launch.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_list_view.xml" value="0.1763157894736842" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.75" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.5" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_notification.xml" value="0.22" />

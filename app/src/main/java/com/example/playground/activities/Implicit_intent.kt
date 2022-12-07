@@ -19,14 +19,14 @@ class Implicit_intent : AppCompatActivity() {
 
         shareActbtn.setOnClickListener {
             val message = findViewById<EditText>(R.id.usrmsg).text.toString()
-            var intent = Intent(this, Explicit_intent::class.java)
+            val intent = Intent(this, Explicit_intent::class.java)
 
             intent.putExtra(Constants.USR_MSG_KEY, message)
             startActivity(intent)
         }
 
         sharebtn.setOnClickListener {
-            var intent = Intent()
+            val intent = Intent()
             intent.action = Intent.ACTION_SEND
             intent.putExtra(Intent.EXTRA_TEXT, usrmsg.text.toString())
             intent.type = "text/plain"

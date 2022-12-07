@@ -28,6 +28,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.GravityCompat
 import com.example.playground.activities.*
+import com.example.playground.activities.starbuzz.StarBuzz
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
@@ -243,7 +244,7 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
 
         val coffeebtn:Button=findViewById(R.id.coffeebtn)
         coffeebtn.setOnClickListener {
-            startActivity(Intent(this,StarBuzz::class.java))
+            startActivity(Intent(this, StarBuzz::class.java))
         }
     }
 
