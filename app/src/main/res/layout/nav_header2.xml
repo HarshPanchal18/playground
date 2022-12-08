@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/trans_green">
+
+    <ImageView
+        android:id="@+id/navImgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:src="@mipmap/splashimg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="By Harsh Panchal"
+        app:layout_constraintTop_toBottomOf="@+id/navImgView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

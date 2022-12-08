@@ -31,6 +31,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_clock.xml" value="0.21" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drink_category.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drink_main.xml" value="0.1" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_expand_list.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_explicit_intent.xml" value="0.5" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_frame_layout.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_home_fragment.xml" value="0.1" />
@@ -38,8 +39,8 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_implicit_intent.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_launch.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_list_view.xml" value="0.1763157894736842" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.5" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.16" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_notification.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_picker.xml" value="0.25" />
@@ -65,11 +66,16 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_tab3.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/app_bar_main.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/content_main.xml" value="0.1763157894736842" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/expand_children.xml" value="0.1763157894736842" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/expand_parent.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_tab.xml" value="0.1953125" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/listview_item.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/nav_header.xml" value="0.1" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/nav_header2.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/nav_header_main.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/swipe_layout.xml" value="0.3269230769230769" />
+        <entry key="..\:/dev/playground/app/src/main/res/menu/expand_header.xml" value="0.1763157894736842" />
+        <entry key="..\:/dev/playground/app/src/main/res/menu/nav_header.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/menu/nav_header_menu.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/menu/options_menu.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/menu/popup_menu.xml" value="0.1" />

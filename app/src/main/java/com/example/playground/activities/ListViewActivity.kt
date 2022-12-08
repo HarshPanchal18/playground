@@ -3,11 +3,8 @@ package com.example.playground.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
+import android.widget.*
 import com.example.playground.R
-import android.widget.ListView
-import android.widget.Toast
 
 class ListViewActivity : AppCompatActivity() {
 
@@ -16,7 +13,7 @@ class ListViewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_list_view)
 
         val clist: ListView = findViewById(R.id.countrylist)
-        val characters= arrayOf("Flash","Arrow","Kenya","Kyrgyzstan","Kuwait" ,
+        val characters= arrayOf("Kenya","Kyrgyzstan","Kuwait" ,
                                 "Kazakhstan" ,"Kiribati","South Korea","Pakistan",
                                 "Nepal","Syria","Portugal","Russia","Moscow","Hong Kong")
         val adapter: ArrayAdapter<*>

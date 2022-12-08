@@ -246,6 +246,11 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         coffeebtn.setOnClickListener {
             startActivity(Intent(this, StarBuzz::class.java))
         }
+
+        val expbtn:Button=findViewById(R.id.expandbtn)
+        expbtn.setOnClickListener {
+            startActivity(Intent(this,ExpandList::class.java))
+        }
     }
 
     // Central Function For Volume
