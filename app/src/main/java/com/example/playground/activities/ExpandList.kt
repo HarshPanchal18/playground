@@ -18,23 +18,21 @@ class ExpandList : AppCompatActivity() {
         setContentView(R.layout.activity_expand_list)
 
         val myChild:List<String>
-        val adapter2:MyAdapter
+        val adapter:MyAdapter
         val explist: ExpandableListView = findViewById(R.id.expandlist)
         val myHeader:HashMap<String,List<String>> = DataProvider.getInfo()
 
         myChild=ArrayList<String>(myHeader.keys)
-        adapter2=MyAdapter(this,myHeader,myChild)
-        //explist.adapter=adapter2
-        explist.setAdapter(adapter2)
+        adapter=MyAdapter(this,myHeader,myChild)
+        //explist.adapter=adapter2 // this method is buggy :(
+        explist.setAdapter(adapter)
     }
 }
 
 
-class MyAdapter(private val ctx: Context, private val childTitles:HashMap<String,List<String>>, private val headerTitle:List<String>) :
+class MyAdapter
+    (private val ctx: Context, private val childTitles:HashMap<String,List<String>>, private val headerTitle:List<String>) :
     BaseExpandableListAdapter() {
-    //private lateinit var ctx:Context
-    //private lateinit var childTitles:HashMap<String,List<String>>
-    //private lateinit var headerTitle:List<String>
 
     override fun getGroupCount(): Int {
         return headerTitle.size
@@ -111,10 +109,10 @@ class DataProvider{
             child2.add("Children 8")
 
             val child3=ArrayList<String>()
-            child2.add("Children 9")
-            child2.add("Children 10")
-            child2.add("Children 11")
-            child2.add("Children 12")
+            child3.add("Children 9")
+            child3.add("Children 10")
+            child3.add("Children 11")
+            child3.add("Children 12")
 
             val headerDetail=HashMap<String,List<String>>()
             headerDetail["Header 1"] = child1
