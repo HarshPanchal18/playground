@@ -15,11 +15,8 @@ import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.SeekBar
+import android.widget.*
 import android.widget.SeekBar.OnSeekBarChangeListener
-import android.widget.TextView
-import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -250,6 +247,19 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         val expbtn:Button=findViewById(R.id.expandbtn)
         expbtn.setOnClickListener {
             startActivity(Intent(this,ExpandList::class.java))
+        }
+
+        val rating: RatingBar =findViewById(R.id.rate)
+        rating.setOnRatingBarChangeListener { ratingBar, fl, b ->
+            Toast.makeText(this,ratingBar.rating.toString(),Toast.LENGTH_SHORT).show()
+            val intent=Intent(Intent.ACTION_VIEW)
+            intent.data=Uri.parse("https://play.google.com/store/apps/details?id=com.example.playground")
+            startActivity(intent)
+        }
+
+        val wallpaperbtn:Button=findViewById(R.id.wallpaperbtn)
+        wallpaperbtn.setOnClickListener {
+            startActivity(Intent(this,WallPaper::class.java))
         }
     }
 

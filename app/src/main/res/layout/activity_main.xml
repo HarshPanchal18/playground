@@ -381,7 +381,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/buttonlayer1"
-        android:text="Notification"
+        android:text="Notify"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
@@ -424,10 +424,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Refresh"
         android:backgroundTint="@color/buttonlayer1"
+        android:text="Refresh"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.626"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pickerbtn" />
 
@@ -467,6 +467,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seekbarmedia" />
 
+    <RatingBar
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginTop="20dp"
+        android:stepSize="0.25"
+        android:rating="4.5"
+        android:numStars="5"
+        app:layout_constraintEnd_toStartOf="@+id/floating"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coffeebtn" />
+
+    <Button
+        android:id="@+id/wallpaperbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/buttonlayer1"
+        android:text="Wallpaper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/framebtn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
@@ -476,7 +501,7 @@
         android:id="@+id/navView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:headerLayout="@layout/nav_header2"
+        app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_header_menu"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"/>
