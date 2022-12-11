@@ -8,8 +8,8 @@ import com.example.playground.R
 import com.example.playground.adapters.MyCompoundAdapter
 
 class ListViewActivity : AppCompatActivity() {
-    val title=arrayOf("Title 1","Title 2","Title 3","Title 4")//,"Title 5")
-    val descriptions=arrayOf("Description 1","Description 2","Description 3","Description 4")//,"Description 5")
+    val title=arrayOf("Title 1","Title 2","Title 3","Title 4")
+    val descriptions=arrayOf("Description 1","Description 2","Description 3","Description 4")
     val images=arrayOf(R.drawable.ic_home_current,R.drawable.ic_profile_current,R.drawable.ic_add_current,R.drawable.ic_action_hint)
     val characters= arrayOf("Kenya","Kyrgyzstan","Kuwait","Kazakhstan" ,"Kiribati","South Korea","Pakistan",
                             "Nepal","Syria","Portugal","Russia","Moscow","Hong Kong","Brazil","Japan","Thailand","Singapore")

@@ -37,12 +37,9 @@ class TabActivity : AppCompatActivity() {
         adapter.addFragment(tab1(), "Tab #1")
         adapter.addFragment(tab2(), "Tab #2")
         adapter.addFragment(tab3(), "Tab #3")
-        //adapter.addFragment(tab3(), "Leet Code")
 
-        // Adding the Adapter to the ViewPager
-        pager.adapter = adapter
+        pager.adapter = adapter // Adding the Adapter to the ViewPager
 
-        // bind the viewPager with the TabLayout.
-        tab.setupWithViewPager(pager)
+        tab.setupWithViewPager(pager) // bind the viewPager with the TabLayout.
     }
 }
