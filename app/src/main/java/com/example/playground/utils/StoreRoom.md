@@ -196,3 +196,17 @@ fun createNotificationChannel(){
 > You can only use the `android:onClick` attribute in activity layouts for buttons, or any views that are subclasses of `Button` such as `CheckBox` and `RadioButton`.
 > The `ListView` class  isn't a subclass of `Button`, so using the `android:onClick` attribute won't work.
 > That's why you have to implement your own listener.
+
+#### app bars, action bars, and toolbars. Is there a difference?
+> An app bar is the bar that usually appears at the top of your activities.
+> It’s sometimes called an action bar because in earlier versions of Android, the only way of implementing an app bar was via the ActionBar class. 
+
+> The ActionBar class is used behind the scenes when you add an app bar by applying a theme.
+> If your app doesn’t rely on any new app bar features, this may be sufficient for your app. 
+
+> An alternative way of adding an app bar is to implement a toolbar using the Toolbar class.
+> The result looks similar to the default theme-based app bar, but it includes newer features of Android.
+
+#### I’ve seen the <include> tag in some of the code that Android Studio has created for me. What does it do?
+> The <include> tag is used to include one layout inside another. 
+> Depending on what version of Android Studio you’re using and what type of project you create, Android Studio may split your layout code into one or more separate layouts.

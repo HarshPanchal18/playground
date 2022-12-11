@@ -252,14 +252,21 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         val rating: RatingBar =findViewById(R.id.rate)
         rating.setOnRatingBarChangeListener { ratingBar, fl, b ->
             Toast.makeText(this,ratingBar.rating.toString(),Toast.LENGTH_SHORT).show()
-            val intent=Intent(Intent.ACTION_VIEW)
-            intent.data=Uri.parse("https://play.google.com/store/apps/details?id=com.example.playground")
-            startActivity(intent)
+            if(ratingBar.rating.toInt()>=4){
+                val intent=Intent(Intent.ACTION_VIEW)
+                intent.data=Uri.parse("https://play.google.com/store/apps/details?id=com.example.playground")
+                startActivity(intent)
+            }
         }
 
         val wallpaperbtn:Button=findViewById(R.id.wallpaperbtn)
         wallpaperbtn.setOnClickListener {
             startActivity(Intent(this,WallPaper::class.java))
+        }
+
+        val searchbtn:Button=findViewById(R.id.searchbtn)
+        searchbtn.setOnClickListener {
+            startActivity(Intent(this,SearchActivity::class.java))
         }
     }
 

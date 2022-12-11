@@ -21,12 +21,16 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
+            android:name=".activities.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:label="Network Image Wallpaper"
             android:name=".activities.WallPaper"
             android:exported="false" />
         <activity
-            android:label="Expanded List"
             android:name=".activities.ExpandList"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Expanded List" />
         <activity
             android:name=".activities.starbuzz.DrinkMainActivity"
             android:exported="false" />
@@ -37,9 +41,9 @@
             android:name=".activities.starbuzz.StarBuzz"
             android:exported="false" />
         <activity
-            android:label="ListView"
             android:name=".activities.ListViewActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="ListView" />
         <activity
             android:name=".activities.PullRefresh"
             android:exported="false" />
@@ -50,13 +54,13 @@
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
-            android:label="Notification Styles"
             android:name=".activities.Notification"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Notification Styles" />
         <activity
-            android:label="Animation"
             android:name=".activities.AnimationActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Animation" />
         <activity
             android:name=".activities.FrameLayoutActivity"
             android:exported="false" />
@@ -95,8 +99,8 @@
             android:exported="false" />
         <activity
             android:name=".activities.LockScreen"
-            android:label="Welcome !"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Welcome !" />
         <activity
             android:name=".activities.ClockActivity"
             android:exported="false" />
