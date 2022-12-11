@@ -34,10 +34,10 @@ class TabActivity : AppCompatActivity() {
         val adapter = ViewPagerAdapter(supportFragmentManager)
 
         // add fragment to the list
-        adapter.addFragment(tab1(), "GeeksForGeeks")
-        adapter.addFragment(tab2(), "Code Chef")
-        adapter.addFragment(tab3(), "Leet Code")
-        adapter.addFragment(tab3(), "Leet Code")
+        adapter.addFragment(tab1(), "Tab #1")
+        adapter.addFragment(tab2(), "Tab #2")
+        adapter.addFragment(tab3(), "Tab #3")
+        //adapter.addFragment(tab3(), "Leet Code")
 
         // Adding the Adapter to the ViewPager
         pager.adapter = adapter

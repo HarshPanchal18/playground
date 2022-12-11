@@ -10,10 +10,18 @@
     <ListView
         android:id="@+id/countrylist"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="383dp"
+        android:layout_margin="10dp" />
 
-    <!--<View
+    <View
         android:layout_width="match_parent"
         android:layout_height="20dp"
-        android:background="@color/buttonlayer2"/>-->
+        android:background="@color/buttonlayer2"/>
+
+    <ListView
+        android:id="@+id/compundlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
+
 </LinearLayout>
