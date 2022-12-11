@@ -5,7 +5,9 @@ import android.content.Intent
 import android.content.res.ColorStateList
 import android.content.res.Configuration
 import android.graphics.Color
+import android.graphics.PorterDuff
 import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
 import android.media.AudioManager
 import android.net.ConnectivityManager
 import android.net.Uri
@@ -250,6 +252,8 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         }
 
         val rating: RatingBar =findViewById(R.id.rate)
+        val stars: Drawable = rating.progressDrawable
+        stars.setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_ATOP)
         rating.setOnRatingBarChangeListener { ratingBar, fl, b ->
             Toast.makeText(this,ratingBar.rating.toString(),Toast.LENGTH_SHORT).show()
             if(ratingBar.rating.toInt()>=4){
