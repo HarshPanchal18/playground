@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <rootNode>
+        <Id>101</Id>
+        <Name>Arjun</Name>
+        <Age>25</Age>
+    </rootNode>
+    <rootNode>
+        <Id>102</Id>
+        <Name>Tirth</Name>
+        <Age>22</Age>
+    </rootNode>
+    <rootNode>
+        <Id>103</Id>
+        <Name>Akshay</Name>
+        <Age>17</Age>
+    </rootNode>
+    <rootNode>
+        <Id>104</Id>
+        <Name>Vivek</Name>
+        <Age>21</Age>
+    </rootNode>
+    <rootNode>
+        <Id>105</Id>
+        <Name>Jay</Name>
+        <Age>20</Age>
+    </rootNode>
+    <rootNode>
+        <Id>106</Id>
+        <Name>Harsh</Name>
+        <Age>19</Age>
+    </rootNode>
+</root>

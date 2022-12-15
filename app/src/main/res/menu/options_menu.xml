@@ -7,18 +7,26 @@
     <item
         android:id="@+id/action_setting"
         android:orderInCategory="100"
-        android:title="Application Setting" />
+        app:showAsAction="never"
+        android:title="Application Settings" />
 
     <item
         android:id="@+id/action_share"
         android:orderInCategory="100"
-        app:showAsAction="always"
+        app:showAsAction="never"
         android:title="@string/action_share"/>
 
     <item
         android:id="@+id/action_exit"
         android:orderInCategory="100"
         android:title="@string/action_exit"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         android:icon="@drawable/ic_action_exit"/>
+
+    <item
+        android:id="@+id/reportbug"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="Report a bug"
+        android:icon="@drawable/ic_report_bug"/>
 </menu>

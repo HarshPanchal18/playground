@@ -24,6 +24,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.browser.customtabs.CustomTabsIntent
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.GravityCompat
 import com.example.playground.activities.*
@@ -365,7 +366,8 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.options_menu,menu)
-        return true
+        //return super.onCreateOptionsMenu(menu)
+        return true // true tells the Android you've dealt with the item being clicked
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -375,7 +377,7 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         return when(item.itemId)
         {
             R.id.action_setting->{
-                Toast.makeText(applicationContext, "clicked on setting", Toast.LENGTH_LONG).show()
+                //Toast.makeText(applicationContext, "clicked setting", Toast.LENGTH_LONG).show()
                 val intent=Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 val uri: Uri =Uri.fromParts("package",packageName,null)
@@ -385,12 +387,12 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             }
 
             R.id.action_share->{
-                Toast.makeText(applicationContext, "clicked on share", Toast.LENGTH_LONG).show()
-                true
+                Toast.makeText(applicationContext, "Clicked on share", Toast.LENGTH_LONG).show()
+                true // true tells the Android you've dealt with the item being clicked
             }
 
             R.id.action_exit->{
-                Toast.makeText(applicationContext, "clicked on exit", Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext, "Clicked exit", Toast.LENGTH_LONG).show()
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle("EXIT")
                 builder.setMessage(R.string.dialogMsgExit)
@@ -411,7 +413,32 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
                 alertDialog.show()
                 true
             }
+
+            R.id.reportbug->{
+                openCustomTab("https:www.github.com/harshpanchal18/")
+                true
+            }
             else->super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun openCustomTab(url: String) {
+        val weburi:Uri = if(!url.contains("https://") && !url.contains("http://"))
+            Uri.parse("http://$url")
+        else
+            Uri.parse(url)
+
+        val customTabIntent=CustomTabsIntent.Builder()
+        customTabIntent.setToolbarColor(Color.parseColor("#75FF5722"))
+        customTabIntent.setShowTitle(true)
+
+        if(chromeInstalled())
+            customTabIntent.build().intent.setPackage("com.android.chrome")
+        customTabIntent.build().launchUrl(this,weburi)
+    }
+
+    private fun chromeInstalled(): Boolean {
+        return try{ packageManager.getPackageInfo("com.android.chrome",0); true
+        } catch(e:Exception){ false }
     }
 }
