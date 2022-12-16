@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/dev/playground/app/src/main/res/drawable-anydpi/ic_action_exit.xml" value="0.124" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable-anydpi/ic_action_hint.xml" value="0.148" />
+        <entry key="..\:/dev/playground/app/src/main/res/drawable-anydpi/ic_flash.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/bottom_bar_shape.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/button_background.xml" value="0.2155" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/customs.xml" value="0.148" />
@@ -40,8 +41,8 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_launch.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_list_view.xml" value="0.2" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.16" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.18" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.33" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.25" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_notification.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_parse_data.xml" value="0.18" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_picker.xml" value="0.25" />
@@ -60,6 +61,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_splash_screen.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_star_buzz.xml" value="0.2" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_stopwatch.xml" value="0.33" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_switcher.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_sys_info.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_sysinfo.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_tab.xml" value="0.16" />

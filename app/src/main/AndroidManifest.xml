@@ -21,6 +21,9 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
+            android:name=".activities.Switcher"
+            android:exported="false" />
+        <activity
             android:name=".activities.ParseData"
             android:exported="false" />
         <activity
