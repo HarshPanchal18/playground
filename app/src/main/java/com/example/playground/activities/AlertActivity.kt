@@ -13,21 +13,18 @@ import com.example.playground.MainActivity
 import com.example.playground.R
 import kotlinx.android.synthetic.main.activity_alert.*
 
-
 class AlertActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_alert)
 
         // Customize the back button
-        //actionBar.setHomeAsUpIndicator();
         val actionBar: ActionBar? = supportActionBar
 
-        // showing the back button in action bar
+        // showing the back button on action bar
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
             actionBar.setHomeButtonEnabled(true)
-            actionBar.apply {  }
         }
 
         val items = arrayOf(" PHP", " JAVA", " JSON", " C#", " Objective-C")

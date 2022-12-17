@@ -107,8 +107,8 @@ import kotlinx.android.synthetic.main.activity_main.*
  3rd Activity - InsertionExample
 */
 
-val intent=Intent(CustomizedListview.this,InsertionExample.class)
-intent.putExtra("orderid",getOrderid);
+val intent=Intent(CustomizedListview.this,InsertionExample::class.java)
+intent?.putExtra("orderid",getOrderid);
 startActivity(intent);
 ```
 * In your 3rd Activity
@@ -117,22 +117,22 @@ startActivity(intent);
  val getOrderId:String = bundle.getString("orderid");
 ```
 Another way
-```java
+```kotlin
 //your 1st activity (CustomizedListview)
-String str:String=txtView.getText().toString();
-Intent i=new Intent(getApplicationContext(),SingleMenuItemActivity.class);
+val str:String=txtView.text.toString();
+val i= Intent(applicationContext,SingleMenuItemActivity::class.java);
 i.putExtra("message",str);
 startActivity(i);
 
 //your 2nd Activity (SingleMenuItemActivity)
-String str= getIntent().getStringExtra("message");
-Intent i = new Intent(getApplicationContext(), InsertionExample.class);
+val str:String = Intent.getStringExtra("message");
+val i =Intent(applicationContext, InsertionExample::class.java)
 i.putExtra("message", str);
 startActivity(i);
 
 //you 3rd Activity (InsertionExample)
-Intent int=getIntent();
-String str= int.getStringExtra("message");
+val int:Intent=getIntent();
+val str:String= int?.getStringExtra("message");
 txtView.setText(str);
 ```
 

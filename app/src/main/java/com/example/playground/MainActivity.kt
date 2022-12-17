@@ -25,6 +25,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.GravityCompat
+import androidx.core.view.MenuItemCompat
 import com.example.playground.activities.*
 import com.example.playground.activities.starbuzz.StarBuzz
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -36,8 +37,9 @@ import kotlin.system.exitProcess
 class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener { // implements Popmenu for popup window
 
     lateinit var toggle:ActionBarDrawerToggle
+    var shareActionProvider:ShareActionProvider? = null
 
-     override fun onConfigurationChanged(newConfig: Configuration) {
+    override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
     }
 
@@ -360,10 +362,15 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         backPressedTime= System.currentTimeMillis()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+
         menuInflater.inflate(R.menu.options_menu,menu)
-        //return super.onCreateOptionsMenu(menu)
-        return true // true tells the Android you've dealt with the item being clicked
+        val menuItem:MenuItem=menu.findItem(R.id.action_share)
+        shareActionProvider = (MenuItemCompat.getActionProvider(menuItem) as ShareActionProvider?)
+        setShareAction("Want to join?")
+
+        return super.onCreateOptionsMenu(menu)
+        //return true // true tells the Android you've dealt with the item being clicked
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -416,6 +423,15 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             }
             else->super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun setShareAction(str: String) { //create the intent and pass to shareActivity
+        val intent=Intent(Intent.ACTION_SEND)
+        intent.type="text/plain"
+        intent.putExtra(Intent.EXTRA_TEXT,str)
+        shareActionProvider?.setShareIntent(intent)
+        // you need to call setShareIntent() whenever the content you wish to share has changed
+        // i.e. if you're flicking through images in a photos app, you need to make sure you share the current photo
     }
 
     private fun openCustomTab(url: String) {

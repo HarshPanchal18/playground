@@ -126,6 +126,7 @@ class MainActivity2 : AppCompatActivity() {
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toggle.onOptionsItemSelected(item))
             return true

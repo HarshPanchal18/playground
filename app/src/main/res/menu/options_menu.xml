@@ -29,4 +29,12 @@
         app:showAsAction="never"
         android:title="Report a bug"
         android:icon="@drawable/ic_report_bug"/>
+
+    <!-- showAsAction values
+    "ifRoom"    Place the item in the app bar if there’s space. If there’s not space, put it in the overflow.
+    "withText"  Include the item’s title text.
+    "never"     Put the item in the overflow area, and never in the main app bar.
+    "always"    Always place the item in the main area of the app bar. This value should be used sparingly;
+                if you apply this to many items, they may overlap each other.
+    -->
 </menu>
