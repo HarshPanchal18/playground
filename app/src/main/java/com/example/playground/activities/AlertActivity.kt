@@ -2,8 +2,6 @@ package com.example.playground.activities
 
 import android.content.Intent
 import android.graphics.Color
-import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import android.os.Bundle
 import android.text.Html
 import android.view.View
@@ -13,6 +11,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.playground.MainActivity
 import com.example.playground.R
+import kotlinx.android.synthetic.main.activity_alert.*
+
 
 class AlertActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,13 +27,37 @@ class AlertActivity : AppCompatActivity() {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true)
             actionBar.setHomeButtonEnabled(true)
-            /*actionBar.apply {
-                startActivity(Intent(this,MainActivity::class.java))
-            }*/
-        };
+            actionBar.apply {  }
+        }
+
+        val items = arrayOf(" PHP", " JAVA", " JSON", " C#", " Objective-C")
+        val itemsSelected = ArrayList<Any>()
+
+        checkalert.setOnClickListener {
+            val builder=AlertDialog.Builder(this)
+            builder.setTitle("Select Languages You Know: ")
+            builder.setMultiChoiceItems(items,null
+            ) { dialog, selectedItemId, isSelected ->
+                if (isSelected) itemsSelected.add(selectedItemId)
+                else if (itemsSelected.contains(selectedItemId)) itemsSelected.remove(Integer.valueOf(selectedItemId))
+            }
+
+            //positive action
+            builder.setPositiveButton("Yes"){
+                    _, _ -> Toast.makeText(this, itemsSelected.toString(), Toast.LENGTH_SHORT).show()
+            }
+
+            //cancel action
+            builder.setNegativeButton("No"){
+                    _, _ -> Toast.makeText(applicationContext,"Discarded changes",Toast.LENGTH_SHORT).show()
+                checkalert.text="Alerted"
+            }
+
+            val alertDialog:AlertDialog=builder.create()
+            alertDialog.show()
+        }
 
         val alertbtn: Button =findViewById(R.id.altbtn)
-
         alertbtn.setOnClickListener {
             val builder=AlertDialog.Builder(this)
             builder.setTitle(R.string.dialogTitle)

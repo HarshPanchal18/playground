@@ -3,21 +3,17 @@ package com.example.playground.activities
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.Drawable
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.view.Gravity
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.playground.MainActivity
 import com.example.playground.R
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_lock_screen.*
-import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.system.exitProcess
 
@@ -30,9 +26,17 @@ class LockScreen : AppCompatActivity() {
 
         val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
 
-        val r: Int = rand(0, 10)
+        val li=layoutInflater
+        val view=li.inflate(R.layout.custom_toast, findViewById(R.id.custom_toast))
+        val ctoast=Toast(applicationContext)
+        ctoast.view = view
+        ctoast.duration=Toast.LENGTH_LONG
+        ctoast.show()
+
+
+        val randDigit: Int = rand(0, 10)
         gobtn.setOnClickListener {
-            if (passwdbox.text.toString() == r.toString()) {
+            if (passwdbox.text.toString() == randDigit.toString()) {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 passwdbox.backgroundTintList=ColorStateList.valueOf(Color.GREEN)
@@ -48,7 +52,7 @@ class LockScreen : AppCompatActivity() {
         }
 
         hintbtn.setOnClickListener {
-            val toast = Toast.makeText(this, "Try :--> $r", Toast.LENGTH_SHORT)
+            val toast = Toast.makeText(this, "Apply: $randDigit", Toast.LENGTH_SHORT)
             toast.setGravity(Gravity.CENTER, 0, 0)
             toast.show()
         }

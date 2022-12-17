@@ -22,7 +22,6 @@ import com.example.playground.activities.Switcher
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main2.*
 
-
 class MainActivity2 : AppCompatActivity() {
 
     lateinit var toggle: ActionBarDrawerToggle
