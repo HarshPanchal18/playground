@@ -8,17 +8,15 @@ import com.example.playground.fragments.HomeFragment
 import com.example.playground.fragments.ProfileFragment
 
 internal class PagerViewAdapter(fragmentManager: FragmentManager?):FragmentPagerAdapter(fragmentManager!!) {
-    override fun getItem(position: Int): Fragment {
-        return if(position==0) HomeFragment()
-            else if(position==1) ProfileFragment()
-            else AddFragrment()
 
-            /*0-> HomeFragment()
-            1-> ProfileFragment()
-            2-> AddFragrment()
-            else->null
-        }*/
+    override fun getItem(position: Int): Fragment {
+        return when (position) {
+            0 -> HomeFragment()
+            1 -> ProfileFragment()
+            else -> AddFragrment()
+        }
     }
+
     override fun getCount(): Int {
         return 3
     }

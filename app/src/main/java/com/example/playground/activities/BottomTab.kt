@@ -1,8 +1,8 @@
 package com.example.playground.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.playground.R
 import com.example.playground.adapters.PagerViewAdapter
@@ -57,9 +57,9 @@ class BottomTab : AppCompatActivity() {
         })
 
         mViewPager.currentItem=0
-        homebtn.setImageResource(R.drawable.ic_home_current)
-
+        homebtn.setImageResource(R.drawable.ic_home_black)
     }
+
     private fun changeTabs(position:Int){
         when (position) {
             0 -> {

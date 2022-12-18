@@ -19,6 +19,7 @@ import com.example.playground.activities.AdminContact
 import com.example.playground.activities.LockScreen
 import com.example.playground.activities.ParseData
 import com.example.playground.activities.Switcher
+import com.example.playground.activities.workout.WorkoutMainActivity
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main2.*
 
@@ -90,6 +91,10 @@ class MainActivity2 : AppCompatActivity() {
 
         switcher.setOnClickListener {
             startActivity(Intent(this,Switcher::class.java))
+        }
+
+        fragmentbtn.setOnClickListener {
+            startActivity(Intent(this, WorkoutMainActivity::class.java))
         }
     }
 
