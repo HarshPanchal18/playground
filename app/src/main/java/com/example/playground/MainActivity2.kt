@@ -15,10 +15,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.view.GravityCompat
-import com.example.playground.activities.AdminContact
-import com.example.playground.activities.LockScreen
-import com.example.playground.activities.ParseData
-import com.example.playground.activities.Switcher
+import com.example.playground.activities.*
 import com.example.playground.activities.workout.WorkoutMainActivity
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main2.*
@@ -95,6 +92,10 @@ class MainActivity2 : AppCompatActivity() {
 
         fragmentbtn.setOnClickListener {
             startActivity(Intent(this, WorkoutMainActivity::class.java))
+        }
+
+        swipe_deletebtn.setOnClickListener {
+            startActivity(Intent(this,SwipeDelete::class.java))
         }
     }
 

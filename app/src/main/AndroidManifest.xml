@@ -21,11 +21,16 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
+            android:name=".activities.SwipeDelete"
+            android:exported="false" />
+        <activity
             android:name=".activities.DetailActivity"
             android:exported="false" />
         <activity
             android:name=".activities.workout.WorkoutMainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Workout Fragments"
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".activities.Switcher"
             android:exported="false" />

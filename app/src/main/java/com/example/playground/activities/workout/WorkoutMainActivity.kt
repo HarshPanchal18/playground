@@ -3,6 +3,7 @@ package com.example.playground.activities.workout
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
 import com.example.playground.R
@@ -14,6 +15,15 @@ class WorkoutMainActivity : AppCompatActivity(), WorkoutListFragment.WorkoutList
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_workout_main)
+
+        // Customize the back button
+        val actionBar: ActionBar? = supportActionBar
+
+        // showing the back button on action bar
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setHomeButtonEnabled(true)
+        }
     }
 
     override fun itemClicked(id: Long) {
