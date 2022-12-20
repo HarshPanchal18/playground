@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/activity_vertical_margin"
+    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+    tools:context=".activities.storage.CacheActivity">
+
+    <EditText
+        android:id="@+id/cacheName"
+        android:hint="Name: "
+        android:ems="10"
+        android:text=""
+        android:inputType="textPersonName|textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/cacheSavebtn"
+            android:text="SAVE"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/cacheReadbtn"
+            android:text="READ"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cacheReadText"
+        android:textSize="20sp"
+        android:hint="Cache Content"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -14,12 +14,25 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
+        <activity
+            android:label="Input Validation"
+            android:name=".activities.ValidationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.storage.CacheActivity"
+            android:exported="false"
+            android:label="Cache Storage" />
+        <activity
+            android:name=".activities.storage.StorageMainActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.SwipeDelete"
             android:exported="false" />
@@ -99,7 +112,7 @@
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
-            android:name=".fragments.AddFragrment"
+            android:name=".fragments.AddFragment"
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
@@ -141,7 +154,16 @@
             android:exported="false" />
         <activity
             android:name=".activities.Implicit_intent"
-            android:exported="false" />
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activities.tabs.tab3"
             android:exported="false"

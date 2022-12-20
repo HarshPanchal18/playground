@@ -3,7 +3,7 @@ package com.example.playground.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.playground.fragments.AddFragrment
+import com.example.playground.fragments.AddFragment
 import com.example.playground.fragments.HomeFragment
 import com.example.playground.fragments.ProfileFragment
 
@@ -13,7 +13,7 @@ internal class PagerViewAdapter(fragmentManager: FragmentManager?):FragmentPager
         return when (position) {
             0 -> HomeFragment()
             1 -> ProfileFragment()
-            else -> AddFragrment()
+            else -> AddFragment()
         }
     }
 

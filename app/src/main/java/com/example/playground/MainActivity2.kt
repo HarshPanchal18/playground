@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.view.GravityCompat
 import com.example.playground.activities.*
+import com.example.playground.activities.storage.StorageMainActivity
 import com.example.playground.activities.workout.WorkoutMainActivity
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main2.*
@@ -96,6 +97,14 @@ class MainActivity2 : AppCompatActivity() {
 
         swipe_deletebtn.setOnClickListener {
             startActivity(Intent(this,SwipeDelete::class.java))
+        }
+
+        storagebtn.setOnClickListener {
+            startActivity(Intent(this,StorageMainActivity::class.java))
+        }
+
+        validationbtn.setOnClickListener {
+            startActivity(Intent(this,ValidationActivity::class.java))
         }
     }
 

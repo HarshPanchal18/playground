@@ -37,6 +37,14 @@
         <item>Stores</item>
     </string-array>
 
+    <string-array name="storages">
+        <item>Cache</item>
+        <item>Shared Preferences</item>
+        <item>Internal Storage</item>
+        <item>External Storage</item>
+        <item>External Storage Public Directory</item>
+    </string-array>
+
     <string name="action_settings">Settings</string>
     <string name="action_share">Share</string>
     <string name="action_exit">Exit</string>
