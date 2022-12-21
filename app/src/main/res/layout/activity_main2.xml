@@ -101,6 +101,18 @@
             app:layout_constraintTop_toBottomOf="@+id/fragmentbtn" />
 
         <Button
+            android:id="@+id/recyclerbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/buttonlayer1"
+            android:text="Recycler View"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.665"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swipe_deletebtn" />
+
+        <Button
             android:id="@+id/validationbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

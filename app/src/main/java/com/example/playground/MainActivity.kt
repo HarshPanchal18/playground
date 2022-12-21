@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
                 }
 
                 R.id.logout -> {
-                    Toast.makeText(applicationContext,"Log Out",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext,"Logged Out",Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this,LockScreen::class.java))
                 }
             }

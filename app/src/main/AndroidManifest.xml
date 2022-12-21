@@ -23,9 +23,16 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
-            android:label="Input Validation"
-            android:name=".activities.ValidationActivity"
+            android:name=".RecyclerActivity"
             android:exported="false" />
+        <activity
+            android:name=".activities.storage.SharedPreference"
+            android:exported="false"
+            android:label="Shared Preference" />
+        <activity
+            android:name=".activities.ValidationActivity"
+            android:exported="false"
+            android:label="Input Validation" />
         <activity
             android:name=".activities.storage.CacheActivity"
             android:exported="false"
@@ -148,13 +155,16 @@
             android:exported="false" />
         <activity
             android:name=".activities.SysInfo"
-            android:exported="false" />
+            android:exported="false"
+            android:label="System Snapshot" />
         <activity
             android:name=".activities.Explicit_intent"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Intent" />
         <activity
             android:name=".activities.Implicit_intent"
-            android:exported="false">
+            android:exported="false"
+            android:label="Intent">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 

@@ -1,14 +1,28 @@
 package com.example.playground.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import com.example.playground.utils.Constants
+import androidx.appcompat.app.AppCompatActivity
 import com.example.playground.R
+import com.example.playground.utils.Constants
+import kotlinx.android.synthetic.main.activity_implicit_intent.*
 
 class Implicit_intent : AppCompatActivity() {
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        val msgtxt=usrmsg.text.toString()
+        outState.putString("savedText",msgtxt)
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        val msgText=savedInstanceState.getString("savedText")
+        usrmsg.setText(msgText)
+        super.onRestoreInstanceState(savedInstanceState)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_implicit_intent)

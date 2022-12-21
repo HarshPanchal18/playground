@@ -15,6 +15,7 @@ class StorageMainActivity : AppCompatActivity() {
         val itemClickListener: AdapterView.OnItemClickListener=AdapterView.OnItemClickListener { adapterView, view, pos, l ->
             when(pos){
                 0 -> { startActivity(Intent(this,CacheActivity::class.java)) }
+                1 -> { startActivity(Intent(this,SharedPreference::class.java)) }
             }
         }
 
