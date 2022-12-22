@@ -18,6 +18,7 @@
         tools:context=".MainActivity2">
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="276dp"
@@ -123,6 +124,18 @@
             app:layout_constraintHorizontal_bias="0.059"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/swipe_deletebtn" />
+
+        <Button
+            android:id="@+id/viewSliderbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/buttonlayer2"
+            android:text="View Slider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.129"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/validationbtn" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView

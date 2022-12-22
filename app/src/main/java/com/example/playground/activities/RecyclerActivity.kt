@@ -4,23 +4,28 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.playground.R
+import com.example.playground.adapters.CustRecycleAdapter
 import kotlinx.android.synthetic.main.activity_recycler.*
 
 class RecyclerActivity : AppCompatActivity() {
-    // ArrayList for person names
-    var personNames = ArrayList(listOf(
-        "Person 1", "Person 2",
-        "Person 3", "Person 4",
-        "Person 5", "Person 6",
-        "Person 7", "Person 8" ))
+
+    private val personNames=fetchData()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler)
 
-        val linearLayoutManager=LinearLayoutManager(applicationContext)
+        val linearLayoutManager=LinearLayoutManager(this)
         personRecyclerView.layoutManager=linearLayoutManager
 
-        //val custAdapter=AdapterView(this,personNames)
+        val adapter=CustRecycleAdapter(this,personNames)
+        personRecyclerView.adapter=adapter
+    }
+
+    private fun fetchData():ArrayList<String>{
+        val list=ArrayList<String>()
+        for( i in 0 until 20)
+            list.add("Item $i")
+        return list
     }
 }

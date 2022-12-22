@@ -106,6 +106,14 @@ class MainActivity2 : AppCompatActivity() {
         validationbtn.setOnClickListener {
             startActivity(Intent(this,ValidationActivity::class.java))
         }
+
+        recyclerbtn.setOnClickListener {
+            startActivity(Intent(this,RecyclerActivity::class.java))
+        }
+
+        viewSliderbtn.setOnClickListener {
+            startActivity(Intent(this,ViewPager::class.java))
+        }
     }
 
     private fun flashOn() {
