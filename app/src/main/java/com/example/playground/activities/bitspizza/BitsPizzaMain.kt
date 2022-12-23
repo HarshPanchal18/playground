@@ -1,10 +1,13 @@
 package com.example.playground.activities.bitspizza
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.ShareActionProvider
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.MenuItemCompat
 import androidx.fragment.app.Fragment
@@ -20,7 +23,11 @@ class BitsPizzaMain : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bits_pizza_main)
 
-        //setSupportActionBar(toolbar as Toolbar?)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        val actionBar: ActionBar? = supportActionBar
+        val colorDrawable = ColorDrawable(Color.parseColor("#f7ac34"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
+
         val pagerAdapter=SectionsAdapter(supportFragmentManager)
         pager.adapter=pagerAdapter
 
@@ -53,7 +60,6 @@ class BitsPizzaMain : AppCompatActivity() {
         shareActionProvider?.setShareIntent(intent)
     }
 
-
     private class SectionsAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
         override fun getCount(): Int { return 4 }
@@ -69,10 +75,10 @@ class BitsPizzaMain : AppCompatActivity() {
 
         override fun getPageTitle(pos:Int): CharSequence? { // adds the text to the tabs
             return when(pos){
-                0-> "Home"//resources.getText(R.string.home_tab)
-                1-> "Pizza"// resources.getText(R.string.pizza_tab)
-                2-> "Pasta"//resources.getText(R.string.pasta_tab)
-                3-> "Store"//resources.getText(R.string.store_tab)
+                0-> "Home"
+                1-> "Pizza"
+                2-> "Pasta"
+                3-> "Store"
                 else -> null
             }
         }

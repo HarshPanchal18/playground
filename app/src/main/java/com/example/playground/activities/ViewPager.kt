@@ -1,6 +1,7 @@
 package com.example.playground.activities
 
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.playground.R
@@ -16,6 +17,15 @@ class ViewPager : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_pager)
+
+        // Customize the back button
+        val actionBar: ActionBar? = supportActionBar
+
+        // showing the back button on action bar
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setHomeButtonEnabled(true)
+        }
 
         postToList()
 

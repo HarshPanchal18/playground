@@ -28,6 +28,7 @@
             android:name=".activities.bitspizza.OrderActivity"
             android:exported="false" />
         <activity
+            android:label="Bits And Pizza"
             android:name=".activities.bitspizza.BitsPizzaMain"
             android:exported="false" />
         <activity
@@ -42,6 +43,7 @@
             android:exported="false"
             android:label="Internal Storage" />
         <activity
+            android:parentActivityName=".MainActivity2"
             android:name=".activities.ViewPager"
             android:exported="false"
             android:label="View Slider" />
