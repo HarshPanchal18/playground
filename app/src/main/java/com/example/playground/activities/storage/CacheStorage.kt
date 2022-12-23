@@ -5,11 +5,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.playground.R
 import kotlinx.android.synthetic.main.activity_cache.*
-import java.io.File
-import java.io.FileOutputStream
-import java.io.IOException
+import java.io.*
 
-class CacheActivity : AppCompatActivity() {
+class CacheStorage : AppCompatActivity() {
 
     private val fileName:String="myCache"
     var name:String=""
@@ -25,29 +23,23 @@ class CacheActivity : AppCompatActivity() {
     private fun readFile(){
         try {
             val file= File(cacheDir,fileName)
-            /*val fin=FileInputStream(file)
-            val inputStream=InputStreamReader(fin)
-            val bufferedReader=BufferedReader(inputStream)*/
+            val fin=FileInputStream(file)
+            val inputStream= InputStreamReader(fin)
+            val bufferedReader= BufferedReader(inputStream)
             val stringBuilder=StringBuilder()
-            //var line: String? =null
+            var line: String?
 
+            while(run {
+                    line = bufferedReader.readLine()
+                    line
+                } != null) // https://discuss.kotlinlang.org/t/assignment-not-allow-in-while-expression/339/6
+            { stringBuilder.append(line) }
 
-            // while(true)
-            /*while({ line=bufferedReader.readLine() } != null) // https://discuss.kotlinlang.org/t/assignment-not-allow-in-while-expression/339/6
-                stringBuilder.append(line)*/
-
-            file.readLines().forEach{ stringBuilder.append(it) }
-
-            /*fin.close()
-            inputStream.close()*/
+            fin.close()
+            inputStream.close()
 
             cacheReadText.text=stringBuilder.toString()
-
-            if(cacheName.text.toString().isEmpty())
-                Toast.makeText(this,"Blanked",Toast.LENGTH_SHORT).show()
-            else
-                Toast.makeText(this,"Retrieved..",Toast.LENGTH_SHORT).show()
-
+            Toast.makeText(this,"Retrieved..",Toast.LENGTH_SHORT).show()
         } catch (e:IOException) { e.printStackTrace() }
     }
 

@@ -14,8 +14,11 @@ class StorageMainActivity : AppCompatActivity() {
 
         val itemClickListener: AdapterView.OnItemClickListener=AdapterView.OnItemClickListener { adapterView, view, pos, l ->
             when(pos){
-                0 -> { startActivity(Intent(this,CacheActivity::class.java)) }
+                0 -> { startActivity(Intent(this,CacheStorage::class.java)) }
                 1 -> { startActivity(Intent(this,SharedPreference::class.java)) }
+                2 -> { startActivity(Intent(this,InternalStorage::class.java)) }
+                3 -> { startActivity(Intent(this,ExternalStorage::class.java)) }
+                4 -> { startActivity(Intent(this,ExternalStoragePublicDir::class.java)) }
             }
         }
 

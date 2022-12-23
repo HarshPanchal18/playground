@@ -7,10 +7,10 @@
     android:orientation="vertical"
     android:paddingVertical="@dimen/activity_vertical_margin"
     android:paddingHorizontal="@dimen/activity_horizontal_margin"
-    tools:context=".activities.storage.CacheStorage">
+    tools:context=".activities.storage.ExternalStoragePublicDir">
 
     <EditText
-        android:id="@+id/cacheName"
+        android:id="@+id/externalPublicName"
         android:hint="Name: "
         android:ems="10"
         android:text=""
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/cacheSavebtn"
+            android:id="@+id/externalPublicSavebtn"
             android:text="SAVE"
             android:layout_weight="1"
             android:layout_margin="5dp"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"/>
 
         <Button
-            android:id="@+id/cacheReadbtn"
+            android:id="@+id/externalPublicReadbtn"
             android:text="READ"
             android:layout_weight="1"
             android:layout_margin="5dp"
@@ -42,9 +42,10 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/cacheReadText"
+        android:id="@+id/externalPublicReadText"
         android:textSize="20sp"
-        android:hint="Cache Content"
+        android:layout_marginTop="20dp"
+        android:hint="External Storage Content"
         android:textColor="#000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

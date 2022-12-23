@@ -56,4 +56,24 @@
     <string name="workout_desc">Description</string>
     <string name="title_activity_main">MainActivity</string>
 
+    <string-array name="pizza">
+        <item>Diavolo</item>
+        <item>Fungi</item>
+    </string-array>
+
+    <string-array name="pasta">
+        <item>Spaghetti Bolognese</item>
+        <item>Lasagne</item>
+    </string-array>
+
+    <string-array name="store">
+        <item>Cambridge</item>
+        <item>Sebastopol</item>
+    </string-array>
+
+    <string name="home_tab">Home</string>
+    <string name="pizza_tab">Pizza</string>
+    <string name="store_tab">Store</string>
+    <string name="pasta_tab">Pasta</string>
+
 </resources>

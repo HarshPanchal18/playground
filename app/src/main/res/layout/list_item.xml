@@ -7,10 +7,11 @@
 
     <TextView
         android:id="@+id/dataId"
-        android:layout_width="32dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="1"
         android:textColor="@color/colorAccent"/>
+        <!--android:layout_width="32dp"-->
 
     <TextView
         android:id="@+id/nameId"

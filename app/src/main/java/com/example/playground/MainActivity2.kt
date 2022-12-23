@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.view.GravityCompat
 import com.example.playground.activities.*
+import com.example.playground.activities.bitspizza.BitsPizzaMain
 import com.example.playground.activities.storage.StorageMainActivity
 import com.example.playground.activities.workout.WorkoutMainActivity
 import com.google.android.material.navigation.NavigationView
@@ -113,6 +114,10 @@ class MainActivity2 : AppCompatActivity() {
 
         viewSliderbtn.setOnClickListener {
             startActivity(Intent(this,ViewPager::class.java))
+        }
+
+        bitspizzabtn.setOnClickListener {
+            startActivity(Intent(this,BitsPizzaMain::class.java))
         }
     }
 

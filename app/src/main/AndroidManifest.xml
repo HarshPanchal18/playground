@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -23,9 +25,26 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
-            android:label="View Slider"
-            android:name=".activities.ViewPager"
+            android:name=".activities.bitspizza.OrderActivity"
             android:exported="false" />
+        <activity
+            android:name=".activities.bitspizza.BitsPizzaMain"
+            android:exported="false" />
+        <activity
+            android:name=".activities.storage.ExternalStoragePublicDir"
+            android:exported="false" />
+        <activity
+            android:name=".activities.storage.ExternalStorage"
+            android:exported="false"
+            android:label="External Storage" />
+        <activity
+            android:name=".activities.storage.InternalStorage"
+            android:exported="false"
+            android:label="Internal Storage" />
+        <activity
+            android:name=".activities.ViewPager"
+            android:exported="false"
+            android:label="View Slider" />
         <activity
             android:name=".activities.RecyclerActivity"
             android:exported="false"
@@ -39,7 +58,7 @@
             android:exported="false"
             android:label="Input Validation" />
         <activity
-            android:name=".activities.storage.CacheActivity"
+            android:name=".activities.storage.CacheStorage"
             android:exported="false"
             android:label="Cache Storage" />
         <activity

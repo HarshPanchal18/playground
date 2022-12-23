@@ -11,13 +11,20 @@ import kotlinx.android.synthetic.main.activity_parse_data.*
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
+import org.xml.sax.Attributes
+import org.xml.sax.SAXException
+import org.xml.sax.helpers.DefaultHandler
 import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserFactory
 import java.io.IOException
 import java.io.InputStream
+import javax.xml.parsers.ParserConfigurationException
+import javax.xml.parsers.SAXParserFactory
 
 class ParseData : AppCompatActivity() {
     private var contactList=ArrayList<HashMap<String,String>>()
+    internal var empData = HashMap<String, String>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_parse_data)
@@ -31,6 +38,65 @@ class ParseData : AppCompatActivity() {
             contactList.clear()
             xmlParsing()
         }
+
+        saxbtn.setOnClickListener {
+            contactList.clear()
+            saxParsing()
+        }
+    }
+
+    private fun saxParsing() {
+        try {
+            val parserFactory = SAXParserFactory.newInstance()
+            val saxParser = parserFactory.newSAXParser()
+            val defaultHandler = object : DefaultHandler() {
+                var currentVal = ""
+                var currentElement = false
+
+                override fun startElement(
+                    uri: String?,
+                    localName: String?,
+                    qName: String?,
+                    attributes: Attributes?
+                ) {
+                    currentElement = true
+                    currentVal = ""
+                    if (localName == "employee")
+                        empData = HashMap()
+                }
+
+                override fun endElement(uri: String?, localName: String?, qName: String?) {
+                    currentElement = false
+                    if (localName.equals("name", ignoreCase = true))
+                        empData["name"] = currentVal
+                    else if (localName.equals("salary", ignoreCase = true))
+                        empData["salary"] = currentVal
+                    else if (localName.equals("designation", ignoreCase = true))
+                        empData["designation"] = currentVal
+                    if (localName.equals("employee", ignoreCase = true))
+                        contactList.add(empData)
+                }
+
+                override fun characters(ch: CharArray, start: Int, length: Int) {
+                    if (currentElement)
+                        currentVal += String(ch, start, length)
+                }
+            }
+            val istream = assets.open("empdetail.xml")
+            saxParser.parse(istream, defaultHandler)
+
+            val adapter = SimpleAdapter(
+                this,
+                contactList,
+                R.layout.list_item,
+                arrayOf("name", "salary", "designation"),
+                intArrayOf(R.id.dataId, R.id.nameId, R.id.ageId)
+            )
+            parselist.adapter = adapter
+        }
+        catch (e: IOException) { e.printStackTrace() }
+        catch (e: ParserConfigurationException) { e.printStackTrace() }
+        catch (e: SAXException) { e.printStackTrace() }
     }
 
     private fun xmlParsing() {
