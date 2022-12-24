@@ -24,6 +24,8 @@ class LockScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lock_screen)
 
+        supportActionBar!!.hide()
+
         val vibrator = getSystemService(VIBRATOR_SERVICE) as Vibrator
 
         val li=layoutInflater

@@ -31,7 +31,7 @@ class BitsPizzaMain : AppCompatActivity() {
         val pagerAdapter=SectionsAdapter(supportFragmentManager)
         pager.adapter=pagerAdapter
 
-        tabs.setupWithViewPager(pager) // links the viewPager wit tab layout
+        tabs.setupWithViewPager(pager) // links the viewPager with tab layout
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -45,7 +45,7 @@ class BitsPizzaMain : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
-            R.id.action_share -> {
+            R.id.action_create_order -> {
                 startActivity(Intent(this,OrderActivity::class.java))
                 true
             }

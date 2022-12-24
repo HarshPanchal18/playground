@@ -447,3 +447,59 @@ fun createNotificationChannel(){
 * Use the ActionBar `setDisplayHomeAsUpEnabled()` to enable the Up button.
 
 * You can share content by adding the share action provider to your app bar. Add it by including it in your menu resource file. Call its `setShareIntent()` method to pass it an intent describing the content you wish  to share.
+
+- 8
+* You add a basic app bar by applying a theme that contains one.
+  
+* The Android Support Libraries provide backward compatibility with older versions of Android.
+  
+* The AppCompatActivity class is a type of activity that resides in the v7 AppCompat Support Library. In
+  general, your activity needs to extend the AppCompatActivity class whenever you want an app bar that provides backward
+  compatibility with older versions of Android.
+  
+* The android:theme attribute in `AndroidManifest.xml` specifies which theme to apply.
+  
+* You define styles in a style resource file using the <style> element. The name
+  attribute gives the style a name. The parent attribute specifies where the style
+  should inherit its properties from.
+* The latest app bar features are in the Toolbar class in the v7 AppCompat Support Library. You can use a toolbar as
+  your app bar.
+  
+* Add actions to your app bar by adding them to a menu resource file.
+  
+* Add the items in the menu resource file to the app bar by implementing the activity’s
+  `onCreateOptionsMenu()`.
+  
+* You determine what items should do when clicked by implementing the activity’s `onOptionsItemSelected()`.
+  
+* Add an Up button to your app bar to navigate up the app’s hierarchy. Specify the hierarchy in
+  AndroidManifest.xml. Use the ActionBar `setDisplayHomeAsUpEnabled()` to enable the Up button.
+  
+* You can share content by adding the share action provider to your app bar. Add it by
+  including it in your menu resource file. Call its `setShareIntent()` to pass
+  it an intent describing the content you wish to share.
+
+- 12
+* Enable swipe navigation using a view pager. 
+
+* You tell a view pager about its pages by
+  implementing a fragment pager adapter.
+  
+* Use the fragment pager adapter’s getCount() method to tell the view pager how many pages it should have. Use
+  its getItem() method to tell it which fragment should appear on each page.
+  
+* Add tab navigation by implementing a tab layout. Put the toolbar and tab layout inside an app bar layout in your layout
+  code, then attach the tab layout to the view pager in your activity code.
+  
+* The tab layout comes from the Android Design Support Library. This library
+  helps you implement the material design guidelines in your app.
+
+* Use a coordinator layout to coordinate animations between views.
+
+* Add scrollable content the coordinator layout can coordinate using a nested scroll view.
+
+* Use a collapsing toolbar layout to add a toolbar that collapses and grows in response to user scroll actions.
+
+* Use a FAB (floating action button) to promote common or important user actions.
+
+* A snackbar lets you display short messages that the user can interact with.
