@@ -6,11 +6,12 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.playground.R
+import com.example.playground.adapters.ListAdapter
 import com.example.playground.adapters.Movie
 import com.example.playground.adapters.SwipeToDeleteCallBack
-import kotlinx.android.synthetic.main.activity_swipe_delete.*
+import kotlinx.android.synthetic.main.activity_swipe_hold.*
 
-class SwipeDelete : AppCompatActivity() {
+class SwipeHold : AppCompatActivity() {
 
     // https://github.com/musabagab/RecyclerViewSwipeToDeleteStarter
     // https://www.youtube.com/watch?v=wxoUkqXyi94&list=PLdG8S8J9LP6mZtVBURNiZ4jPBnKUHIfkW&index=82
@@ -28,11 +29,13 @@ class SwipeDelete : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_swipe_delete)
+        setContentView(R.layout.activity_swipe_hold)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         swipe_delete_recycle.apply {
-            layoutManager=LinearLayoutManager(this@SwipeDelete)
-            adapter=com.example.playground.adapters.ListAdapter(moviesList)
+            layoutManager=LinearLayoutManager(this@SwipeHold)
+            adapter= ListAdapter(moviesList)
         }
 
         val swipeToDeleteCallBack=object:SwipeToDeleteCallBack(){
@@ -45,5 +48,29 @@ class SwipeDelete : AppCompatActivity() {
 
         val itemTouchHelper=ItemTouchHelper(swipeToDeleteCallBack)
         itemTouchHelper.attachToRecyclerView(swipe_delete_recycle)
+
+        val itemTouchHelper2=object:ItemTouchHelper.Callback(){
+            override fun getMovementFlags(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+            ): Int {
+                val dragFlags=ItemTouchHelper.UP or ItemTouchHelper.DOWN
+                return makeMovementFlags(dragFlags,0)
+            }
+
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder,
+            ): Boolean { // notify item moved
+                recyclerView.adapter?.notifyItemMoved(viewHolder.adapterPosition,target.adapterPosition) // front and end positions
+                return true // item has been successfully moved...
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {}
+        }
+
+        val itemTouchHelperCallback=ItemTouchHelper(itemTouchHelper2)
+        itemTouchHelperCallback.attachToRecyclerView(swipe_delete_recycle)
     }
 }

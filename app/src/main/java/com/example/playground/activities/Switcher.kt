@@ -13,6 +13,7 @@ class Switcher : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_switcher)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         var mPos=-1
         val TEXT= arrayOf(

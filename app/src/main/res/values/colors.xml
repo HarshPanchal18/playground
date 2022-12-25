@@ -24,6 +24,9 @@
     <color name="silver">#b6bab7</color>
     <color name="cool">#188FCF</color>
     <color name="warm">#F1D416</color>
+    <color name="gray">#888</color>
+    <color name="blue">#0000FF</color>
+    <color name="color_null" />
 
     <color name="trans_green">#7525D366</color>
     <color name="trans_yellow">#75FFD337</color>

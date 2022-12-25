@@ -24,6 +24,7 @@ class SearchActivity : AppCompatActivity() {
         val toolbar:Toolbar=findViewById(R.id.toolbar)
         toolbar.title="Search City of Gujarat"
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val lists: ListView =findViewById(R.id.citylist)
         val searchview: SearchView = findViewById(R.id.idsearch)

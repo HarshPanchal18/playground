@@ -352,8 +352,7 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             val snackBar=
                 Snackbar.make(homelayout,"Press back again to exit",Snackbar.LENGTH_SHORT)
                 .setAction("BACK"){
-                    Snackbar.make(homelayout,"Welcome",Snackbar.LENGTH_SHORT).show()
-                }
+                    Snackbar.make(homelayout,"Welcome",Snackbar.LENGTH_SHORT).show() }
             snackBar.setActionTextColor(Color.YELLOW)
             val snackBarView=snackBar.view
             snackBarView.setBackgroundColor(Color.BLACK)

@@ -1,14 +1,14 @@
 package com.example.playground.activities
 
-import com.example.playground.adapters.ViewPagerAdapter
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.example.playground.R
 import com.example.playground.activities.tabs.tab1
 import com.example.playground.activities.tabs.tab2
 import com.example.playground.activities.tabs.tab3
+import com.example.playground.adapters.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 
 class TabActivity : AppCompatActivity() {
@@ -20,6 +20,7 @@ class TabActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tab)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // set the references of the declared objects above
         pager = findViewById(R.id.viewPager)

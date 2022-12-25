@@ -1,12 +1,9 @@
 package com.example.playground
 
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.hardware.camera2.CameraAccessException
-import android.hardware.camera2.CameraManager
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -80,12 +77,10 @@ class MainActivity2 : AppCompatActivity() {
         }
 
         flashfloatbtn.setOnClickListener {
-            var counter=0
-            if(hasFlash){
-                if(counter.mod(2)==0) flashOff()
-                else flashOn()
-                counter++
-            } else { Toast.makeText(this,"No Flashes",Toast.LENGTH_SHORT).show() }
+            finish()
+            startActivity(intent)
+            overridePendingTransition(0,1)
+            Toast.makeText(this,"Restarted",Toast.LENGTH_SHORT).show()
         }
 
         switcher.setOnClickListener {
@@ -97,7 +92,7 @@ class MainActivity2 : AppCompatActivity() {
         }
 
         swipe_deletebtn.setOnClickListener {
-            startActivity(Intent(this,SwipeDelete::class.java))
+            startActivity(Intent(this,SwipeHold::class.java))
         }
 
         storagebtn.setOnClickListener {
@@ -119,40 +114,10 @@ class MainActivity2 : AppCompatActivity() {
         bitspizzabtn.setOnClickListener {
             startActivity(Intent(this,BitsPizzaMain::class.java))
         }
-    }
 
-    private fun flashOn() {
-        val cameraManager=getSystemService(Context.CAMERA_SERVICE) as CameraManager
-        try {
-            val cameraID:String=cameraManager.cameraIdList[0]
-            cameraManager.setTorchMode(cameraID,true)
-        } catch (e:CameraAccessException) {  }
-    }
-
-    private fun flashOff() {
-        val cameraManager=getSystemService(Context.CAMERA_SERVICE) as CameraManager
-        try {
-            val cameraID:String=cameraManager.cameraIdList[0]
-            cameraManager.setTorchMode(cameraID,false)
-        } catch (e:CameraAccessException) {  }
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<String>,
-        grantResults: IntArray
-    ) {
-        when(requestCode){
-            CAMERA_REQUEST -> {
-                if(grantResults.isNotEmpty() && grantResults[0]==PackageManager.PERMISSION_GRANTED)
-                    hasFlash=packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
-                else {
-                    flashfloatbtn.isEnabled=true
-                    Toast.makeText(this,"Permission denied",Toast.LENGTH_SHORT).show()
-                }
-            }
+        txtlinks.setOnClickListener {
+            startActivity(Intent(this,TextLinks::class.java))
         }
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

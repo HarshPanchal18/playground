@@ -168,6 +168,42 @@ fun createNotificationChannel(){
 }
 ```
 
+### Highlights web urls into Strings
+```kotlin
+private fun clickableLinks(longTexts: String) {
+            try {
+                val spanned= SpannableString(longTexts)
+                val matcher= Patterns.WEB_URL.matcher(longTexts) // where WEB_URL is a builtin regex function for grabbing out the Website
+                var matchStart:Int
+                var matchEnd:Int // both are for tracking cursor or index
+
+                while(matcher.find()){ // enters if string contains any URL
+                    matchStart=matcher.start(1)
+                    matchEnd=matcher.end()
+
+                    var url=longTexts.substring(matchStart,matchEnd)
+                    if(!url.startsWith("http://") && !url.startsWith("https://"))
+                        url="https:$url"
+
+                    val clickableSpan:ClickableSpan=object:ClickableSpan(){
+                        override fun onClick(p0: View) {
+                            val intent=Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                            startActivity(intent)
+                        }
+
+                        override fun updateDrawState(ds: TextPaint) { // for customize the state of that link
+                            super.updateDrawState(ds)
+                            ds.color=Color.RED
+                            ds.isUnderlineText=false
+                        }
+                    }
+                    spanned.setSpan(clickableSpan,matchStart,matchEnd,Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+                    longtxts.text=spanned
+                    longtxts.movementMethod=LinkMovementMethod.getInstance()
+                }
+            } catch(e:Exception) { e.printStackTrace() }
+    }
+```
 ## _QnA_
 
 #### I added a String to my `strings.xml` file, but I can't see it in R.java. Why isn't it there?  

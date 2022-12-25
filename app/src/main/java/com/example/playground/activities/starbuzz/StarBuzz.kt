@@ -1,16 +1,17 @@
 package com.example.playground.activities.starbuzz
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
 import android.widget.ListView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.playground.R
 
 class StarBuzz : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_star_buzz)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val itemClickListener: AdapterView.OnItemClickListener =
             AdapterView.OnItemClickListener { adapterView, view, pos, l ->

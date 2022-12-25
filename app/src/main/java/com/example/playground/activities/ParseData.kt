@@ -28,6 +28,7 @@ class ParseData : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_parse_data)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         jsonbtn.setOnClickListener {
             contactList.clear()

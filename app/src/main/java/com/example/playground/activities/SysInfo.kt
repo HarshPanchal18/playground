@@ -22,6 +22,7 @@ class SysInfo : AppCompatActivity() {
         setContentView(R.layout.activity_sys_info)
 
         supportActionBar!!.title = "System Information"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val sysversion = findViewById<View>(R.id.sysversion) as TextView
         sysversion.text = System.getenv("os.version")
