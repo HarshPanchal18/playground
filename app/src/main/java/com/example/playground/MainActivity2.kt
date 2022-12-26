@@ -1,7 +1,6 @@
 package com.example.playground
 
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
@@ -10,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import androidx.core.view.GravityCompat
 import com.example.playground.activities.*
 import com.example.playground.activities.bitspizza.BitsPizzaMain
@@ -22,15 +20,10 @@ import kotlinx.android.synthetic.main.activity_main2.*
 class MainActivity2 : AppCompatActivity() {
 
     lateinit var toggle: ActionBarDrawerToggle
-    val CAMERA_REQUEST:Int=123
-    var hasFlash=false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-
-        ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.CAMERA),CAMERA_REQUEST)
-        hasFlash=packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH)
 
         // Appbar Configs
         supportActionBar?.title = "Playground"
@@ -43,13 +36,13 @@ class MainActivity2 : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.page1 -> {
-                    Toast.makeText(applicationContext,"Page 1", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext,"Home Page", Toast.LENGTH_SHORT).show()
                     drawer2.closeDrawer(GravityCompat.START)
                     startActivity(Intent(this,MainActivity::class.java))
                 }
 
                 R.id.page2 -> {
-                    Toast.makeText(applicationContext,"Page 2", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext,"Secondary Page", Toast.LENGTH_SHORT).show()
                     drawer2.closeDrawer(GravityCompat.START)
                     startActivity(Intent(this,MainActivity2::class.java))
                 }
@@ -117,6 +110,18 @@ class MainActivity2 : AppCompatActivity() {
 
         txtlinks.setOnClickListener {
             startActivity(Intent(this,TextLinks::class.java))
+        }
+
+        dynamic_list.setOnClickListener {
+            startActivity(Intent(this,DynamicList::class.java))
+        }
+
+        bottomSheetbtn.setOnClickListener {
+            startActivity(Intent(this,BottomSheet::class.java))
+        }
+
+        shimmerbtn.setOnClickListener {
+            startActivity(Intent(this,ShimmerLoading::class.java))
         }
     }
 

@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="#D8CECE"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.AdminContact"
-    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".activities.AdminContact">
 
-    <View
+        <!--    <View
         android:background="@color/trans_red"
         android:layout_width="match_parent"
         android:layout_height="5dp"/>
@@ -52,7 +58,43 @@
     <View
         android:background="@color/trans_red"
         android:layout_width="match_parent"
-        android:layout_height="5dp"/>
+        android:layout_height="5dp"/>-->
 
-</LinearLayout>
-</ScrollView>
+    <androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:backgroundTint="#D8CECE"
+    android:layout_height="300dp"
+    android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:background="@drawable/image_shadow"
+            android:padding="15dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/developer" />
+
+</androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:fontFamily="sans-serif-black"
+            android:text="HARSH MANOJBHAI PANCHAL"
+            android:textSize="25.5sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:layout_marginTop="30sp"
+            android:textSize="15dp"
+            android:text="Hello Geeks, I'm an Android developer, always follow best practices for android application and I am always ready to learn new technologies, methods, and principle as per the project requirements."
+            android:fontFamily="casual"
+            android:textStyle="bold"
+            android:padding="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

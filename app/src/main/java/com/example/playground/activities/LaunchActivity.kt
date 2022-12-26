@@ -2,11 +2,12 @@ package com.example.playground.activities
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.playground.R
+import kotlinx.android.synthetic.main.activity_launch.*
 
 class LaunchActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,6 +66,10 @@ class LaunchActivity : AppCompatActivity() {
             intent.data = Uri.parse("geo:21.171020,72.854210")
             val chooser:Intent=Intent.createChooser(intent,"Launch Maps")
             startActivity(chooser)
+        }
+
+        imgCapture.setOnClickListener {
+            startActivity(Intent(this,CameraView::class.java))
         }
     }
 }

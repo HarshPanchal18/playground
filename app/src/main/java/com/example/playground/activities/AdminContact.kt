@@ -1,9 +1,6 @@
 package com.example.playground.activities
 
 import android.os.Bundle
-import android.webkit.WebSettings
-import android.webkit.WebView
-import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.playground.R
 
@@ -13,7 +10,7 @@ class AdminContact : AppCompatActivity() {
         setContentView(R.layout.activity_admin_contact)
         supportActionBar!!.hide()
 
-        val gitwebpage:WebView=findViewById(R.id.github_profile)
+        /*val gitwebpage:WebView=findViewById(R.id.github_profile)
         val webSettings1:WebSettings=gitwebpage.settings
         webSettings1.javaScriptEnabled=true
         webSettings1.builtInZoomControls=true
@@ -25,6 +22,7 @@ class AdminContact : AppCompatActivity() {
         webSettings2.javaScriptEnabled=true
         webSettings2.builtInZoomControls=true
         redditwebpage.webViewClient= WebViewClient()
-        redditwebpage.loadUrl("https://www.reddit.com/user/HarshPanchal_")
+        redditwebpage.loadUrl("https://www.reddit.com/user/HarshPanchal_")*/
+
     }
 }

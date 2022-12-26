@@ -25,9 +25,29 @@
         tools:targetApi="31">
         <activity
             android:parentActivityName=".MainActivity2"
-            android:label="Links inside Texts"
-            android:name=".activities.TextLinks"
+            android:label="Shimmer Loading"
+            android:name=".activities.ShimmerLoading"
             android:exported="false" />
+        <activity
+            android:name=".activities.BottomSheet"
+            android:exported="false"
+            android:label="Bottom Sheet"
+            android:parentActivityName=".MainActivity2" />
+        <activity
+            android:name=".activities.CameraView"
+            android:exported="false"
+            android:label="Capture Image"
+            android:parentActivityName=".MainActivity2" />
+        <activity
+            android:name=".activities.DynamicList"
+            android:exported="false"
+            android:label="Dynamic Lists"
+            android:parentActivityName=".MainActivity2" />
+        <activity
+            android:name=".activities.TextLinks"
+            android:exported="false"
+            android:label="Links inside Texts"
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".activities.bitspizza.OrderActivity"
             android:exported="false"
@@ -36,24 +56,24 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".activities.bitspizza.BitsPizzaMain"
-            android:parentActivityName=".MainActivity2"
             android:exported="false"
-            android:label="Bits And Pizza" />
+            android:label="Bits And Pizza"
+            android:parentActivityName=".MainActivity2" />
         <activity
-            android:parentActivityName=".activities.storage.StorageMainActivity"
             android:name=".activities.storage.ExternalStoragePublicDir"
+            android:exported="false"
             android:label="External Storage"
-            android:exported="false" />
+            android:parentActivityName=".activities.storage.StorageMainActivity" />
         <activity
-            android:parentActivityName=".activities.storage.StorageMainActivity"
             android:name=".activities.storage.ExternalStorage"
             android:exported="false"
-            android:label="External Storage" />
+            android:label="External Storage"
+            android:parentActivityName=".activities.storage.StorageMainActivity" />
         <activity
-            android:parentActivityName=".activities.storage.StorageMainActivity"
             android:name=".activities.storage.InternalStorage"
             android:exported="false"
-            android:label="Internal Storage" />
+            android:label="Internal Storage"
+            android:parentActivityName=".activities.storage.StorageMainActivity" />
         <activity
             android:name=".activities.ViewPager"
             android:exported="false"
@@ -61,34 +81,34 @@
             android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".activities.RecyclerActivity"
-            android:parentActivityName=".MainActivity2"
             android:exported="false"
-            android:label="Recycler View" />
+            android:label="Recycler View"
+            android:parentActivityName=".MainActivity2" />
         <activity
-            android:parentActivityName=".activities.storage.StorageMainActivity"
             android:name=".activities.storage.SharedPreference"
             android:exported="false"
-            android:label="Shared Preference" />
+            android:label="Shared Preference"
+            android:parentActivityName=".activities.storage.StorageMainActivity" />
         <activity
-            android:parentActivityName=".MainActivity2"
             android:name=".activities.ValidationActivity"
             android:exported="false"
-            android:label="Input Validation" />
+            android:label="Input Validation"
+            android:parentActivityName=".MainActivity2" />
         <activity
-            android:parentActivityName=".activities.storage.StorageMainActivity"
             android:name=".activities.storage.CacheStorage"
             android:exported="false"
-            android:label="Cache Storage" />
+            android:label="Cache Storage"
+            android:parentActivityName=".activities.storage.StorageMainActivity" />
         <activity
-            android:parentActivityName=".MainActivity2"
             android:name=".activities.storage.StorageMainActivity"
+            android:exported="false"
             android:label="Local Storages"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity2" />
         <activity
-            android:parentActivityName=".MainActivity2"
-            android:label="Swipe to remove, Hold and Drag"
             android:name=".activities.SwipeHold"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Swipe to remove, Hold and Drag"
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".activities.DetailActivity"
             android:exported="false" />
@@ -98,15 +118,15 @@
             android:label="Workout Fragments"
             android:parentActivityName=".MainActivity2" />
         <activity
-            android:label="Text and Image Switcher"
-            android:parentActivityName=".MainActivity2"
             android:name=".activities.Switcher"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Text and Image Switcher"
+            android:parentActivityName=".MainActivity2" />
         <activity
-            android:label="Parse data from external sources"
-            android:parentActivityName=".MainActivity2"
             android:name=".activities.ParseData"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Parse data from external sources"
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".activities.SearchActivity"
             android:exported="false"
@@ -115,13 +135,13 @@
         <activity
             android:name=".activities.WallPaper"
             android:exported="false"
-            android:parentActivityName=".MainActivity2"
-            android:label="Network Image Wallpaper" />
+            android:label="Network Image Wallpaper"
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".activities.ExpandList"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
-            android:label="Expanded List" />
+            android:label="Expanded List"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activities.starbuzz.DrinkMainActivity"
             android:exported="false" />
@@ -129,57 +149,57 @@
             android:name=".activities.starbuzz.DrinkCategory"
             android:exported="false" />
         <activity
-            android:label="Starbuzz Cafe"
-            android:parentActivityName=".MainActivity"
             android:name=".activities.starbuzz.StarBuzz"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Starbuzz Cafe"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activities.ListViewActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
-            android:label="ListView" />
+            android:label="ListView"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
-            android:label="Pull Down"
             android:name=".activities.PullRefresh"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Pull Down"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.AdminContact"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.Notification"
             android:exported="false"
-            android:label="Notification Styles" />
+            android:label="Notification Styles"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.AnimationActivity"
             android:exported="false"
-            android:label="Animation" />
+            android:label="Animation"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.FrameLayoutActivity"
+            android:exported="false"
             android:label="Frame View"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.PickerActivity"
+            android:exported="false"
             android:label="Pickers"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.SendSMS"
+            android:exported="false"
             android:label="Send Text Messages"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.BottomTab"
+            android:exported="false"
             android:label="Bottom Navigation"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".fragments.ProfileFragment"
             android:exported="false"
@@ -193,62 +213,62 @@
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.LaunchActivity"
+            android:exported="false"
             android:label="Launchers"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activities.Stopwatch"
             android:exported="false" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.ImgActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.Progressbar"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activities.LockScreen"
             android:exported="false"
             android:label="Welcome !" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.ClockActivity"
+            android:exported="false"
             android:label="Ticking Time"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.ScrollVActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.ScrollHActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.Bgcolor"
+            android:exported="false"
             android:label="Backgrounds"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.ScreenRotation"
+            android:exported="false"
             android:label="Rotations"
-            android:exported="false" />
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.SysInfo"
             android:exported="false"
-            android:label="System Snapshot" />
+            android:label="System Snapshot"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activities.Explicit_intent"
             android:exported="false"
             android:label="Intent" />
         <activity
             android:name=".activities.Implicit_intent"
-            android:parentActivityName=".MainActivity"
             android:exported="false"
-            android:label="Intent">
+            android:label="Intent"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -288,23 +308,23 @@
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
-            android:label="Card View"
-            android:parentActivityName=".MainActivity"
             android:name=".activities.CardView"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Card View"
+            android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".activities.TabActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activities.AlertActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:parentActivityName=".MainActivity"
-            android:label="Spinner"
             android:name=".activities.SpinnerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Spinner"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
