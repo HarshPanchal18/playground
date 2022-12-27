@@ -24,10 +24,16 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
-            android:parentActivityName=".MainActivity2"
-            android:label="Shimmer Loading"
-            android:name=".activities.ShimmerLoading"
+            android:name=".Insert"
             android:exported="false" />
+        <activity
+            android:name=".API_Main"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ShimmerLoading"
+            android:exported="false"
+            android:label="Shimmer Loading"
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".activities.BottomSheet"
             android:exported="false"
