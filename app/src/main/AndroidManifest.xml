@@ -24,10 +24,10 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
-            android:name=".Insert"
+            android:name=".activities.sqlitedb.DatabaseMainActivity"
             android:exported="false" />
         <activity
-            android:name=".API_Main"
+            android:name=".activities.sqlitedb.Insert"
             android:exported="false" />
         <activity
             android:name=".activities.ShimmerLoading"

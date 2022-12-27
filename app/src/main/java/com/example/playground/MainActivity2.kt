@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import com.example.playground.activities.*
 import com.example.playground.activities.bitspizza.BitsPizzaMain
+import com.example.playground.activities.sqlitedb.DatabaseMainActivity
 import com.example.playground.activities.storage.StorageMainActivity
 import com.example.playground.activities.workout.WorkoutMainActivity
 import com.google.android.material.navigation.NavigationView
@@ -122,6 +123,10 @@ class MainActivity2 : AppCompatActivity() {
 
         shimmerbtn.setOnClickListener {
             startActivity(Intent(this,ShimmerLoading::class.java))
+        }
+
+        sqlitebtn.setOnClickListener {
+            startActivity(Intent(this,DatabaseMainActivity::class.java))
         }
     }
 
