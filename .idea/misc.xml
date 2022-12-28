@@ -42,7 +42,8 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_camera_view.xml" value="0.16447368421052633" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_card_view.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_clock.xml" value="0.21" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_database_main.xml" value="0.1763157894736842" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_database_main.xml" value="0.2" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_delete.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_detail.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drink_category.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drink_main.xml" value="0.1" />
@@ -95,6 +96,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_tab2.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_tab3.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_text_links.xml" value="0.1763157894736842" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_update.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_validation.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_view_pager.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_wall_paper.xml" value="0.16" />
@@ -103,7 +105,8 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/app_bar_main.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/calendar_cell.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/center_in_list.xml" value="0.1763157894736842" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/compound_list.xml" value="0.1" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/compound_list.xml" value="0.25" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/compound_list_sqlite.xml" value="0.25" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/content_main.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/custom_toast.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/expand_children.xml" value="0.1763157894736842" />

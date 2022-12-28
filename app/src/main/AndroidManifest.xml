@@ -24,6 +24,12 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
+            android:name=".activities.sqlitedb.Delete"
+            android:exported="false" />
+        <activity
+            android:name=".activities.sqlitedb.Update"
+            android:exported="false" />
+        <activity
             android:name=".activities.sqlitedb.DatabaseMainActivity"
             android:exported="false" />
         <activity

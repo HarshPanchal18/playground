@@ -1,40 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.sqlitedb.DatabaseMainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.sqlitedb.DatabaseMainActivity"
+    android:orientation="vertical">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <!--<com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent">-->
 
-    <com.google.android.material.tabs.TabLayout
+<!--    <com.google.android.material.tabs.TabLayout
         android:id="@+id/db_tabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:tabBackground="@color/colorPrimary"
         app:tabGravity="fill"
         app:tabMode="fixed"
-        app:tabTextColor="@android:color/white"/>
+        app:tabIndicatorGravity="stretch"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabTextColor="@android:color/white" />-->
 
-    </com.google.android.material.appbar.AppBarLayout>
+    <!--</com.google.android.material.appbar.AppBarLayout>-->
 
-    <androidx.viewpager.widget.ViewPager
+    <!--<androidx.viewpager2.widget.ViewPager2
         android:id="@+id/db_viewpager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent"/>-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBar">
+        app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.viewpager.widget.ViewPager>
+        <Button
+            android:id="@+id/insbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Insert" />
+
+        <Button
+            android:id="@+id/updbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Update" />
+
+        <!--<Button
+        android:id="@+id/readbtn"
+        android:layout_margin="20dp"
+        android:text="READ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>-->
+
+        <Button
+            android:id="@+id/delbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Delete" />
+
+        <!--<TextView
+            android:id="@+id/readlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:textSize="25sp" />-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/readlist"
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/refreshfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.644" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

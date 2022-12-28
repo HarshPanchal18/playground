@@ -23,7 +23,7 @@ class CustRecycleAdapter(var context:Context,personNames: ArrayList<String>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.name.text = personNames[position].toString() // set the data in items
+        holder.name.text = personNames[position] // set the data in items
         holder.itemView.setOnClickListener {
             Toast.makeText(context,
                 personNames[position],
