@@ -27,8 +27,8 @@ class GridView : AppCompatActivity() , AdapterView.OnItemClickListener{
 
     private fun setDataList() : ArrayList<GridAdapter.gridItem> {
         val gridArrList:ArrayList<GridAdapter.gridItem> = ArrayList()
-        for(i in 0..10)
-            gridArrList.add(GridAdapter.gridItem(R.mipmap.ic_launcher,i.toString()))
+        for(i in 0..15)
+            gridArrList.add(GridAdapter.gridItem(R.drawable.cappuccino,i.toString()))
         return gridArrList
     }
 
