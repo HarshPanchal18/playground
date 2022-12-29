@@ -11,6 +11,7 @@ class Delete : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_delete)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val mydb_helper=db_helper(this)
         deletebtn.setOnClickListener {
             val res=mydb_helper.deleteData(dbid.text.toString())

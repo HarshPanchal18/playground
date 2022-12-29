@@ -13,7 +13,6 @@ import androidx.core.view.GravityCompat
 import com.example.playground.activities.*
 import com.example.playground.activities.bitspizza.BitsPizzaMain
 import com.example.playground.activities.sqlitedb.DatabaseMainActivity
-import com.example.playground.activities.sqlitedb.Insert
 import com.example.playground.activities.storage.StorageMainActivity
 import com.example.playground.activities.workout.WorkoutMainActivity
 import com.google.android.material.navigation.NavigationView
@@ -21,7 +20,7 @@ import kotlinx.android.synthetic.main.activity_main2.*
 
 class MainActivity2 : AppCompatActivity() {
 
-    lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

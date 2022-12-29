@@ -14,7 +14,6 @@ class db_helper(context: Context?) : SQLiteOpenHelper(context, "studManager", nu
     val col2:String="NAME"
     val col3:String="SURNAME"
     val col4:String="MARKS"
-    val db: SQLiteDatabase = this.writableDatabase
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL("create table $tblname (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, SURNAME TEXT,MARKS INTEGER)")
@@ -26,6 +25,7 @@ class db_helper(context: Context?) : SQLiteOpenHelper(context, "studManager", nu
 
     fun insertData(name:String,Sname:String,marks:String): Boolean {
         val contentVal = ContentValues()
+        val db: SQLiteDatabase = this.writableDatabase
         contentVal.put(col2,name)
         contentVal.put(col3,Sname)
         contentVal.put(col4,marks)
@@ -36,11 +36,13 @@ class db_helper(context: Context?) : SQLiteOpenHelper(context, "studManager", nu
     }
 
     fun getAllData(): Cursor {
+        val db: SQLiteDatabase = this.writableDatabase
         return db.rawQuery("Select * from $tblname", null)
     }
 
     fun updateData(id:String,name:String,sname:String,marks:String): Boolean {
         val contentVal=ContentValues()
+        val db: SQLiteDatabase = this.writableDatabase
         contentVal.put(col2,name)
         contentVal.put(col3,sname)
         contentVal.put(col4,marks)
@@ -49,6 +51,18 @@ class db_helper(context: Context?) : SQLiteOpenHelper(context, "studManager", nu
     }
 
     fun deleteData(id: String): Int {
+        val db: SQLiteDatabase = this.writableDatabase
         return db.delete(tblname, "ID=?", arrayOf(id))
+    }
+
+    fun deleteAll() {
+        val db: SQLiteDatabase = this.writableDatabase
+        db.execSQL("delete from $tblname")
+    }
+
+    fun readAllData(): Cursor {
+        val query = "select * from $tblname;"
+        val db: SQLiteDatabase = this.writableDatabase
+        return db.rawQuery(query, null)
     }
 }

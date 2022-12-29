@@ -12,16 +12,11 @@ import com.example.playground.R
 import kotlinx.android.synthetic.main.activity_insert.*
 
 class Insert : AppCompatActivity() {
-  /*  override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?): View {
-*/
-
-        override fun onCreate(savedInstanceState: Bundle?) {
+     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_insert)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val myDb = db_helper(applicationContext)
 
         insrtbtn.setOnClickListener {
@@ -29,6 +24,5 @@ class Insert : AppCompatActivity() {
             if(res) Toast.makeText(applicationContext,"Inserted",Toast.LENGTH_SHORT).show()
             else Toast.makeText(applicationContext,"Not Inserted",Toast.LENGTH_SHORT).show()
         }
-        //return inflater.inflate(R.layout.activity_insert,container,false)!!
     }
 }

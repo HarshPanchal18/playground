@@ -3,19 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10sp"
+    android:id="@+id/mainlayout"
     android:orientation="horizontal">
 
     <TextView
         android:id="@+id/idnum"
-        android:text="ID"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginRight="60dp"
+        android:textSize="30sp"
+        android:text="ID" />
 
     <TextView
         android:id="@+id/name"
-        android:layout_width="200dp"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/idnum"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:text="Name" />
 
     <TextView
@@ -26,6 +31,7 @@
         android:text="Surname" />
 
     <TextView
+        android:id="@+id/marks"
         android:text="Marks"
         android:layout_below="@+id/name"
         android:layout_toEndOf="@+id/idnum"

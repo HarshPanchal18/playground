@@ -340,12 +340,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stopwatchbtn" />
 
-    <Button
+   <!-- <Button
         android:id="@+id/sendsms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="Send SMS"
+        android:backgroundTint="@color/buttonlayer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/launchbtn" />
+-->
+    <Button
+        android:id="@+id/gridbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Grid View"
         android:backgroundTint="@color/buttonlayer2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.053"
@@ -386,7 +398,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sendsms" />
+        app:layout_constraintTop_toBottomOf="@+id/gridbtn" />
 
     <Button
         android:id="@+id/animbtn"

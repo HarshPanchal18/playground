@@ -11,6 +11,7 @@ class Update : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val mydb_helper=db_helper(this)
         updatebtn.setOnClickListener {
             val res:Boolean=mydb_helper.updateData(

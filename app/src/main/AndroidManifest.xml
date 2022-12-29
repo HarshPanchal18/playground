@@ -24,17 +24,30 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
-            android:name=".activities.sqlitedb.Delete"
+            android:parentActivityName=".MainActivity"
+            android:label="Grid View"
+            android:name=".activities.GridView"
             android:exported="false" />
+        <activity
+            android:name=".activities.sqlitedb.Delete"
+            android:exported="false"
+            android:label="Remove Student Detail"
+            android:parentActivityName=".activities.sqlitedb.DatabaseMainActivity" />
         <activity
             android:name=".activities.sqlitedb.Update"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Update Student Detail"
+            android:parentActivityName=".activities.sqlitedb.DatabaseMainActivity" />
         <activity
             android:name=".activities.sqlitedb.DatabaseMainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Student Management SQLite"
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".activities.sqlitedb.Insert"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Insert Student Detail"
+            android:parentActivityName=".activities.sqlitedb.DatabaseMainActivity" />
         <activity
             android:name=".activities.ShimmerLoading"
             android:exported="false"

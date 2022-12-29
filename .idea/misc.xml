@@ -42,7 +42,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_camera_view.xml" value="0.16447368421052633" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_card_view.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_clock.xml" value="0.21" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_database_main.xml" value="0.2" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_database_main.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_delete.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_detail.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drink_category.xml" value="0.1763157894736842" />
@@ -52,6 +52,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_explicit_intent.xml" value="0.5" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_external_storage_public_dir.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_frame_layout.xml" value="0.33" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_grid_view.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_home_fragment.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_img.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_implicit_intent.xml" value="0.33" />
@@ -60,7 +61,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_launch.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_list_view.xml" value="0.2" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.22" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.31259720062208396" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main_workout.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_notification.xml" value="0.22" />
@@ -106,7 +107,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/calendar_cell.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/center_in_list.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/compound_list.xml" value="0.25" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/compound_list_sqlite.xml" value="0.25" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/compound_list_sqlite.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/content_main.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/custom_toast.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/expand_children.xml" value="0.1763157894736842" />
@@ -116,6 +117,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_workout_detail.xml" value="0.2" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_workout_detail2.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_workout_list.xml" value="0.1763157894736842" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/grid_row_item.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/item_page.xml" value="0.15703125" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/list_item.xml" value="0.25" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/listview_item.xml" value="0.1" />
@@ -133,6 +135,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/menu/nav_header_menu.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/menu/options_menu.xml" value="0.25" />
         <entry key="..\:/dev/playground/app/src/main/res/menu/popup_menu.xml" value="0.1" />
+        <entry key="..\:/dev/playground/app/src/main/res/menu/sqlite_menu.xml" value="0.20277777777777778" />
         <entry key="..\:/dev/playground/app/src/main/res/xml/data.xml" value="0.17543859649122806" />
         <entry key="..\:/dev/playground/app/src/main/res/xml/empdata.xml" value="0.17543859649122806" />
       </map>

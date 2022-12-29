@@ -27,6 +27,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.GravityCompat
 import androidx.core.view.MenuItemCompat
 import com.example.playground.activities.*
+import com.example.playground.activities.GridView
 import com.example.playground.activities.starbuzz.StarBuzz
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
@@ -207,9 +208,9 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             startActivity(Intent(this,BottomTab::class.java))
         }
 
-        val sendsms:Button=findViewById(R.id.sendsms)
-        sendsms.setOnClickListener {
-            startActivity(Intent(this,SendSMS::class.java))
+        val gridbtn:Button=findViewById(R.id.gridbtn)
+        gridbtn.setOnClickListener {
+            startActivity(Intent(this,GridView::class.java))
         }
 
         val pickerbtn:Button=findViewById(R.id.pickerbtn)
