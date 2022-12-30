@@ -15,6 +15,7 @@ class CacheStorage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cache)
+        supportActionBar!!.hide()
 
         cacheSavebtn.setOnClickListener { saveFile() }
         cacheReadbtn.setOnClickListener { readFile() }

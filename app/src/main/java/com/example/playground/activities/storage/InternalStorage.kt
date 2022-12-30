@@ -15,6 +15,7 @@ class InternalStorage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_internal_storage)
+        supportActionBar!!.hide()
 
         internalSavebtn.setOnClickListener { saveFile() }
         internalReadbtn.setOnClickListener { readFile() }

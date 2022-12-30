@@ -16,6 +16,7 @@ class SharedPreference : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_preference)
+        supportActionBar!!.hide()
 
         sharedReadbtn.setOnClickListener { readFile() }
         sharedSavebtn.setOnClickListener { saveFile() }

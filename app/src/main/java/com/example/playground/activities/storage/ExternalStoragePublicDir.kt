@@ -20,6 +20,7 @@ class ExternalStoragePublicDir : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_external_storage_public_dir)
+        supportActionBar!!.hide()
 
         externalPublicSavebtn.setOnClickListener {
             val permissionCheck= ContextCompat.checkSelfPermission(
