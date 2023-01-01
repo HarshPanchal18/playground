@@ -32,6 +32,7 @@ import com.example.playground.activities.starbuzz.StarBuzz
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.system.exitProcess
 
@@ -51,11 +52,14 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         // that enables you to retrieve the references to resource in your app.
 
         // Appbar Configs
-        supportActionBar?.title = "Playground"
+        supportActionBar?.title = resources.getString(R.string.app_name)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val actionBar: ActionBar? = supportActionBar
         val colorDrawable = ColorDrawable(Color.parseColor("#f7ac34"))
         actionBar?.setBackgroundDrawable(colorDrawable)
+
+        FirebaseMessaging.getInstance().subscribeToTopic("Notification")
+        //FirebaseMessaging.getInstance().unsubscribeFromTopic("Notification")
 
         val navView: NavigationView = findViewById(R.id.navView)
         navView.setNavigationItemSelectedListener {

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Playground</string>
+    <string name="app_name">遊び場</string>
     <string name="title_activity_alert">alertActivity</string>
 
     <string name="cardview">I\'m card</string>
@@ -9,30 +9,31 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="welcome_toast">いらっしゃいませ</string>
+    <string name="lock_passcode">パスコードを入力</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="hello_world">こんにちは世界！！                  こんにちは世界！！                    こんにちは世界！！                    こんにちは世界！！</string>
 
-    <string name="dialogTitle">Exit</string>
-    <string name="dialogMsgHome">Are you sure you want to go home??</string>
-    <string name="dialogMsgExit">Are you sure you want to exit??</string>
-    <string name="dialogMessageLock">Are you sure you want to Lock??</string>
+    <string name="dialogTitle">出口</string>
+    <string name="dialogMsgHome">本当に家に帰りますか??</string>
+    <string name="dialogMsgExit">本当に終了してもよろしいですか??</string>
+    <string name="dialogMessageLock">本当にロックしますか??</string>
     <string name="title_activity_tab">tabActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_card_view">CardView</string>
-    <string name="welcome_toast">Welcome</string>
-    <string name="lock_passcode">Enter Passcode</string>
-    <string name="hello_world">Hello World!                  Hello World!                    Hello World!                    Hello World!</string>
-    <string name="HomePage">Home Page</string>
-    <string name="SecondaryPage">Secondary Page</string>
-    <string name="aboutDev">About Developer</string>
-    <string name="logOut">Log Out</string>
+    <string name="HomePage">ホームページ</string>
+    <string name="SecondaryPage">二次ページ</string>
+    <string name="aboutDev">開発者について</string>
+    <string name="logOut">ログアウト</string>
 
-    <string name="developerName">HARSH MANOJBHAI PANCHAL</string>
-    <string name="devDesc">Hello Geeks, I\'m an Android developer, always follow best practices for android application and I am always ready to learn new technologies, methods, and principle as per the project requirements.</string>
-    <string name="find_beer">Find Beer!</string>
-    <string name="brands">No Beer Selected</string>
+    <string name="developerName">刺々しい</string>
+    <string name="devDesc">こんにちはオタク、私は Android 開発者です。常に Android アプリケーションのベスト プラクティスに従い、プロジェクトの要件に従って、常に新しいテクノロジ、メソッド、および原則を学ぶ準備ができています。</string>
+
+    <string name="find_beer">ビールを探せ！</string>
+    <string name="brands">ビールが選択されていません</string>
     <string-array name="beer_color">
         <item>Light</item>
         <item>Amber</item>
@@ -80,20 +81,20 @@
         <item>Sebastopol</item>
     </string-array>
 
-    <string name="home_tab">Home</string>
-    <string name="pizza_tab">Pizza</string>
-    <string name="store_tab">Store</string>
-    <string name="pasta_tab">Pasta</string>
+    <string name="home_tab">家</string>
+    <string name="pizza_tab">ピザ</string>
+    <string name="store_tab">店</string>
+    <string name="pasta_tab">パスタ</string>
 
     <string name="company_name">Bits and Pizzas</string>
     <string name="restaurant_image">Restaurant image</string>
-    <string name="home_text">Since we opened our doors in 2017, Bits and Pizzas
-    has built its reputation as one of America’s best Italian-Digital
-    restaurants. Some people believe eating out is about being with your
-    friends and family. We believe that good food is best enjoyed while
-    staring at your phone.</string>
+    <string name="home_text">2017年にオープンして以来、Bits and Pizzas
+    は、アメリカで最高のイタリア語デジタルの 1 つとしての評判を築いてきました
+    レストラン。外食はあなたと一緒にいることだと信じている人もいます
+    友達と家族。私たちは、おいしい料理を楽しむのが一番だと信じています。
+    あなたの携帯電話を見つめています。</string>
 
-    <string name="order_name_hint">Please enter your name</string>
-    <string name="order_details_hint">Please enter your order</string>
+    <string name="order_name_hint">お名前を入力してください</string>
+    <string name="order_details_hint">ご注文内容を入力してください</string>
 
 </resources>

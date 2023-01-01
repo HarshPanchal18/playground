@@ -16,12 +16,16 @@ import com.example.playground.activities.sqlitedb.DatabaseMainActivity
 import com.example.playground.activities.storage.StorageMainActivity
 import com.example.playground.activities.workout.WorkoutMainActivity
 import com.google.android.material.navigation.NavigationView
+import com.r0adkll.slidr.Slidr
+import com.r0adkll.slidr.model.SlidrConfig
+import com.r0adkll.slidr.model.SlidrInterface
+import com.r0adkll.slidr.model.SlidrPosition
 import kotlinx.android.synthetic.main.activity_main2.*
 
 class MainActivity2 : AppCompatActivity() {
 
     private lateinit var toggle: ActionBarDrawerToggle
-
+    private lateinit var slidr : SlidrInterface
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
@@ -32,6 +36,13 @@ class MainActivity2 : AppCompatActivity() {
         val actionBar: ActionBar? = supportActionBar
         val colorDrawable = ColorDrawable(Color.parseColor("#f7ac34"))
         actionBar?.setBackgroundDrawable(colorDrawable)
+
+        // Made a Activity Slider
+        slidr=Slidr.attach(this)
+        val config=SlidrConfig.Builder()
+            .position(SlidrPosition.TOP)
+            .build()
+        Slidr.attach(this,config)
 
         val navView: NavigationView = findViewById(R.id.navView)
         navView.setNavigationItemSelectedListener {

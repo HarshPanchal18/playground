@@ -28,7 +28,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout-large/activity_main_workout.xml" value="0.20833333333333334" />
         <entry key="..\:/dev/playground/app/src/main/res/layout-large/activity_workout_main.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_add_fragrment.xml" value="0.1717948717948718" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_admin_contact.xml" value="0.25" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_admin_contact.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_alert.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_animation.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_api_main.xml" value="0.1763157894736842" />
@@ -121,7 +121,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/item_page.xml" value="0.15703125" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/list_item.xml" value="0.25" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/listview_item.xml" value="0.1" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/nav_header.xml" value="0.9" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/nav_header.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/nav_header2.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/nav_header_main.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/rowlayout.xml" value="0.1046875" />

@@ -83,14 +83,14 @@
             android:layout_gravity="center"
             android:layout_margin="15dp"
             android:fontFamily="sans-serif-black"
-            android:text="HARSH MANOJBHAI PANCHAL"
+            android:text="@string/developerName"
             android:textSize="25.5sp"
             android:textStyle="bold|italic" />
 
         <TextView
             android:layout_marginTop="30sp"
             android:textSize="15dp"
-            android:text="Hello Geeks, I'm an Android developer, always follow best practices for android application and I am always ready to learn new technologies, methods, and principle as per the project requirements."
+            android:text="@string/devDesc"
             android:fontFamily="casual"
             android:textStyle="bold"
             android:padding="20dp"

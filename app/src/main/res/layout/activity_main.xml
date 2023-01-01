@@ -74,7 +74,7 @@
         android:scrollbarFadeDuration="@integer/material_motion_duration_short_1"
         android:scrollHorizontally="true"
         android:singleLine="true"
-        android:text="Hello World!                  Hello World!                    Hello World!                    Hello World!"
+        android:text="@string/hello_world"
         android:textAlignment="center"
         android:textColor="#2e7056"
         android:textSize="25dp"

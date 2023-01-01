@@ -2,16 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <group android:checkableBehavior="single">
     <item android:id="@+id/page1"
-        android:title="Home Page"
+        android:title="@string/HomePage"
         android:icon="@drawable/page_one"/>
     <item android:id="@+id/page2"
-        android:title="Secondary Page"
+        android:title="@string/SecondaryPage"
         android:icon="@drawable/page_two"/>
     <item android:id="@+id/contact"
-        android:title="About Developer"
+        android:title="@string/aboutDev"
         android:icon="@drawable/dev_contact"/>
     <item android:id="@+id/logout"
-        android:title="Log Out"
+        android:title="@string/logOut"
         android:icon="@drawable/ic_action_exit"/>
 </group>
 </menu>

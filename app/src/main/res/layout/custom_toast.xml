@@ -15,7 +15,7 @@
 
     <TextView
         android:id="@+id/cust_toast_msg"
-        android:text="Welcome"
+        android:text="@string/welcome_toast"
         android:paddingHorizontal="20dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"

@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -63,4 +64,10 @@ dependencies {
 
     implementation ('com.google.android.material:material:1.7.0'){because(" of bottom sheet implementation")}
     implementation ('com.facebook.shimmer:shimmer:0.5.0'){because(" For displaying shimming animations while loading the livedata")}
+
+    implementation ('com.r0adkll:slidableactivity:2.1.0'){because("Make Activity Slideable, Slide Right to back")}
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation('com.google.firebase:firebase-messaging:23.1.1')
 }
