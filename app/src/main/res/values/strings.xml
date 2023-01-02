@@ -96,4 +96,10 @@
     <string name="order_name_hint">Please enter your name</string>
     <string name="order_details_hint">Please enter your order</string>
 
+    <string-array name="languages">
+        <item>Hindi</item>
+        <item>English</item>
+        <item>Japanese</item>
+        <item>German</item>
+    </string-array>
 </resources>

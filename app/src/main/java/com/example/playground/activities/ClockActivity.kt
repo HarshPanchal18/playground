@@ -13,8 +13,5 @@ class ClockActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clock)
-
-        //val txtclk:TextClock=findViewById(R.id.txtclock)
-        //val anlclk:AnalogClock=findViewById(R.id.analog)
     }
 }

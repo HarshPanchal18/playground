@@ -277,6 +277,11 @@ private fun clickableLinks(longTexts: String) {
 > It uses less memory than a fragment pager adapter, as when pages aren’t visible, the fragment it displays may be destroyed.
 > It’s useful if your view pager has a large number of pages.
 
+#### Why doesn’t Android provide ready-made adapters for recycler views?
+> Because recycler view adapters don’t just specify the data that will appear.
+> They also specify the views that will be used for each item in the collection. 
+> That means that recycler view adapters are both more powerful, and less general, than list view adapters.
+
 ### Bullet Points
 - 1 getting started
 * Versions of Android have a version number, API level, and code name.

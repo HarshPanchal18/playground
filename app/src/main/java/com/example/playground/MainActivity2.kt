@@ -139,6 +139,10 @@ class MainActivity2 : AppCompatActivity() {
         sqlitebtn.setOnClickListener {
             startActivity(Intent(this, DatabaseMainActivity::class.java))
         }
+
+        dropDownbtn.setOnClickListener {
+            startActivity(Intent(this,DropDownActivity::class.java))
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

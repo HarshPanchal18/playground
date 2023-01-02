@@ -24,10 +24,15 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
-            android:parentActivityName=".MainActivity"
-            android:label="Grid View"
-            android:name=".activities.GridView"
+            android:label="Drop Down View"
+            android:parentActivityName=".MainActivity2"
+            android:name=".activities.DropDownActivity"
             android:exported="false" />
+        <activity
+            android:name=".activities.GridView"
+            android:exported="false"
+            android:label="Grid View"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".activities.sqlitedb.Delete"
             android:exported="false"

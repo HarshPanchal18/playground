@@ -10,6 +10,7 @@ import android.media.AudioManager
 import android.net.ConnectivityManager
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
 import android.provider.Settings
 import android.view.ContextMenu
 import android.view.Menu
@@ -176,8 +177,23 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             customToast(this, "Hold Me", Toast.LENGTH_SHORT, Color.BLACK, Color.WHITE)
         }
 
+        var i=0
         val txtclockbtn: Button = findViewById(R.id.clockbtn)
+        //val txtclk:TextClock?=findViewById(R.id.txtclock)
+        //val anlclk:AnalogClock?=findViewById(R.id.analog)
         txtclockbtn.setOnClickListener {
+            /*i++
+            val handler= Handler()
+            handler.postDelayed({
+                if(i==1){
+                    startActivity(Intent(this, ClockActivity::class.java))
+                    txtclk?.visibility=View.INVISIBLE
+                }
+                else{
+                    startActivity(Intent(this, ClockActivity::class.java))
+                    anlclk?.visibility=View.INVISIBLE
+                }
+            },500) // second time button clicked within 500 ms*/
             startActivity(Intent(this, ClockActivity::class.java))
         }
 
