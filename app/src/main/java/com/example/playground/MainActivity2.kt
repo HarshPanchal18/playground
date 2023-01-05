@@ -143,6 +143,10 @@ class MainActivity2 : AppCompatActivity() {
         dropDownbtn.setOnClickListener {
             startActivity(Intent(this,DropDownActivity::class.java))
         }
+
+        slideImagebtn.setOnClickListener {
+            startActivity(Intent(this,ImageSlider::class.java))
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

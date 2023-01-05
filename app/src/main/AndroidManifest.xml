@@ -24,10 +24,15 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
-            android:label="Drop Down View"
+            android:label="Image Slider"
             android:parentActivityName=".MainActivity2"
-            android:name=".activities.DropDownActivity"
+            android:name=".activities.ImageSlider"
             android:exported="false" />
+        <activity
+            android:name=".activities.DropDownActivity"
+            android:exported="false"
+            android:label="Drop Down View"
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".activities.GridView"
             android:exported="false"
