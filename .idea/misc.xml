@@ -31,6 +31,8 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout-large/activity_workout_main.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_add_fragrment.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_admin_contact.xml" value="0.1" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_alarm.xml" value="0.209375" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_alarm_notification.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_alert.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_animation.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_api_main.xml" value="0.1763157894736842" />
@@ -67,7 +69,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_list_view.xml" value="0.2" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.31259720062208396" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.67" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main_workout.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_notification.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_order.xml" value="0.18" />

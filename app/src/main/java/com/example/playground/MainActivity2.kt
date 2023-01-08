@@ -147,6 +147,10 @@ class MainActivity2 : AppCompatActivity() {
         slideImagebtn.setOnClickListener {
             startActivity(Intent(this,ImageSlider::class.java))
         }
+
+        alarmbtn.setOnClickListener {
+            startActivity(Intent(this,AlarmActivity::class.java))
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
