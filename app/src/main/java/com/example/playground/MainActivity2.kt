@@ -151,6 +151,10 @@ class MainActivity2 : AppCompatActivity() {
         alarmbtn.setOnClickListener {
             startActivity(Intent(this,AlarmActivity::class.java))
         }
+
+        interFragbtn.setOnClickListener {
+            startActivity(Intent(this,InterFragment::class.java))
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
