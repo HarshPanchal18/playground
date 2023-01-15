@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import com.example.playground.activities.*
 import com.example.playground.activities.bitspizza.BitsPizzaMain
+import com.example.playground.activities.compass.CompassActivity
 import com.example.playground.activities.sqlitedb.DatabaseMainActivity
 import com.example.playground.activities.storage.StorageMainActivity
 import com.example.playground.activities.workout.WorkoutMainActivity
@@ -68,6 +69,7 @@ class MainActivity2 : AppCompatActivity() {
                     Toast.makeText(applicationContext,"Logged Out", Toast.LENGTH_SHORT).show()
                     drawer2.closeDrawer(GravityCompat.START)
                     startActivity(Intent(this, LockScreen::class.java))
+                    finish()
                 }
             }
             true
@@ -154,6 +156,14 @@ class MainActivity2 : AppCompatActivity() {
 
         interFragbtn.setOnClickListener {
             startActivity(Intent(this,InterFragment::class.java))
+        }
+
+        compassbtn.setOnClickListener {
+            startActivity(Intent(this,CompassActivity::class.java))
+        }
+
+        gesturebtn.setOnClickListener {
+            startActivity(Intent(this,GestureDetectorActivity::class.java))
         }
     }
 

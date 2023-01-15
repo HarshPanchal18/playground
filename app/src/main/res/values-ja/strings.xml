@@ -97,4 +97,16 @@
     <string name="order_name_hint">お名前を入力してください</string>
     <string name="order_details_hint">ご注文内容を入力してください</string>
 
+    <string name="compass_dial">コンパスダイヤル</string>
+    <string name="compass_hands">コンパスの針</string>
+
+    <string name="single_tap">シングルタップ！</string>
+    <string name="double_tap">ダブルタップ！</string>
+    <string name="double_tap_event">ダブルタップイベント</string>
+    <string name="on_down">ダブルタップイベント</string>
+    <string name="screen_pressed">画面が押されました！</string>
+    <string name="single_tap_up">シングルタップアップ！</string>
+    <string name="scroll">スクロール！</string>
+    <string name="long_press">長押し！</string>
+    <string name="flinging">飛ばす！</string>
 </resources>
