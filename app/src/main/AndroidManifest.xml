@@ -24,10 +24,18 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
-            android:label="Detect Gestures"
-            android:parentActivityName=".MainActivity2"
-            android:name=".activities.GestureDetectorActivity"
+            android:name=".activities.IntroSlider"
             android:exported="false" />
+        <activity
+            android:label="Horizontal RecyclerView"
+            android:parentActivityName=".MainActivity2"
+            android:name=".activities.HorizontalRecyclerView"
+            android:exported="false" />
+        <activity
+            android:name=".activities.GestureDetectorActivity"
+            android:exported="false"
+            android:label="Detect Gestures"
+            android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".activities.compass.CompassActivity"
             android:exported="false"

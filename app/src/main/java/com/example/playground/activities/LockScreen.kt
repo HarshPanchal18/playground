@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.playground.MainActivity
 import com.example.playground.R
+import com.example.playground.utils.PrefManager
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_lock_screen.*
 import java.util.*
@@ -57,6 +58,11 @@ class LockScreen : AppCompatActivity() {
             val toast = Toast.makeText(this, "Apply: $randDigit", Toast.LENGTH_SHORT)
             toast.setGravity(Gravity.CENTER, 0, 0)
             toast.show()
+        }
+
+        appInfoCard.setOnClickListener {
+            PrefManager(applicationContext).setLaunched(true)
+            startActivity(Intent(this,IntroSlider::class.java))
         }
     }
 

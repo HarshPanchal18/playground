@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/drawer">
+    android:id="@+id/drawer"
+    tools:ignore="HardcodedText">
 
-<!--<androidx.core.widget.NestedScrollView-->
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -77,7 +77,7 @@
         android:text="@string/hello_world"
         android:textAlignment="center"
         android:textColor="#2e7056"
-        android:textSize="25dp"
+        android:textSize="25sp"
 
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -205,7 +205,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_action_lock" />
+        app:srcCompat="@drawable/ic_action_lock"
+        android:contentDescription="Lock" />
 
     <Button
         android:id="@+id/networkbtn"
@@ -421,7 +422,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toStartOf="@+id/seekbarring"
         app:layout_constraintTop_toBottomOf="@+id/scrollingtxt"
-        app:srcCompat="@drawable/ring_volume" />
+        app:srcCompat="@drawable/ring_volume"
+        android:contentDescription="Media Volume" />
 
     <ImageView
         android:id="@+id/imageRing"
@@ -430,7 +432,8 @@
         android:layout_marginTop="12dp"
         app:layout_constraintEnd_toStartOf="@+id/seekbarmedia"
         app:layout_constraintTop_toBottomOf="@+id/imageMedia"
-        app:srcCompat="@drawable/media_volume" />
+        app:srcCompat="@drawable/media_volume"
+        android:contentDescription="Ringer Volume" />
 
     <Button
         android:id="@+id/pullrefresh"
@@ -522,7 +525,6 @@
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
-<!--</androidx.core.widget.NestedScrollView>-->
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navView"

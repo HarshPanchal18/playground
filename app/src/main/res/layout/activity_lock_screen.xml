@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,14 +8,54 @@
     android:background="@color/lockscreenbg"
     tools:context=".activities.LockScreen">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/appInfoCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:layout_weight="2"
+                android:layout_marginStart="2dp"
+                android:textSize="14sp"
+                android:text="About Android Versions" />
+
+            <ImageView
+                android:layout_gravity="end"
+                android:src="@drawable/ic_action_hint"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:scaleType="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="160dp"
+        android:fontFamily="monospace"
         android:text="@string/lock_passcode"
+        android:textColor="@color/colorPrimary"
         android:textSize="20sp"
-        android:textColor="#F4821F"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -26,8 +66,10 @@
         android:id="@+id/passwdbox"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:textSize="20dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/textView"
         android:ems="4"
         android:focusedByDefault="true"
         android:inputType="number|numberPassword"
@@ -38,10 +80,7 @@
         android:singleLine="true"
         android:textAlignment="center"
         app:flow_horizontalAlign="center"
-        app:flow_verticalAlign="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" >
+        app:flow_verticalAlign="center">
         <requestFocus/>
     </EditText>
 
@@ -53,6 +92,8 @@
         android:backgroundTint="@color/cool"
         android:drawableEnd="@drawable/ic_action_exit"
         android:text="Go !!"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/passwdbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +103,9 @@
         android:id="@+id/hintbtn"
         android:layout_width="54dp"
         android:layout_height="49dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/gobtn"
         android:background="@drawable/button_background"
         android:src="@drawable/ic_action_hint"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,4 +113,4 @@
         app:layout_constraintStart_toEndOf="@+id/gobtn"
         app:layout_constraintTop_toBottomOf="@+id/passwdbox" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

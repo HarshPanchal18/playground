@@ -41,7 +41,7 @@ class MainActivity2 : AppCompatActivity() {
         // Made a Activity Slider
         slidr=Slidr.attach(this)
         val config=SlidrConfig.Builder()
-            .position(SlidrPosition.TOP)
+            .position(SlidrPosition.LEFT)
             .build()
         Slidr.attach(this,config)
 
@@ -51,7 +51,7 @@ class MainActivity2 : AppCompatActivity() {
                 R.id.page1 -> {
                     Toast.makeText(applicationContext,"Home Page", Toast.LENGTH_SHORT).show()
                     drawer2.closeDrawer(GravityCompat.START)
-                    startActivity(Intent(this,MainActivity::class.java))
+                    finish()
                 }
 
                 R.id.page2 -> {
@@ -86,7 +86,7 @@ class MainActivity2 : AppCompatActivity() {
         flashfloatbtn.setOnClickListener {
             finish()
             startActivity(intent)
-            overridePendingTransition(0,1)
+            overridePendingTransition(0,1) // Call immediately after one of the flavors of #startActivity(Intent) or #finish to specify an explicit transition animation to perform next.
             Toast.makeText(this,"Restarted",Toast.LENGTH_SHORT).show()
         }
 
@@ -164,6 +164,10 @@ class MainActivity2 : AppCompatActivity() {
 
         gesturebtn.setOnClickListener {
             startActivity(Intent(this,GestureDetectorActivity::class.java))
+        }
+
+        horizontalRecyclerViewbtn.setOnClickListener {
+            startActivity(Intent(this,HorizontalRecyclerView::class.java))
         }
     }
 

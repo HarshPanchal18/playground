@@ -109,4 +109,27 @@
     <string name="scroll">スクロール！</string>
     <string name="long_press">長押し！</string>
     <string name="flinging">飛ばす！</string>
+
+    <string name="applicant_name">遊び場</string>
+    <string name="about">このタイプの Recyclerview は基本的に、アプリケーションのメニューを表示するなど、Android アプリケーション開発者が単一の画面に複数のアイテムを表示する必要がある場合に使用されます。</string>
+    <string name="no_internet">インターネットが利用できません.. !!</string>
+
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+
+    <string name="slide_1_title">Android Lollipop!</string>
+    <string name="slide_1_desc">Android 5.0 (LOLLIPOP) は、ユーザーとアプリ開発者向けの新機能を提供します。このドキュメントでは、最も注目すべき新しい API を紹介します。</string>
+
+    <string name="slide_2_title">Android Marshmallow</string>
+    <string name="slide_2_desc">Now on Tap は、あなたが今必要としているものを予測します。タップするだけで、役立つ情報が記載されたカードや知りたいアプリを入手できます。</string>
+
+    <string name="slide_3_title">Android Nougat</string>
+    <string name="slide_3_desc">シンプルで高品質なバーチャル リアリティを楽しむ VR モードを備えた Android Nougat は、あなたを新しい世界に連れて行ってくれます。 Daydream 対応のスマートフォンでご利用いただけます。</string>
+
+    <string name="slide_4_title">Android Oreo</string>
+    <string name="slide_4_desc">Android Oreo との互換性についてアプリをテストします。デバイスのシステム イメージをダウンロードし、現在のアプリをインストールして、動作の変更がアプリに影響を与える可能性がある領域でテストするだけです。アプリの現在のプラットフォーム ターゲットを使用して、コードを更新して公開します。!</string>
+
+    <string name="intro_slider">Android Introduction Slider は基本的に、アプリケーションの主要な機能をユーザーに紹介するために使用されます。また、ユーザーを惹きつけ、アプリについて知るのに役立ちます。これは Android ウェルカム画面とも呼ばれ、インストール直後にアプリの使用方法をユーザーに案内するために使用されます。最近では、ほとんどすべての人気のあるアプリやゲームで使用されています。
+    \n\nイントロ スライダーを作成するために、スキップ ボタンと次のナビゲーション ボタンを備えたスワイプ ジェスチャ機能を備えた 3 ～ 4 枚のスライド画面を作成します。ユーザーは、スワイプ ジェスチャを使用するか、[次へ] ボタンを使用して、他のようこそ画面に移動できます。その後、ユーザーはホーム画面またはログイン画面に移動できます。イントロスライダーは、基本的にインストール後に一度表示され、その後、ユーザーはホーム画面を直接操作します。 </string>
+
 </resources>

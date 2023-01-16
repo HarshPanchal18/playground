@@ -24,11 +24,8 @@ class ExpandList : AppCompatActivity() {
 
         myChild=ArrayList<String>(myHeader.keys)
         adapter=MyAdapter(this,myHeader,myChild)
-        //explist.adapter=adapter2 // this method is buggy :(
         explist.setAdapter(adapter)
     }
-}
-
 
 class MyAdapter
     (private val ctx: Context, private val childTitles:HashMap<String,List<String>>, private val headerTitle:List<String>) :
@@ -122,5 +119,5 @@ class DataProvider{
             return headerDetail
         }
     }
-
+}
 }
