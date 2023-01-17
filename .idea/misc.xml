@@ -9,6 +9,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/drawable/bg_splash.xml" value="0.149" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/bottom_bar_shape.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/btn_background.xml" value="0.1515" />
+        <entry key="..\:/dev/playground/app/src/main/res/drawable/btn_highlight.xml" value="0.1515" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/button_background.xml" value="0.2155" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/customs.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_add_black.xml" value="0.148" />
@@ -53,7 +54,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_detail.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drink_category.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drink_main.xml" value="0.1" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drop_down.xml" value="0.25" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_drop_down.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_dynamic_list.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_expand_list.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_explicit_intent.xml" value="0.5" />
@@ -64,6 +65,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_grid_view.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_home_fragment.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_horizontal_recycler_view.xml" value="0.209375" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_image_cropper.xml" value="0.13223684210526315" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_image_slider.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_img.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_implicit_intent.xml" value="0.33" />
@@ -88,6 +90,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_recycler.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_rotation.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_screen_rotation.xml" value="0.1718683197947841" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_screen_shot.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_scroll.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_scroll_h.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_scroll_v.xml" value="0.1717948717948718" />
@@ -124,7 +127,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/compound_list_sqlite.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/content_main.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/custom_toast.xml" value="0.1" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/dropdown_item.xml" value="0.1" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/dropdown_item.xml" value="0.18" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/expand_children.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/expand_parent.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_blue.xml" value="0.209375" />

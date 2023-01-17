@@ -169,6 +169,10 @@ class MainActivity2 : AppCompatActivity() {
         horizontalRecyclerViewbtn.setOnClickListener {
             startActivity(Intent(this,HorizontalRecyclerView::class.java))
         }
+
+        screenshotbtn.setOnClickListener {
+            startActivity(Intent(this,ScreenShot::class.java))
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

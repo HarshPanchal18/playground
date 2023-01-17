@@ -40,9 +40,8 @@ class LockScreen : AppCompatActivity() {
         val randDigit: Int = rand(0, 10)
         gobtn.setOnClickListener {
             if (passwdbox.text.toString() == randDigit.toString()) {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
                 passwdbox.backgroundTintList=ColorStateList.valueOf(Color.GREEN)
+                startActivity(Intent(this, MainActivity::class.java))
                 finish()
             } else {
                 vibrator.vibrate(

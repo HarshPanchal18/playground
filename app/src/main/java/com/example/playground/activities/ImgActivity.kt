@@ -3,9 +3,8 @@ package com.example.playground.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
-import android.widget.ImageView
 import com.example.playground.R
+import kotlinx.android.synthetic.main.activity_img.*
 
 class ImgActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,16 +12,14 @@ class ImgActivity : AppCompatActivity() {
         setContentView(R.layout.activity_img)
 
         supportActionBar!!.hide()
-        val imgbtn: ImageButton = findViewById(R.id.imagebtn)
-        val imgview: ImageView = findViewById(R.id.imageview)
 
-        imgview.visibility = View.INVISIBLE
+        imageview.visibility = View.INVISIBLE
         var counter: Int = 0
-        imgbtn.setOnClickListener {
+        imagebtn.setOnClickListener {
             if (counter.mod(2) == 0)
-                imgview.visibility = View.VISIBLE
+                imageview.visibility = View.VISIBLE
             else
-                imgview.visibility = View.INVISIBLE
+                imageview.visibility = View.INVISIBLE
             counter++
         }
         counter = 0

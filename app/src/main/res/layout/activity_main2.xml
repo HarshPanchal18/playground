@@ -46,7 +46,8 @@
             app:layout_constraintHorizontal_bias="0.949"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.979" />
+            app:layout_constraintVertical_bias="0.979"
+            android:contentDescription="Restarts activity" />
 
         <Button
             android:id="@+id/switcher"
@@ -272,15 +273,28 @@
             android:backgroundTint="@color/buttonlayer1"
             android:text="Gestures"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintHorizontal_bias="0.466"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/alarmbtn" />
+
+        <Button
+            android:id="@+id/screenshotbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/buttonlayer1"
+            android:text="Screenshot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.962"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/interFragbtn" />
 
         <Button
             android:id="@+id/horizontalRecyclerViewbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="88dp"
+            android:layout_marginBottom="20dp"
             android:backgroundTint="@color/buttonlayer2"
             android:text="Horizontal Recycler"
             app:layout_constraintEnd_toEndOf="parent"

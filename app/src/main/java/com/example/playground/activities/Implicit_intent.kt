@@ -2,7 +2,6 @@ package com.example.playground.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.example.playground.R
@@ -28,23 +27,19 @@ class Implicit_intent : AppCompatActivity() {
         setContentView(R.layout.activity_implicit_intent)
 
         val usrmsg = findViewById<EditText>(R.id.usrmsg)
-        val shareActbtn = findViewById<Button>(R.id.sendToOtherAct)
-        val sharebtn = findViewById<Button>(R.id.sendToOtherApp)
 
-        shareActbtn.setOnClickListener {
-            val message = findViewById<EditText>(R.id.usrmsg).text.toString()
+        sendToOtherAct.setOnClickListener {
+            val message = usrmsg.text.toString()
             val intent = Intent(this, Explicit_intent::class.java)
-
             intent.putExtra(Constants.USR_MSG_KEY, message)
             startActivity(intent)
         }
 
-        sharebtn.setOnClickListener {
+        sendToOtherApp.setOnClickListener {
             val intent = Intent()
             intent.action = Intent.ACTION_SEND
             intent.putExtra(Intent.EXTRA_TEXT, usrmsg.text.toString())
             intent.type = "text/plain"
-
             startActivity(Intent.createChooser(intent, "Select Your application:"))
         }
     }
