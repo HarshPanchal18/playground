@@ -48,6 +48,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_camera_view.xml" value="0.16447368421052633" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_card_view.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_clock.xml" value="0.21" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_co_routine.xml" value="0.13223684210526315" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_compass.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_database_main.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_delete.xml" value="0.209375" />
@@ -77,7 +78,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_list_view.xml" value="0.2" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.1" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main_workout.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_notification.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_order.xml" value="0.18" />

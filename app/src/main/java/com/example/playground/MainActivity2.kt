@@ -173,6 +173,10 @@ class MainActivity2 : AppCompatActivity() {
         screenshotbtn.setOnClickListener {
             startActivity(Intent(this,ScreenShot::class.java))
         }
+
+        coroutinebtn.setOnClickListener {
+            startActivity(Intent(this,CoRoutineActivity::class.java))
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

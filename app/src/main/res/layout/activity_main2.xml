@@ -46,7 +46,7 @@
             app:layout_constraintHorizontal_bias="0.949"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.979"
+            app:layout_constraintVertical_bias="0.98"
             android:contentDescription="Restarts activity" />
 
         <Button
@@ -165,7 +165,7 @@
             android:backgroundTint="@color/teal_700"
             android:text="D\ny\nn\na\nm\ni\nc\n\nL\ni\ns\nt"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.952"
+            app:layout_constraintHorizontal_bias="0.972"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/storagebtn" />
 
@@ -187,9 +187,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/buttonlayer2"
-            android:text="Shimmer Effect"
+            android:text="Shimmer"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintHorizontal_bias="0.12"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtlinks" />
 
@@ -201,7 +201,7 @@
             android:backgroundTint="@color/buttonlayer2"
             android:text="SQLite"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.74"
+            app:layout_constraintHorizontal_bias="0.489"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/bottomSheetbtn" />
 
@@ -235,11 +235,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/buttonlayer2"
-            android:text="Set Alarm"
+            android:text="Set\nAlarm"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintHorizontal_bias="0.801"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/slideImagebtn" />
+            app:layout_constraintTop_toBottomOf="@+id/bottomSheetbtn" />
 
         <Button
             android:id="@+id/interFragbtn"
@@ -249,7 +249,7 @@
             android:backgroundTint="@color/buttonlayer2"
             android:text="Inter Fragment"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.824"
+            app:layout_constraintHorizontal_bias="0.151"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/slideImagebtn" />
 
@@ -261,9 +261,9 @@
             android:backgroundTint="@color/buttonlayer1"
             android:text="Compass"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0662"
+            app:layout_constraintHorizontal_bias="0.052"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/alarmbtn" />
+            app:layout_constraintTop_toBottomOf="@+id/interFragbtn" />
 
         <Button
             android:id="@+id/gesturebtn"
@@ -273,34 +273,45 @@
             android:backgroundTint="@color/buttonlayer1"
             android:text="Gestures"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintHorizontal_bias="0.46"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/alarmbtn" />
+            app:layout_constraintTop_toBottomOf="@+id/interFragbtn" />
 
         <Button
             android:id="@+id/screenshotbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/buttonlayer1"
+            android:backgroundTint="@color/buttonlayer2"
             android:text="Screenshot"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.962"
+            app:layout_constraintHorizontal_bias="0.873"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/interFragbtn" />
+            app:layout_constraintTop_toBottomOf="@+id/slideImagebtn" />
 
         <Button
             android:id="@+id/horizontalRecyclerViewbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="88dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/buttonlayer2"
             android:text="Horizontal Recycler"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.185"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/alarmbtn" />
+            app:layout_constraintTop_toBottomOf="@+id/compassbtn" />
+
+        <Button
+            android:id="@+id/coroutinebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/buttonlayer1"
+            android:text="Coroutine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/screenshotbtn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
