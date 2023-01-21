@@ -132,4 +132,22 @@
     <string name="intro_slider">Android Introduction Slider は基本的に、アプリケーションの主要な機能をユーザーに紹介するために使用されます。また、ユーザーを惹きつけ、アプリについて知るのに役立ちます。これは Android ウェルカム画面とも呼ばれ、インストール直後にアプリの使用方法をユーザーに案内するために使用されます。最近では、ほとんどすべての人気のあるアプリやゲームで使用されています。
     \n\nイントロ スライダーを作成するために、スキップ ボタンと次のナビゲーション ボタンを備えたスワイプ ジェスチャ機能を備えた 3 ～ 4 枚のスライド画面を作成します。ユーザーは、スワイプ ジェスチャを使用するか、[次へ] ボタンを使用して、他のようこそ画面に移動できます。その後、ユーザーはホーム画面またはログイン画面に移動できます。イントロスライダーは、基本的にインストール後に一度表示され、その後、ユーザーはホーム画面を直接操作します。 </string>
 
+    <string name="hello_blank_fragment2">Hello blank fragment</string>
+    <string name="this_profile">This is activity profile</string>
+    <string name="this_category">These are Category fragments</string>
+    <string name="category_lifestyle">Go to the Lifestyle fragment</string>
+    <string name="category_name">Category Name</string>
+    <string name="category_description">Category Description</string>
+    <string name="to_profile">Go to the Activity Profile Page</string>
+    <string name="show_dialog">Show a dialog</string>
+    <string name="hello_home_fragment">Hello This is Home Fragment</string>
+    <string name="to_category">Go to Fragment Category</string>
+    <string name="question_coach">Who is Manchester United\'s most successful coach?</string>
+    <string name="sir_alex_ferguson">Sir Alex Ferguson</string>
+    <string name="jose_mourinho">Jose Mourinho</string>
+    <string name="louis_van_gaal">Louis Van Gaal</string>
+    <string name="david_moyes">David Moyes</string>
+    <string name="choose">Choose</string>
+    <string name="close1">Closed</string>
+
 </resources>

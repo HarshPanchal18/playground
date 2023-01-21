@@ -74,16 +74,19 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_inter_fragment.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_internal_storage.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_intro_slider.xml" value="0.13223684210526315" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_job_scheduler.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_launch.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_list_view.xml" value="0.2" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_lock_screen.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.22" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main2.xml" value="0.25" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main_flexible.xml" value="0.13223684210526315" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_main_workout.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_notification.xml" value="0.22" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_order.xml" value="0.18" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_parse_data.xml" value="0.18" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_picker.xml" value="0.25" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_profile.xml" value="0.13223684210526315" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_profile_fragment.xml" value="0.17094017094017094" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_progressbar.xml" value="0.1717948717948718" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_pull_refresh.xml" value="0.17543859649122806" />
@@ -132,7 +135,11 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/expand_children.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/expand_parent.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_blue.xml" value="0.209375" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_category.xml" value="0.16" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_detail_category.xml" value="0.25" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_green.xml" value="0.209375" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_home.xml" value="0.13223684210526315" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_option_dialog.xml" value="0.25" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_pizza.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_tab.xml" value="0.1953125" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/fragment_top.xml" value="0.1" />

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Playground</string>
     <string name="title_activity_alert">alertActivity</string>
 
@@ -137,4 +137,23 @@
     <string name="intro_slider">Android Introduction Slider is basically used to introduce the major features of the application to the user. It also attracts and helps the user to know about the app. It is also called android welcome screen and is used to guide the user on how to use the app just after installation. It is used in almost all popular apps and games these days.
     \n\nTo make the intro slider we will make 3-4 slide screens having swipe gesture facilities with a skip and next navigation buttons. The user can navigate to other welcome screen using swipe gesture or by using the next button. After that, the user can navigate to the home screen or login screen. Intro slider is basically shown once after the installation and after that user directly interact with the home screen. </string>
 
+    <string name="description" tools:ignore="MissingTranslation">Click the start button to start the weather task or click the cancel button to cancel the weather task</string>
+
+    <string name="hello_blank_fragment2">Hello blank fragment</string>
+    <string name="this_profile">This is activity profile</string>
+    <string name="this_category">These are Category fragments</string>
+    <string name="category_lifestyle">Go to the Lifestyle fragment</string>
+    <string name="category_name">Category Name</string>
+    <string name="category_description">Category Description</string>
+    <string name="to_profile">Go to the Activity Profile Page</string>
+    <string name="show_dialog">Show a dialog</string>
+    <string name="hello_home_fragment">Hello This is Home Fragment</string>
+    <string name="to_category">Go to Fragment Category</string>
+    <string name="question_coach">Who is Manchester United\'s most successful coach?</string>
+    <string name="sir_alex_ferguson">Sir Alex Ferguson</string>
+    <string name="jose_mourinho">Jose Mourinho</string>
+    <string name="louis_van_gaal">Louis Van Gaal</string>
+    <string name="david_moyes">David Moyes</string>
+    <string name="choose">Choose</string>
+    <string name="close1">Closed</string>
 </resources>

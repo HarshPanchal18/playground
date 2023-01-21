@@ -13,6 +13,7 @@ import androidx.core.view.GravityCompat
 import com.example.playground.activities.*
 import com.example.playground.activities.bitspizza.BitsPizzaMain
 import com.example.playground.activities.compass.CompassActivity
+import com.example.playground.activities.flexiblefragment.MainFlexible
 import com.example.playground.activities.sqlitedb.DatabaseMainActivity
 import com.example.playground.activities.storage.StorageMainActivity
 import com.example.playground.activities.workout.WorkoutMainActivity
@@ -176,6 +177,14 @@ class MainActivity2 : AppCompatActivity() {
 
         coroutinebtn.setOnClickListener {
             startActivity(Intent(this,CoRoutineActivity::class.java))
+        }
+
+        jobschedulerbtn.setOnClickListener {
+            startActivity(Intent(this,JobScheduler::class.java))
+        }
+
+        flexibleFragmentbtn.setOnClickListener {
+            startActivity(Intent(this,MainFlexible::class.java))
         }
     }
 
