@@ -150,4 +150,7 @@
     <string name="choose">Choose</string>
     <string name="close1">Closed</string>
 
+    <string name="hintSender">差出人の名前を入力</string>
+    <string name="hintMessage">メッセージを入力してください</string>
+    <string name="sendNotif">送信</string>
 </resources>

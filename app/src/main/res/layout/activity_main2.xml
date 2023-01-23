@@ -337,6 +337,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/horizontalRecyclerViewbtn" />
 
+        <Button
+            android:id="@+id/stackNotificationbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@color/buttonlayer2"
+            android:text="Stack\nNotification"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.959"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coroutinebtn" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 

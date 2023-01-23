@@ -156,4 +156,8 @@
     <string name="david_moyes">David Moyes</string>
     <string name="choose">Choose</string>
     <string name="close1">Closed</string>
+
+    <string name="hintSender">Enter the sender\'s name</string>
+    <string name="hintMessage">Enter messages</string>
+    <string name="sendNotif">Send</string>
 </resources>

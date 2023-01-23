@@ -186,6 +186,10 @@ class MainActivity2 : AppCompatActivity() {
         flexibleFragmentbtn.setOnClickListener {
             startActivity(Intent(this,MainFlexible::class.java))
         }
+
+        stackNotificationbtn.setOnClickListener {
+            startActivity(Intent(this,StackNotificationActivity::class.java))
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

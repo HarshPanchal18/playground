@@ -15,6 +15,8 @@
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_add_black.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_add_current.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_add_pink.xml" value="0.148" />
+        <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.1515" />
+        <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_baseline_notification_24.xml" value="0.1515" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_dash.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_home_black.xml" value="0.148" />
         <entry key="..\:/dev/playground/app/src/main/res/drawable/ic_home_current.xml" value="0.148" />
@@ -39,6 +41,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_animation.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_api_main.xml" value="0.1763157894736842" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_auto_scroll.xml" value="0.25" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_bar_volume.xml" value="0.14" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_bgcolor.xml" value="0.25" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_bits_pizza_main.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_bottom_sheet.xml" value="0.1" />
@@ -105,6 +108,7 @@
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_shimmer_loading.xml" value="0.1" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_spinner.xml" value="0.209375" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_splash_screen.xml" value="0.1717948717948718" />
+        <entry key="..\:/dev/playground/app/src/main/res/layout/activity_stack_notification.xml" value="0.13223684210526315" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_star_buzz.xml" value="0.2" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_stopwatch.xml" value="0.33" />
         <entry key="..\:/dev/playground/app/src/main/res/layout/activity_storage_main.xml" value="0.1" />

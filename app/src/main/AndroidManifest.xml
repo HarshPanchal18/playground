@@ -24,15 +24,20 @@
         android:theme="@style/Theme.Playground"
         tools:targetApi="31">
         <activity
-            android:label="Profile"
-            android:parentActivityName=".activities.flexiblefragment.MainFlexible"
-            android:name=".activities.flexiblefragment.ProfileActivity"
+            android:parentActivityName=".MainActivity2"
+            android:label="Stack Notification"
+            android:name=".activities.StackNotificationActivity"
             android:exported="false" />
         <activity
-            android:label="Fragments"
-            android:parentActivityName=".MainActivity2"
+            android:name=".activities.flexiblefragment.ProfileActivity"
+            android:exported="false"
+            android:label="Profile"
+            android:parentActivityName=".activities.flexiblefragment.MainFlexible" />
+        <activity
             android:name=".activities.flexiblefragment.MainFlexible"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Fragments"
+            android:parentActivityName=".MainActivity2" />
 
         <service
             android:name=".utils.GetCurrentWeatherService"
