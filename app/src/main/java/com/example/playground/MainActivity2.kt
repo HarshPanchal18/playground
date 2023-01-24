@@ -190,6 +190,10 @@ class MainActivity2 : AppCompatActivity() {
         stackNotificationbtn.setOnClickListener {
             startActivity(Intent(this,StackNotificationActivity::class.java))
         }
+
+        soundPoolbtn.setOnClickListener {
+            startActivity(Intent(this,SoundPoolActivity::class.java))
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
