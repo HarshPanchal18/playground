@@ -204,6 +204,36 @@ private fun clickableLinks(longTexts: String) {
             } catch(e:Exception) { e.printStackTrace() }
     }
 ```
+
+### Clear Application Data
+```kotlin
+private fun clearAppData() {
+    try {
+        // clearing app data
+        if (Build.VERSION_CODES.KITKAT <= Build.VERSION.SDK_INT) {
+            (getSystemService(ACTIVITY_SERVICE) as ActivityManager).clearApplicationUserData() // note: it has a return value!
+        } else {
+            val packageName = applicationContext.packageName
+            val runtime = Runtime.getRuntime()
+            runtime.exec("pm clear $packageName")
+        }
+    } catch (e: java.lang.Exception) {
+        e.printStackTrace()
+    }
+}
+```
+
+### Restart Application
+```kotlin
+fun triggerRebirth(context: Context) {
+    val packageManager = context.packageManager
+    val intent = packageManager.getLaunchIntentForPackage(context.packageName)
+    val componentName = intent!!.component
+    val mainIntent = Intent.makeRestartActivityTask(componentName)
+    context.startActivity(mainIntent)
+    Runtime.getRuntime().exit(0)
+}
+```
 ## _QnA_
 
 #### I added a String to my `strings.xml` file, but I can't see it in R.java. Why isn't it there?  
