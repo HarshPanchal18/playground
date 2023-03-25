@@ -1,16 +1,15 @@
 package com.example.playground
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
-import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.media.AudioManager
 import android.net.ConnectivityManager
 import android.net.Uri
 import android.os.Bundle
-import android.os.Handler
 import android.provider.Settings
 import android.view.ContextMenu
 import android.view.Menu
@@ -42,10 +41,6 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
     lateinit var toggle:ActionBarDrawerToggle
     var shareActionProvider:ShareActionProvider? = null
 
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -66,26 +61,27 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.page1 -> {
-                    Toast.makeText(applicationContext,"Home Page",Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this,MainActivity::class.java))
+                    applicationContext.showToast("Home Page")
+                    startActivity<MainActivity>()
+                    //startActivity(Intent(this,MainActivity::class.java))
                 }
 
                 R.id.page2 -> {
-                    Toast.makeText(applicationContext,"Secondary Page",Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this,MainActivity2::class.java))
+                    applicationContext.showToast("Secondary Page")
+                    startActivity<MainActivity2>()
                 }
 
                 R.id.contact -> {
-                    startActivity(Intent(this, AdminContact::class.java))
+                    startActivity<AdminContact>()
                 }
 
                 R.id.logout -> {
-                    Toast.makeText(applicationContext,"Logged Out",Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this,LockScreen::class.java))
+                    applicationContext.showToast("Logged out")
+                    startActivity<LockScreen>()
                 }
             }
             drawer.closeDrawer(GravityCompat.START)
-            true
+            false
         }
 
         val scrollTxt: TextView = findViewById(R.id.scrollingtxt)
@@ -97,42 +93,42 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
 
         val alertbtn: Button = findViewById(R.id.alertbtn)
         alertbtn.setOnClickListener {
-            startActivity(Intent(this, AlertActivity::class.java))
+            startActivity<AlertActivity>()
         }
 
         val cardbtn: Button = findViewById(R.id.cardbtn)
         cardbtn.setOnClickListener {
-            startActivity(Intent(this, CardView::class.java))
+            startActivity<CardView>()
         }
 
         val tabbtn: Button = findViewById(R.id.tabbtn)
         tabbtn.setOnClickListener {
-            startActivity(Intent(this, TabActivity::class.java))
+            startActivity<TabActivity>()
         }
 
         val spinbtn: Button = findViewById(R.id.spinner)
         spinbtn.setOnClickListener {
-            startActivity(Intent(this, SpinnerActivity::class.java))
+            startActivity<SpinnerActivity>()
         }
 
         val intentbtn: Button = findViewById(R.id.intentbtn)
         intentbtn.setOnClickListener {
-            startActivity(Intent(this, Implicit_intent::class.java))
+            startActivity<Implicit_intent>()
         }
 
         val sysbtn: Button = findViewById(R.id.sysinfobtn)
         sysbtn.setOnClickListener {
-            startActivity(Intent(this, SysInfo::class.java))
+            startActivity<SysInfo>()
         }
 
         val scrRotatebtn: Button = findViewById(R.id.orientation)
         scrRotatebtn.setOnClickListener {
-            startActivity(Intent(this, ScreenRotation::class.java))
+            startActivity<ScreenRotation>()
         }
 
         val bgcolorbtn: Button = findViewById(R.id.bgbtn)
         bgcolorbtn.setOnClickListener {
-            startActivity(Intent(this,Bgcolor::class.java))
+            startActivity<Bgcolor>()
         }
 
         //--------Flat button
@@ -145,13 +141,13 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
 
             //positive action
             builder.setPositiveButton("Yes") { _, _ ->
-                startActivity(Intent(this, LockScreen::class.java))
+                startActivity<LockScreen>()
                 finish()
             }
 
             //cancel action
             builder.setNegativeButton("No")
-            { _, _ -> Toast.makeText(applicationContext, "Welcome Back :)", Toast.LENGTH_SHORT).show() }
+            { _, _ -> applicationContext.showToast("Welcome back :)") }
 
             //create the alert dialog
             val alertDialog: AlertDialog = builder.create()
@@ -177,39 +173,24 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             customToast(this, "Hold Me", Toast.LENGTH_SHORT, Color.BLACK, Color.WHITE)
         }
 
-        var i=0
         val txtclockbtn: Button = findViewById(R.id.clockbtn)
-        //val txtclk:TextClock?=findViewById(R.id.txtclock)
-        //val anlclk:AnalogClock?=findViewById(R.id.analog)
         txtclockbtn.setOnClickListener {
-            /*i++
-            val handler= Handler()
-            handler.postDelayed({
-                if(i==1){
-                    startActivity(Intent(this, ClockActivity::class.java))
-                    txtclk?.visibility=View.INVISIBLE
-                }
-                else{
-                    startActivity(Intent(this, ClockActivity::class.java))
-                    anlclk?.visibility=View.INVISIBLE
-                }
-            },500) // second time button clicked within 500 ms*/
-            startActivity(Intent(this, ClockActivity::class.java))
+            startActivity<ClockActivity>()
         }
 
         val progressbtn: Button = findViewById(R.id.progressbtn)
         progressbtn.setOnClickListener {
-            startActivity(Intent(this, Progressbar::class.java))
+            startActivity<Progressbar>()
         }
 
         val imgbtn: Button = findViewById(R.id.imgbtn)
         imgbtn.setOnClickListener {
-            startActivity(Intent(this, ImgActivity::class.java))
+            startActivity<ImgActivity>()
         }
 
         val stopwbtn: Button = findViewById(R.id.stopwatchbtn)
         stopwbtn.setOnClickListener {
-            startActivity(Intent(this, Stopwatch::class.java))
+            startActivity<Stopwatch>()
         }
 
         val seekbarRing:SeekBar = findViewById(R.id.seekbarring)
@@ -220,62 +201,62 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
 
         val launchbtn:Button=findViewById(R.id.launchbtn)
         launchbtn.setOnClickListener {
-            startActivity(Intent(this,LaunchActivity::class.java))
+            startActivity<LaunchActivity>()
         }
 
         val bottomtab:Button=findViewById(R.id.bottomtab)
         bottomtab.setOnClickListener {
-            startActivity(Intent(this,BottomTab::class.java))
+            startActivity<BottomTab>()
         }
 
         val gridbtn:Button=findViewById(R.id.gridbtn)
         gridbtn.setOnClickListener {
-            startActivity(Intent(this,GridView::class.java))
+            startActivity<GridView>()
         }
 
         val pickerbtn:Button=findViewById(R.id.pickerbtn)
         pickerbtn.setOnClickListener {
-            startActivity(Intent(this,PickerActivity::class.java))
+            startActivity<PickerActivity>()
         }
 
         val framebtn:Button=findViewById(R.id.framebtn)
         framebtn.setOnClickListener {
-            startActivity(Intent(this, FrameLayoutActivity::class.java))
+            startActivity<FrameLayoutActivity>()
         }
 
         val notificationbtn:Button=findViewById(R.id.notificationbtn)
         notificationbtn.setOnClickListener {
-            startActivity(Intent(this,Notification::class.java))
+            startActivity<Notification>()
         }
 
         val animbtn:Button=findViewById(R.id.animbtn)
         animbtn.setOnClickListener {
-            startActivity(Intent(this,AnimationActivity::class.java))
+            startActivity<AnimationActivity>()
         }
 
         val pull:Button=findViewById(R.id.pullrefresh)
         pull.setOnClickListener {
-            startActivity(Intent(this,PullRefresh::class.java))
+            startActivity<PullRefresh>()
         }
 
         val list:Button=findViewById(R.id.listbtn)
         list.setOnClickListener {
-            startActivity(Intent(this,ListViewActivity::class.java))
+            startActivity<ListViewActivity>()
         }
 
         val coffeebtn:Button=findViewById(R.id.coffeebtn)
         coffeebtn.setOnClickListener {
-            startActivity(Intent(this, StarBuzz::class.java))
+            startActivity<StarBuzz>()
         }
 
         val expbtn:Button=findViewById(R.id.expandbtn)
         expbtn.setOnClickListener {
-            startActivity(Intent(this,ExpandList::class.java))
+            startActivity<ExpandList>()
         }
 
         val rating: RatingBar =findViewById(R.id.rate)
-        rating.setOnRatingBarChangeListener { ratingBar, fl, b ->
-            Toast.makeText(this,ratingBar.rating.toString(),Toast.LENGTH_SHORT).show()
+        rating.setOnRatingBarChangeListener { ratingBar, _, _ ->
+            this.showToast(ratingBar.rating.toString())
             if(ratingBar.rating.toInt()>=4){
                 val intent=Intent(Intent.ACTION_VIEW)
                 intent.data=Uri.parse("https://play.google.com/store/apps/details?id=com.example.playground")
@@ -285,12 +266,12 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
 
         val wallpaperbtn:Button=findViewById(R.id.wallpaperbtn)
         wallpaperbtn.setOnClickListener {
-            startActivity(Intent(this,WallPaper::class.java))
+            startActivity<WallPaper>()
         }
 
         val searchbtn:Button=findViewById(R.id.searchbtn)
         searchbtn.setOnClickListener {
-            startActivity(Intent(this,SearchActivity::class.java))
+            startActivity<SearchActivity>()
         }
     }
 
@@ -336,9 +317,9 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
         if(item.title=="Vertical")
-            startActivity(Intent(this, ScrollVActivity::class.java))
+            startActivity<ScrollVActivity>()
         else
-            startActivity(Intent(this,ScrollHActivity::class.java))
+            startActivity<ScrollHActivity>()
         return true
     }
 
@@ -351,9 +332,9 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
 
     private fun checkConnection() {
         if (isOnline())
-            Toast.makeText(this, "Yes", Toast.LENGTH_SHORT).show()
+            this.showToast("Yes")
          else
-            Toast.makeText(this,"No",Toast.LENGTH_SHORT).show()
+             this.showToast("No")
     }
 
     // Ask again for exit
@@ -410,12 +391,11 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
             }
 
             R.id.action_share->{
-                Toast.makeText(applicationContext, "Clicked on share", Toast.LENGTH_LONG).show()
+                applicationContext.showToast("Clicked on share")
                 true // true tells the Android you've dealt with the item being clicked
             }
 
             R.id.action_exit->{
-                Toast.makeText(applicationContext, "Clicked exit", Toast.LENGTH_LONG).show()
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle("EXIT")
                 builder.setMessage(R.string.dialogMsgExit)
@@ -472,5 +452,13 @@ class MainActivity : AppCompatActivity() { //, PopupMenu.OnMenuItemClickListener
     private fun chromeInstalled(): Boolean {
         return try{ packageManager.getPackageInfo("com.android.chrome",0); true
         } catch(e:Exception){ false }
+    }
+
+    inline fun <reified T : Activity> Activity.startActivity() {
+        startActivity(Intent(this, T::class.java))
+    }
+
+    private fun Context.showToast(message: String) {
+        Toast.makeText(this,message,Toast.LENGTH_SHORT).show()
     }
 }
